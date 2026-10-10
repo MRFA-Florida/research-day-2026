@@ -4,7 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mayo Clinic Research Fellow Association (MRFA) Research Day, Florida 2026</title>
-  <meta name="description" content="Program, speakers and live Q&A for MRFA Research Day at Mayo Clinic in Florida.">
+  <meta name="description" content="Thursday, October 29, 2026, Kinne Auditorium. Program, speakers, posters, abstracts and live Q&A.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MRFA Research Day, Florida 2026">
+  <meta property="og:title" content="MRFA Research Day, Florida 2026">
+  <meta property="og:description" content="Thursday, October 29, 2026, Kinne Auditorium. Program, speakers, posters, abstracts and live Q&A.">
+  <meta property="og:url" content="https://verasteguialfredo.github.io/mrfa-research-day/">
+  <meta property="og:image" content="https://verasteguialfredo.github.io/mrfa-research-day/assets/img/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MRFA Research Day, Florida 2026. Thursday, October 29, 2026, Kinne Auditorium, Mayo Clinic in Florida.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://verasteguialfredo.github.io/mrfa-research-day/assets/img/og-card.jpg">
   <meta name="theme-color" content="#0a2d5c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +41,7 @@
         <div><dt>Time</dt><dd id="event-time">—</dd></div>
         <div><dt>Where</dt><dd id="event-place">—</dd></div>
       </dl>
+      <button type="button" class="hero-cal" id="add-cal"><span aria-hidden="true">🗓</span> Add to calendar</button>
     </div>
   </header>
 
@@ -46,6 +58,8 @@
       <a href="#speakers">Speakers</a>
       <a href="#panel">Panel</a>
       <a href="#posters" id="tab-posters" hidden>Posters</a>
+      <a href="#awards">Awards</a>
+      <a href="#mine">My agenda</a>
       <a href="#info">Info</a>
       <button type="button" class="theme-btn" id="theme-btn" aria-label="Theme">
         <svg class="ic ic-auto" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg>
@@ -87,7 +101,29 @@
         <input type="search" id="poster-search" placeholder="Search by name, title, department or number" autocomplete="off">
       </label>
       <ul class="posters" id="poster-list"></ul>
-      <p class="empty" id="poster-empty" hidden>No posters match that search. Try a last name or a poster number like P12.</p>
+      <p class="empty" id="poster-empty" hidden>No posters match that search. Try a last name or a poster number like P-12.</p>
+    </section>
+
+    <section id="awards" class="wrap block" aria-labelledby="h-awards">
+      <h2 id="h-awards">Awards</h2>
+      <p class="lede" id="awards-note"></p>
+      <ul class="awards" id="award-list"></ul>
+      <div class="award-card" id="award-card" hidden>
+        <h3 id="award-title">Audience Choice Award</h3>
+        <div id="award-text"></div>
+        <div class="award-row">
+          <a class="btn rate-btn" id="award-open" data-start="09:15" data-open-label="Rate a talk" target="_blank" rel="noopener" aria-disabled="true">Rate this talk</a>
+          <div class="qr" id="award-qr" aria-label="QR code for the rating form"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mine" class="wrap block" aria-labelledby="h-mine">
+      <h2 id="h-mine">My agenda</h2>
+      <p class="lede">Tap <strong>☆ Save</strong> on any talk or poster to keep it here. Your list stays on this device.</p>
+      <ul class="mine" id="mine-list"></ul>
+      <p class="empty" id="mine-empty">Nothing saved yet. Open a talk in the program or a poster and tap ☆ Save.</p>
+      <button type="button" class="btn ghost" id="mine-cal" hidden><span aria-hidden="true">🗓</span> Add my saved talks to calendar</button>
     </section>
 
     <figure class="band" aria-hidden="true">
@@ -100,14 +136,6 @@
     <section id="info" class="wrap block" aria-labelledby="h-info">
       <h2 id="h-info">Info</h2>
       <dl class="faq" id="faq"></dl>
-      <div class="award-card" id="award-card" hidden>
-        <h3 id="award-title">Audience Choice Award</h3>
-        <div id="award-text"></div>
-        <div class="award-row">
-          <a class="btn rate-btn" id="award-open" data-start="09:15" data-open-label="Rate a talk" target="_blank" rel="noopener" aria-disabled="true">Rate this talk</a>
-          <div class="qr" id="award-qr" aria-label="QR code for the rating form"></div>
-        </div>
-      </div>
       <div class="share qa-card" id="qa-card" hidden>
         <div class="share-text">
           <h3>Ask a question</h3>
@@ -146,6 +174,7 @@
   </dialog>
 
   <script src="assets/qrcode-generator.js"></script>
+  <script src="assets/extras.js"></script>
   <script src="assets/rating.js"></script>
   <script src="assets/app.js"></script>
 </body>

@@ -22,7 +22,8 @@
   // ?preview=10:15 lets organizers check how the "Now" view looks before the day.
   const preview = new URLSearchParams(location.search).get("preview");
 
-  let data, talksById = {};
+  let data, talksById = {}, postersById = {};
+  const itemById = (id) => talksById[id] || postersById[id];
 
   fetch(`data/event.json?v=${Date.now()}`, { cache: "no-store" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -39,14 +40,19 @@
   const pickLabel = (t) => `${t.session === 1 ? "I" : "II"}-${t.order} ${String(t.presenter).replace(/,.*$/, "").trim()}`;
   function actionsHTML(t) {
     const url = questionUrl(t);
-    const abs = t.abstract ? `<a class="btn ghost" href="abstract.html?talk=${esc(t.id)}">Read abstract</a>` : "";
-    if (!url) return `<div class="actions">${abs}<span class="btn" aria-disabled="true">Questions open on the day</span></div>`;
+    const X = window.MRFA;
+    const mini = `<div class="mini-row">
+      ${X ? X.saveBtn(t.id) : ""}
+      ${t.abstract ? `<a class="mini-btn" href="abstract.html?talk=${esc(t.id)}"><span aria-hidden="true">📄</span> Abstract</a>` : ""}
+      ${X && t.citation ? X.citeBtn(t.id) : ""}
+      ${X ? X.calBtn(t.id) : ""}
+      ${url ? `<button class="mini-btn" type="button" data-qr="${esc(t.id)}"><span aria-hidden="true">▦</span> QR code</button>` : ""}
+    </div>`;
+    if (!url) return `<div class="actions"><span class="btn" aria-disabled="true">Questions open on the day</span></div>${mini}`;
     return `<p class="pick">In the forms, choose <strong>${esc(pickLabel(t))}</strong></p><div class="actions">
       <a class="btn" href="${esc(url)}" target="_blank" rel="noopener">Ask a question</a>
       ${window.MRFARating ? MRFARating.button(t, data.event) : ""}
-      ${abs}
-      <button class="btn ghost" type="button" data-qr="${esc(t.id)}">Show QR code</button>
-    </div>`;
+    </div>${mini}`;
   }
 
   function render() {
@@ -65,6 +71,7 @@
     $("foot-host").textContent = `${e.name} ${e.edition || ""}, ${e.host || ""}`.trim();
 
     (data.talks || []).forEach((t) => (talksById[t.id] = t));
+    (data.posters || []).forEach((p) => (postersById[p.id] = p));
 
     // Program
     $("run").innerHTML = (data.agenda || []).map((s, i) => {
@@ -91,6 +98,8 @@
 
     // Posters
     renderPosters("");
+    renderAwards();
+    renderMine();
 
     // Info
     // Moderator and judges
@@ -135,7 +144,7 @@
       <summary>
         <span class="ord">${esc(t.order)}${t.start ? `<small>${fmt(t.start)}</small>` : ""}</span>
         <span>
-          ${t.format ? `<span class="fmt ${fmtClass(t.format)}">${esc(t.format)}</span>` : ""}
+          ${t.format ? `<span class="fmt ${fmtClass(t.format)}">${esc(t.format)}</span>` : ""}${t.code ? `<span class="code">${esc(t.code)}</span>` : ""}
           <span class="talk-title">${esc(t.title)}</span>
           <span class="talk-who">${esc(fullName(t))}</span>
         </span>
@@ -181,10 +190,50 @@
         <div>
           <div class="ttl">${p.abstract ? `<a href="abstract.html?poster=${esc(p.id)}">${esc(p.title)}</a>` : esc(p.title)}</div>
           <div class="who"><strong>${esc(fullName(p))}</strong>${p.department ? `, ${esc(p.department)}` : ""}</div>
+          ${window.MRFA ? `<div class="mini-row">${MRFA.saveBtn(p.id)}${p.citation ? MRFA.citeBtn(p.id) : ""}</div>` : ""}
         </div>
       </li>`).join("")}</ul></li>`;
     }).join("");
     $("poster-empty").hidden = list.length > 0;
+  }
+
+  function renderAwards() {
+    $("awards-note").textContent = data.awardsNote || "";
+    $("award-list").innerHTML = (data.awards || []).map((a) => {
+      const w = a.winner && itemById(a.winner.id);
+      if (!w) return `<li class="award pending"><h3>${esc(a.title)}</h3><p>To be announced at 2:15 PM</p></li>`;
+      const isPoster = !!postersById[w.id];
+      const link = isPoster ? `abstract.html?poster=${esc(w.id)}` : `abstract.html?talk=${esc(w.id)}`;
+      return `<li class="award won">
+        <h3><span aria-hidden="true">🏆</span> ${esc(a.title)}</h3>
+        <div class="award-win">
+          ${avatar({ presenter: w.presenter, photo: w.photo }, "lg")}
+          <div>
+            <p class="w-name">${esc(fullName(w))}</p>
+            ${roleLine(w) ? `<p class="w-role">${esc(roleLine(w))}</p>` : ""}
+            <p class="w-title"><a href="${link}">${esc(w.title)}</a></p>
+            <p class="w-code">${esc(w.code || "")}${a.winner.note ? `, ${esc(a.winner.note)}` : ""}</p>
+          </div>
+        </div>
+      </li>`;
+    }).join("");
+  }
+
+  function renderMine() {
+    if (!window.MRFA) return;
+    const ids = MRFA.saved.all();
+    const talks = ids.map((id) => talksById[id]).filter(Boolean).sort((a, b) => toMin(a.start) - toMin(b.start));
+    const posters = ids.map((id) => postersById[id]).filter(Boolean);
+    $("mine-list").innerHTML = [
+      ...talks.map((t) => `<li class="mine-item"><span class="mine-time">${fmt(t.start)}</span>
+        <div><a href="#talk-${esc(t.id)}" data-open="${esc(t.id)}">${esc(t.title)}</a><span class="mine-who">${esc(fullName(t))}, ${esc(t.code)}</span></div>
+        ${MRFA.saveBtn(t.id)}</li>`),
+      ...posters.map((p) => `<li class="mine-item"><span class="mine-time">Poster</span>
+        <div><a href="abstract.html?poster=${esc(p.id)}">${esc(p.title)}</a><span class="mine-who">${esc(fullName(p))}, ${esc(p.code)}</span></div>
+        ${MRFA.saveBtn(p.id)}</li>`),
+    ].join("");
+    $("mine-empty").hidden = ids.length > 0;
+    $("mine-cal").hidden = talks.length === 0;
   }
 
   function makeQR(el, text) {
@@ -249,6 +298,16 @@
       makeQR($("qr-big"), questionUrl(t), 280);
       $("qr-dialog").showModal();
       return;
+    }
+    const sv = ev.target.closest("[data-save]");
+    if (sv) { MRFA.saved.toggle(sv.dataset.save); renderMine(); return; }
+    const ct = ev.target.closest("[data-cite]");
+    if (ct) { MRFA.openCite(itemById(ct.dataset.cite)); return; }
+    const cl = ev.target.closest("[data-cal]");
+    if (cl) { const t = talksById[cl.dataset.cal]; MRFA.calendar.talks(data.event, [t], `${t.code}-${t.presenter.split(" ").pop()}.ics`); return; }
+    if (ev.target.closest("#add-cal")) { MRFA.calendar.event(data.event); return; }
+    if (ev.target.closest("#mine-cal")) {
+      MRFA.calendar.talks(data.event, MRFA.saved.all().map((id) => talksById[id]).filter(Boolean), "My-MRFA-agenda.ics"); return;
     }
     const open = ev.target.closest("[data-open]");
     if (open) { const d = $("talk-" + open.dataset.open); if (d) d.open = true; }

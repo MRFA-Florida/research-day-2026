@@ -33,3 +33,10 @@ Paste a Microsoft Forms link into a talk's `questionUrl`. To use one form for ev
 
 ### Previewing the live "Now" view
 On the event date, the site highlights the current block and shows a Now/Next bar using Florida time. To preview it any day, add `?preview=10:30` to the address.
+
+## Announcing award winners
+In `data/event.json`, find `"awards"` and replace `null` with the winning talk or poster ID, for example
+`"winner": { "id": "s1-04" }` (talk) or `"winner": { "id": "p09" }` (poster). Talk IDs: `s1-01`…`s2-11`; poster IDs: `p01`…`p21`.
+
+## Citations
+Each talk and poster has a pre-built AMA `citation` in `data/event.json`. If you change a title or author, update that line too (or ask Claude to regenerate them).

@@ -43,3 +43,6 @@
   .abs-main { padding: 0; max-width: none; }
 }
 .fmt.poster { background: color-mix(in srgb, var(--sunset) 30%, var(--surface)); color: var(--ink); }
+.abs-code { font-weight: 700; color: var(--ink); }
+.abs-mini { margin: 1.25rem 0; }
+.abs-main .mini-row { margin-bottom: 1.25rem; }

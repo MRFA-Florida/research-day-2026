@@ -5,7 +5,7 @@
     "host": "Mayo Clinic Research Fellow Association (MRFA)",
     "date": "2026-10-29",
     "dateLabel": "Thursday, October 29, 2026",
-    "timeLabel": "8:00 AM – 3:00 PM",
+    "timeLabel": "9:30 AM – 2:30 PM",
     "location": "Kinne Auditorium",
     "room": "Mayo Clinic in Florida",
     "campus": "Jacksonville, Florida",
@@ -19,13 +19,17 @@
     "ratingUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=nP9fomM_sk-aitm90DIfmt6hjfGQVi1NnuZVQD2XtwFURFNNRUVIRURIVlFXQzVMS1k2VUc4QjZRUi4u",
     "ratingCloses": "13:30",
     "award": {
-      "title": "Audience Choice Award",
+      "title": "How the Audience Choice Award works",
       "text": [
         "In addition to the awards determined by the judging panel, MRFA Research Day recognizes one presentation with the Audience Choice Award, selected by the attendees in Kinne Auditorium.",
         "After each talk, select “Rate this talk” in the program or scan the code below, choose the presentation, and rate it from one to five stars. Each talk becomes available for rating when it begins.",
         "To keep the results fair, ratings require a Mayo Clinic sign-in, only one rating per attendee per presentation is counted, and ratings by a presentation’s own authors are excluded. Voting closes at 1:30 PM, and the recipient will be announced at the Awards Ceremony at 2:15 PM. Audience ratings are separate from the judges’ evaluations."
       ]
-    }
+    },
+    "meetingCitation": "Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL",
+    "calStart": "09:30",
+    "calEnd": "14:30",
+    "utcOffset": "-04:00"
   },
   "agenda": [
     {
@@ -129,7 +133,9 @@
       "abstract": true,
       "degrees": "PhD",
       "role": "Research Associate",
-      "department": "Department of Neuroscience"
+      "department": "Department of Neuroscience",
+      "code": "O-01",
+      "citation": "Bodart-Santos V, Ravula AR, You Y, et al. Targeting P2RX7 to Suppress Innate Immune Activation Induced by Extracellular Vesicles Carrying Mitochondrial Cargo in Tauopathy. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-01."
     },
     {
       "id": "s1-02",
@@ -147,7 +153,9 @@
       "abstract": true,
       "degrees": "MD, PhD",
       "role": "Research Fellow",
-      "department": "Division of Gastroenterology and Hepatology"
+      "department": "Division of Gastroenterology and Hepatology",
+      "code": "O-02",
+      "citation": "Hu J, Faheem M, Clark JR, et al. Development of a Novel KrasFLEx-G12D Mouse Model for Kras-driven Cancer Research. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-02."
     },
     {
       "id": "s1-03",
@@ -165,7 +173,9 @@
       "abstract": true,
       "degrees": "PhD",
       "role": "Research Associate",
-      "department": "Department of Neuroscience"
+      "department": "Department of Neuroscience",
+      "code": "O-03",
+      "citation": "Qiao W, Ikezu TC, Sun H, et al. APOE genotype modulates glial responses and myelin homeostasis during aging. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-03."
     },
     {
       "id": "s1-04",
@@ -183,7 +193,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Division of Vascular and Endovascular Surgery"
+      "department": "Division of Vascular and Endovascular Surgery",
+      "code": "O-04",
+      "citation": "Sanchez-Calderin D, Meschia JF, Kumar G, et al. Early Revascularization in Symptomatic Carotid Artery Disease Leads to Better Outcomes: A Ten-Year Multi-Center Cohort Analysis. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-04."
     },
     {
       "id": "s1-05",
@@ -201,7 +213,9 @@
       "abstract": true,
       "degrees": "",
       "role": "Graduate Student",
-      "department": "Division of Nephrology"
+      "department": "Division of Nephrology",
+      "code": "O-05",
+      "citation": "Learmonth M, Zinn C, Rueda I, Hickson LJ. Combining Mesenchymal Stromal Cell-Conditioned Media with Contemporary Pharmacotherapy Modulates Hyperglycemic Kidney Tubular Injury and Geroprotective Signaling In Vitro. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-05."
     },
     {
       "id": "s1-06",
@@ -219,7 +233,9 @@
       "abstract": true,
       "degrees": "PhD",
       "role": "Research Associate",
-      "department": "Department of Laboratory Medicine and Pathology"
+      "department": "Department of Laboratory Medicine and Pathology",
+      "code": "O-06",
+      "citation": "Sears T, Li A, Horbinski CM. Prolonged Vorasidenib Treatment Accelerates Growth in a Subset of High-Grade IDH-Mutant Glioma Cultures. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-06."
     },
     {
       "id": "s1-07",
@@ -237,7 +253,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Department of Pain Medicine"
+      "department": "Department of Pain Medicine",
+      "code": "O-07",
+      "citation": "Martinez F, Encalada S, Hoprich J, Mosquera-Moscoso J, Sletten C. Adverse Childhood Experiences and Functional Outcomes Following Interdisciplinary Pain Rehabilitation: A Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-07."
     },
     {
       "id": "s1-08",
@@ -255,7 +273,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Department of Physical Medicine and Rehabilitation"
+      "department": "Department of Physical Medicine and Rehabilitation",
+      "code": "O-08",
+      "citation": "Monge Ferrin A, Rehmat MA, Pagan Rosado R. Wheelchair Propulsion Type and Musculoskeletal Burden After Spinal Cord Injury. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-08."
     },
     {
       "presenter": "Ahmed Saad",
@@ -273,7 +293,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Department of Neurology"
+      "department": "Department of Neurology",
+      "code": "O-09",
+      "citation": "Saad A, Khand Y, Vallamchetla SK, et al. Epilepsy as a Marker of Cognitive Decline in Cerebral Amyloid Angiopathy: Evidence from a Large Multi-Institutional Cohort. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-09."
     },
     {
       "id": "s1-10",
@@ -291,7 +313,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Associate",
-      "department": "Department of Neurosurgery"
+      "department": "Department of Neurosurgery",
+      "code": "O-10",
+      "citation": "Suarez Meade P, Dove N, Liu Y, et al. Single-cell spatial multi-omic mapping of glioblastoma reveals two targetable invasion programs and a margin invasion burden that predicts early progression. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-10."
     },
     {
       "id": "s1-11",
@@ -309,7 +333,9 @@
       "abstract": false,
       "degrees": "MD",
       "role": "Research Fellow",
-      "department": "Women's Health and Internal Medicine"
+      "department": "Women's Health and Internal Medicine",
+      "code": "O-11",
+      "citation": "Castillo Silva JI. Network Analysis of Perimenopausal Symptoms. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-11."
     },
     {
       "id": "s2-01",
@@ -327,7 +353,9 @@
       "abstract": true,
       "degrees": "PhD",
       "role": "Research Fellow",
-      "department": "Department of Neuroscience"
+      "department": "Department of Neuroscience",
+      "code": "O-12",
+      "citation": "Samtani G, Ellison J, Newington J, et al. Therapeutic potential of antisense oligonucleotide targeting of Tau Tubulin Kinase 1 in models of Alzheimer's disease. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-12."
     },
     {
       "id": "s2-02",
@@ -345,7 +373,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Division of Endocrinology, Diabetes, and Metabolism"
+      "department": "Division of Endocrinology, Diabetes, and Metabolism",
+      "code": "O-13",
+      "citation": "Sepulveda D, Maier AR, Bennett PK, et al. What Patients Want: Are Weight-Loss Goals Realistic Relative to the Strategies Patients Are Willing to Adopt?. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-13."
     },
     {
       "id": "s2-03",
@@ -363,7 +393,9 @@
       "abstract": true,
       "degrees": "PhD",
       "role": "Research Fellow",
-      "department": "Department of Neuroscience"
+      "department": "Department of Neuroscience",
+      "code": "O-14",
+      "citation": "Tatsumoto A, Ravula AR, Gibbs B, et al. Humanized MAPT and APP Increase Neuronal Excitability and Accelerate Phosphorylated Tau Propagation in a Novel Entorhinal Cortex Layer II–Targeted Mouse Model of Early Alzheimer's Disease. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-14."
     },
     {
       "id": "s2-04",
@@ -381,7 +413,9 @@
       "abstract": true,
       "degrees": "MBBS",
       "role": "Research Fellow",
-      "department": "Division of Heart Failure and Transplantation"
+      "department": "Division of Heart Failure and Transplantation",
+      "code": "O-15",
+      "citation": "Desai A, Klingbeil R, Mautong H, et al. Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-15."
     },
     {
       "id": "s2-05",
@@ -399,7 +433,9 @@
       "abstract": true,
       "degrees": "PhD, MS",
       "role": "Research Fellow",
-      "department": "Department of Molecular Medicine"
+      "department": "Department of Molecular Medicine",
+      "code": "O-16",
+      "citation": "Sengupta S, Yamaguchi A, Nulk A, et al. Metabolic modulations of CAR T cells to improve anti-tumor efficacy in Glioblastoma. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-16."
     },
     {
       "id": "s2-06",
@@ -417,7 +453,9 @@
       "abstract": true,
       "degrees": "MBBS",
       "role": "Research Trainee",
-      "department": "Department of Critical Care Medicine"
+      "department": "Department of Critical Care Medicine",
+      "code": "O-17",
+      "citation": "Kafle R, Poudel P, Quiza K, et al. Impact of Extracorporeal Membrane Oxygenation as a Bridge to Lung Transplantation on Perioperative Outcomes, Renal Trajectory and Resource Utilization. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-17."
     },
     {
       "id": "s2-07",
@@ -435,7 +473,9 @@
       "abstract": true,
       "degrees": "MBBS",
       "role": "Research Trainee",
-      "department": "Department of Neurology"
+      "department": "Department of Neurology",
+      "code": "O-18",
+      "citation": "Khand Y, Tarabeah S, Saad A, Tatum W, Freund B. Risk of Incident Seizures and Epilepsy After a Diagnosis of Idiopathic Intracranial Hypertension: A Matched Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-18."
     },
     {
       "id": "s2-08",
@@ -453,7 +493,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Division of General Internal Medicine"
+      "department": "Division of General Internal Medicine",
+      "code": "O-19",
+      "citation": "Magana AJ, Hernandez Romero TV, Sosa Carcamo Z, et al. The Predictive Value of SHAPE Test in Predicting Perioperative Major Adverse Cardiac Events: A Single-Center Retrospective Analysis. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-19."
     },
     {
       "id": "s2-09",
@@ -471,7 +513,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Trainee",
-      "department": "Division of Vascular and Endovascular Surgery"
+      "department": "Division of Vascular and Endovascular Surgery",
+      "code": "O-20",
+      "citation": "Inal E, Erben Y, Melo-Gonzalez N, et al. MAP Score and Abdominal Aortic Calcium Score Capture Distinct Operative and Renal Risk in Partial Nephrectomy: A Single-Center Retrospective Study. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-20."
     },
     {
       "id": "s2-10",
@@ -489,7 +533,9 @@
       "abstract": true,
       "degrees": "MD",
       "role": "Research Fellow",
-      "department": "Divisions of Radiology and Surgery"
+      "department": "Divisions of Radiology and Surgery",
+      "code": "O-21",
+      "citation": "Verastegui A, Castaneda R, Sepulveda D, Acosta A, Adedinsewo DA, Hurtado Andrade MD. Cardiac Structural Recovery with GLP-1 Receptor Agonist Therapy in Heart Failure: A Multicenter Propensity-Matched Study. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-21."
     },
     {
       "id": "s2-11",
@@ -507,13 +553,15 @@
       "abstract": true,
       "degrees": "PhD",
       "role": "Research Associate",
-      "department": "Department of Quantitative Health Sciences"
+      "department": "Department of Quantitative Health Sciences",
+      "code": "O-22",
+      "citation": "Wang F, Maxim AH, Franco C, et al. Information That Sparks Dialogue: Supporting Clinical Trial Communication Through an AI-Enabled Portal. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-22."
     }
   ],
   "posters": [
     {
       "id": "p01",
-      "number": "P1",
+      "number": "P-01",
       "presenter": "Yugant Khand",
       "degrees": "MBBS",
       "role": "Research Trainee",
@@ -521,11 +569,13 @@
       "category": "Basic Sciences",
       "title": "Cerebral Microbleeds and Risk of Cognitive Impairment and Mortality After Traumatic Brain Injury: A Real-World Retrospective Cohort Study",
       "pi": "Kevin Barrett, M.D.",
-      "abstract": true
+      "abstract": true,
+      "code": "P-01",
+      "citation": "Khand Y, Afia M, Barrett K. Cerebral Microbleeds and Risk of Cognitive Impairment and Mortality After Traumatic Brain Injury: A Real-World Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-01."
     },
     {
       "id": "p02",
-      "number": "P2",
+      "number": "P-02",
       "presenter": "Anna Nulk",
       "degrees": "PhD",
       "role": "",
@@ -533,11 +583,13 @@
       "category": "Basic Sciences",
       "title": "Atorvastatin-Mediated Targeting of Lipid Metabolic Reprogramming in Glioblastoma",
       "pi": "Loic Deleyrolle",
-      "abstract": true
+      "abstract": true,
+      "code": "P-02",
+      "citation": "Nulk AR, Redmon E, Searl N, et al. Atorvastatin-Mediated Targeting of Lipid Metabolic Reprogramming in Glioblastoma. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-02."
     },
     {
       "id": "p03",
-      "number": "P3",
+      "number": "P-03",
       "presenter": "Ayman H. Faroqi",
       "degrees": "",
       "role": "",
@@ -545,11 +597,13 @@
       "category": "Translational Sciences",
       "title": "Development and Validation of CRISPR Interference to Reduce Alpha-Synuclein Expression as a Therapeutic Strategy for Synucleinopathies",
       "pi": "Pam J. McLean",
-      "abstract": true
+      "abstract": true,
+      "code": "P-03",
+      "citation": "Faroqi AH, Amerna D, Regalia D, et al. Development and Validation of CRISPR Interference to Reduce Alpha-Synuclein Expression as a Therapeutic Strategy for Synucleinopathies. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-03."
     },
     {
       "id": "p04",
-      "number": "P4",
+      "number": "P-04",
       "presenter": "Dhruva Kumar Lokesh",
       "degrees": "",
       "role": "",
@@ -557,11 +611,13 @@
       "category": "Translational Sciences",
       "title": "Complex Wound Healing Using APLICOR 3D Printed Fat Graft: An Early Institutional Case Series",
       "pi": "Dr. Thea Price",
-      "abstract": true
+      "abstract": true,
+      "code": "P-04",
+      "citation": "Thiyagarajan SK, Garner S, Lokesh DK, Clements N, Price T. Complex Wound Healing Using APLICOR 3D Printed Fat Graft: An Early Institutional Case Series. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-04."
     },
     {
       "id": "p05",
-      "number": "P5",
+      "number": "P-05",
       "presenter": "Dhruva Kumar Lokesh",
       "degrees": "",
       "role": "",
@@ -569,11 +625,13 @@
       "category": "Translational Sciences",
       "title": "Filling the Gap: A Novel Approach to Crohn’s Perianal Fistula Closure Using APLICOR 3D Printed Stromal Vascular Fraction Graft",
       "pi": "Dr. Thea Price",
-      "abstract": true
+      "abstract": true,
+      "code": "P-05",
+      "citation": "Lokesh DK, Deleon M, Stochhi L, Price T. Filling the Gap: A Novel Approach to Crohn’s Perianal Fistula Closure Using APLICOR 3D Printed Stromal Vascular Fraction Graft. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-05."
     },
     {
       "id": "p06",
-      "number": "P6",
+      "number": "P-06",
       "presenter": "Shaina Matveev",
       "degrees": "",
       "role": "",
@@ -581,11 +639,13 @@
       "category": "Translational Sciences",
       "title": "High Resolution In Situ Visualization of Astrocyte-Associated Nanoscale Structures Through Combined TurboID Labeling and Expansion Microscopy",
       "pi": "Ikezu Lab / Tsuneya Ikezu",
-      "abstract": true
+      "abstract": true,
+      "code": "P-06",
+      "citation": "Matveev S, Akamine S, McQuaker-Kajiwara J, et al. High Resolution In Situ Visualization of Astrocyte-Associated Nanoscale Structures Through Combined TurboID Labeling and Expansion Microscopy. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-06."
     },
     {
       "id": "p07",
-      "number": "P7",
+      "number": "P-07",
       "presenter": "Faithlyn Moss",
       "degrees": "",
       "role": "",
@@ -593,11 +653,13 @@
       "category": "Translational Sciences",
       "title": "Aligning Expectations in Community Advisory Board - Research Team Partnerships: Recruitment as an Opportunity for Early Partnership Building",
       "pi": "Dr. Janice Krieger",
-      "abstract": true
+      "abstract": true,
+      "code": "P-07",
+      "citation": "Moss F, Kauer T, Wang F, et al. Aligning Expectations in Community Advisory Board - Research Team Partnerships: Recruitment as an Opportunity for Early Partnership Building. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-07."
     },
     {
       "id": "p08",
-      "number": "P8",
+      "number": "P-08",
       "presenter": "Aarti Desai",
       "degrees": "MBBS",
       "role": "Research Fellow",
@@ -605,11 +667,13 @@
       "category": "Clinical Sciences",
       "title": "Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support",
       "pi": "Rohan Goswami",
-      "abstract": true
+      "abstract": true,
+      "code": "P-08",
+      "citation": "Desai A, Mautong H, Sharma S, Ruiz J, Leoni J, Goswami R. Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-08."
     },
     {
       "id": "p09",
-      "number": "P9",
+      "number": "P-09",
       "presenter": "Felix Lopez Dominici",
       "degrees": "MD",
       "role": "",
@@ -617,11 +681,13 @@
       "category": "Clinical Sciences",
       "title": "Pancreatic Findings on Prior Low-Dose Chest CT Examinations Before Pancreatic Ductal Adenocarcinoma Diagnosis: A Blinded Review Using RADPEER Criteria",
       "pi": "M. B. Wallace",
-      "abstract": true
+      "abstract": true,
+      "code": "P-09",
+      "citation": "Lopez Dominici F, Osagiede O, LeGout J, Bolan C, Wallace MB. Pancreatic Findings on Prior Low-Dose Chest CT Examinations Before Pancreatic Ductal Adenocarcinoma Diagnosis: A Blinded Review Using RADPEER Criteria. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-09."
     },
     {
       "id": "p10",
-      "number": "P10",
+      "number": "P-10",
       "presenter": "Harshvardhan G. Iyer",
       "degrees": "MBBS",
       "role": "",
@@ -629,11 +695,13 @@
       "category": "Clinical Sciences",
       "title": "Comparative Outcomes of En Bloc Resection, Definitive Radiotherapy, and Combined Modality Treatment for Sacral Chordomas: A Systematic Review and Meta-Analysis",
       "pi": "Akinduro Spine Oncology Laboratory / Dr. Oluwaseun O. Akinduro",
-      "abstract": true
+      "abstract": true,
+      "code": "P-10",
+      "citation": "Iyer HG, Vega-Medina PA, Ghaderi S, Boktor B, Johnson WR IV, Akinduro OO. Comparative Outcomes of En Bloc Resection, Definitive Radiotherapy, and Combined Modality Treatment for Sacral Chordomas: A Systematic Review and Meta-Analysis. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-10."
     },
     {
       "id": "p11",
-      "number": "P11",
+      "number": "P-11",
       "presenter": "Harshvardhan G. Iyer",
       "degrees": "MBBS",
       "role": "",
@@ -641,11 +709,13 @@
       "category": "Clinical Sciences",
       "title": "Comparative Outcomes of Endonasal and Transoral Odontoidectomy: An Institutional Experience and Meta-Analysis",
       "pi": "Akinduro Spine Oncology Laboratory / Dr. Oluwaseun O. Akinduro",
-      "abstract": true
+      "abstract": true,
+      "code": "P-11",
+      "citation": "Iyer HG, Vega-Medina PA, Ghaderi S, et al. Comparative Outcomes of Endonasal and Transoral Odontoidectomy: An Institutional Experience and Meta-Analysis. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-11."
     },
     {
       "id": "p12",
-      "number": "P12",
+      "number": "P-12",
       "presenter": "Yugant Khand",
       "degrees": "MBBS",
       "role": "Research Trainee",
@@ -653,11 +723,13 @@
       "category": "Clinical Sciences",
       "title": "EEG-Derived Brain Age as a Biomarker of Neurobiological Aging: A Longitudinal Multi-Pipeline Validation Study",
       "pi": "Brin Freund",
-      "abstract": true
+      "abstract": true,
+      "code": "P-12",
+      "citation": "Khand Y, Colella FE, Abdelhameed A, et al. EEG-Derived Brain Age as a Biomarker of Neurobiological Aging: A Longitudinal Multi-Pipeline Validation Study. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-12."
     },
     {
       "id": "p13",
-      "number": "P13",
+      "number": "P-13",
       "presenter": "Dhruva Kumar Lokesh",
       "degrees": "",
       "role": "",
@@ -665,11 +737,13 @@
       "category": "Clinical Sciences",
       "title": "Prevalence of Micronutrient Deficiencies in Patients with Chronic Wounds: A Descriptive Analysis of 344 Patients",
       "pi": "Dr. Thea Price",
-      "abstract": true
+      "abstract": true,
+      "code": "P-13",
+      "citation": "Lokesh DK, Muniz A, Price T. Prevalence of Micronutrient Deficiencies in Patients with Chronic Wounds: A Descriptive Analysis of 344 Patients. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-13."
     },
     {
       "id": "p14",
-      "number": "P14",
+      "number": "P-14",
       "presenter": "Dhruva Kumar Lokesh",
       "degrees": "",
       "role": "",
@@ -677,11 +751,13 @@
       "category": "Clinical Sciences",
       "title": "The effectiveness of Minimally Invasive Therapy for Hidradenitis Suppurative (MITHS) as a maintenance therapy in Hidradenitis Suppurativa: A novel treatment approach",
       "pi": "Dr. Thea Price",
-      "abstract": true
+      "abstract": true,
+      "code": "P-14",
+      "citation": "Lokesh DK, Muniz A, Price T. The effectiveness of Minimally Invasive Therapy for Hidradenitis Suppurative (MITHS) as a maintenance therapy in Hidradenitis Suppurativa: A novel treatment approach. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-14."
     },
     {
       "id": "p15",
-      "number": "P15",
+      "number": "P-15",
       "presenter": "Fiorela Martinez",
       "degrees": "MD",
       "role": "Research Trainee",
@@ -689,11 +765,13 @@
       "category": "Clinical Sciences",
       "title": "Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center",
       "pi": "Christine Hunt",
-      "abstract": true
+      "abstract": true,
+      "code": "P-15",
+      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-15."
     },
     {
       "id": "p16",
-      "number": "P16",
+      "number": "P-16",
       "presenter": "Andrea Muniz",
       "degrees": "MD",
       "role": "",
@@ -701,11 +779,13 @@
       "category": "Clinical Sciences",
       "title": "Redefining heart transplant eligibility – Heart-After-Liver Transplant (HALT) as an immunologic desensitization strategy in highly sensitized patients",
       "pi": "Rohan Goswami",
-      "abstract": true
+      "abstract": true,
+      "code": "P-16",
+      "citation": "Muniz A, Ruiz J, Goswami R, et al. Redefining heart transplant eligibility – Heart-After-Liver Transplant (HALT) as an immunologic desensitization strategy in highly sensitized patients. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-16."
     },
     {
       "id": "p17",
-      "number": "P17",
+      "number": "P-17",
       "presenter": "Aaliya Rahman",
       "degrees": "",
       "role": "",
@@ -713,11 +793,13 @@
       "category": "Clinical Sciences",
       "title": "Association of ACP at ICU Admission with Outcomes and Clinical Interventions",
       "pi": "Ricardo Diaz Milian",
-      "abstract": true
+      "abstract": true,
+      "code": "P-17",
+      "citation": "Rahman A, Diaz Milian R, Borkar S, Menser T, Guru P. Association of ACP at ICU Admission with Outcomes and Clinical Interventions. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-17."
     },
     {
       "id": "p18",
-      "number": "P18",
+      "number": "P-18",
       "presenter": "Taylor Rakauskas",
       "degrees": "",
       "role": "",
@@ -725,11 +807,13 @@
       "category": "Clinical Sciences",
       "title": "Accuracy of Computer-Assisted-Navigation in Total Ankle Arthroplasty Surgery Using Computed Tomography",
       "pi": "Edward Haupt",
-      "abstract": true
+      "abstract": true,
+      "code": "P-18",
+      "citation": "Rakauskas T, El Masry S, Hamad C, Boux De Casson F, Haupt E. Accuracy of Computer-Assisted-Navigation in Total Ankle Arthroplasty Surgery Using Computed Tomography. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-18."
     },
     {
       "id": "p19",
-      "number": "P19",
+      "number": "P-19",
       "presenter": "Taylor Rakauskas",
       "degrees": "",
       "role": "",
@@ -737,11 +821,13 @@
       "category": "Clinical Sciences",
       "title": "Retrospective Review of Upper Extremity Acral and Nonacral Glomus Tumors",
       "pi": "Edward Haupt",
-      "abstract": true
+      "abstract": true,
+      "code": "P-19",
+      "citation": "Rakauskas T, Tarrat Guadalupe C, Sherman C, Aziz K. Retrospective Review of Upper Extremity Acral and Nonacral Glomus Tumors. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-19."
     },
     {
       "id": "p20",
-      "number": "P20",
+      "number": "P-20",
       "presenter": "Anvi K. Reddy",
       "degrees": "MBBS",
       "role": "",
@@ -749,11 +835,13 @@
       "category": "Clinical Sciences",
       "title": "Hypofractionated Radiotherapy in Glioblastoma: A Review of Comparative Effects on Safety, Tumor Control, and Survival",
       "pi": "Daniel M. Trifiletti, MD",
-      "abstract": true
+      "abstract": true,
+      "code": "P-20",
+      "citation": "Reddy AK, Trifiletti DM, Lehrer E, et al. Hypofractionated Radiotherapy in Glioblastoma: A Review of Comparative Effects on Safety, Tumor Control, and Survival. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-20."
     },
     {
       "id": "p21",
-      "number": "P21",
+      "number": "P-21",
       "presenter": "Jiakun Yu",
       "degrees": "",
       "role": "",
@@ -761,7 +849,9 @@
       "category": "Clinical Sciences",
       "title": "The Development and Pilot Testing of a Shared Decision-Making Encounter Aid for Weight Management Decisions",
       "pi": "Dr. Abu Dabrh",
-      "abstract": true
+      "abstract": true,
+      "code": "P-21",
+      "citation": "Abu Dabrh AM, Gala KS, Yu J, et al. The Development and Pilot Testing of a Shared Decision-Making Encounter Aid for Weight Management Decisions. Presented at: Mayo Clinic Research Fellow Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-21."
     }
   ],
   "judges": [],
@@ -794,5 +884,28 @@
       "bio": "Regina Castaneda, MD, chairs the Mayo Clinic Research Fellow Association in Florida and is a postdoctoral research fellow in women’s health and internal medicine at Mayo Clinic in Jacksonville. Her research focuses on menopause, hormone therapy, and cardiometabolic health, with a particular interest in obesity treatment for midlife women. She has led multiple first-author publications in leading journals, including The Lancet, Annals of Internal Medicine, and JAMA, and her work on hormone therapy and tirzepatide was featured by the Endocrine Society at ENDO 2025. Her honors include the New Investigator Award from The Menopause Society (2025) and the MRFA Translational Research Award."
     }
   ],
-  "judgesNote": "The judging panel evaluates every oral and poster presentation for scientific merit, methodology, and clarity of presentation. Judges will be announced soon."
+  "judgesNote": "The judging panel evaluates every oral and poster presentation for scientific merit, methodology, and clarity of presentation. Judges will be announced soon.",
+  "awards": [
+    {
+      "id": "best-oral",
+      "title": "Best Full Oral Presentation",
+      "winner": null
+    },
+    {
+      "id": "best-rapid",
+      "title": "Best Rapid-Fire Presentation",
+      "winner": null
+    },
+    {
+      "id": "best-poster",
+      "title": "Best Poster Presentation",
+      "winner": null
+    },
+    {
+      "id": "audience",
+      "title": "Audience Choice Award",
+      "winner": null
+    }
+  ],
+  "awardsNote": "Recipients will be announced at the Awards Ceremony at 2:15 PM on October 29 and posted here."
 }

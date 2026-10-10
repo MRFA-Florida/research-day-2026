@@ -50,7 +50,7 @@
 
     $("abs").innerHTML = `
       <p class="abs-meta">
-        <span class="fmt ${/rapid/i.test(t.format) ? "rapid" : "full"}">${esc(t.format)}</span>
+        <span class="fmt ${/rapid/i.test(t.format) ? "rapid" : "full"}">${esc(t.format)}</span>${t.code ? `<span class="abs-code">Abstract ${esc(t.code)}</span>` : ""}
         <span>Session ${roman(t.session)}, talk ${esc(t.order)}</span>
         ${t.start ? `<span class="sep" aria-hidden="true"></span><span>${fmt(t.start)}${t.minutes ? `, ${t.minutes} min` : ""}</span>` : ""}
         ${a && a.category ? `<span class="sep" aria-hidden="true"></span><span>${esc(a.category)}</span>` : ""}
@@ -67,6 +67,7 @@
 
       <article class="abs-body">${body}
         ${a && a.keywords ? `<p class="abs-kw"><strong>Keywords:</strong> ${esc(a.keywords)}</p>` : ""}
+        ${window.MRFA && a ? MRFA.citeBlock(t) : ""}
       </article>
 
       <div class="abs-actions">
@@ -75,11 +76,12 @@
                ${window.MRFARating ? MRFARating.button(t, data.event) : ""}
                <button class="btn ghost" type="button" id="show-qr">Show QR code</button>`
             : `<span class="btn" aria-disabled="true">Questions open on the day</span>`}
-        <button class="btn ghost" type="button" onclick="window.print()">Print</button>
       </div>
+      ${window.MRFA ? `<div class="mini-row">${MRFA.saveBtn(t.id)}${MRFA.calBtn(t.id)}<button class="mini-btn" type="button" onclick="window.print()"><span aria-hidden="true">⎙</span> Print</button></div>` : ""}
       <nav class="abs-nav" aria-label="Other abstracts">${navLink(prev, "prev", "Previous")}${navLink(next, "next", "Next")}</nav>`;
 
     if (window.MRFARating) MRFARating.init(data.event);
+    wireExtras(data, t);
     const qrBtn = $("show-qr");
     if (qrBtn) qrBtn.addEventListener("click", () => {
       $("qr-sub").innerHTML = `Then choose <strong>${esc(pick)}</strong> in the form.`;
@@ -107,7 +109,7 @@
     const nav = (x, cls, label) => x ? `<a class="${cls}" href="abstract.html?poster=${esc(x.id)}"><small>${label}: ${esc(x.number)}</small><span>${esc(clean(x.presenter))}</span></a>` : "";
     const who = [p.role, p.department].filter(Boolean).join(", ");
     $("abs").innerHTML = `
-      <p class="abs-meta"><span class="fmt poster">Poster ${esc(p.number)}</span><span>Poster sessions I and II</span>
+      <p class="abs-meta"><span class="fmt poster">Poster</span><span class="abs-code">Abstract ${esc(p.code || p.number)}</span><span>Poster sessions I and II</span>
         ${p.category ? `<span class="sep" aria-hidden="true"></span><span>${esc(p.category)}</span>` : ""}</p>
       <h1 class="abs-title">${esc(p.title)}</h1>
       <p class="abs-authors">${authors}</p>
@@ -117,9 +119,20 @@
         <div class="initials" aria-hidden="true"><span>${esc(initials(p.presenter))}</span></div>
         <div><strong>${esc(p.degrees ? `${p.presenter}, ${p.degrees}` : p.presenter)}</strong>${who ? `<span class="small role">${esc(who)}</span>` : ""}<span class="small">Presenting at the poster sessions, 10:30 AM and 1:15 PM</span></div>
       </div>
-      <article class="abs-body">${body}${a.keywords ? `<p class="abs-kw"><strong>Keywords:</strong> ${esc(a.keywords)}</p>` : ""}</article>
-      <div class="abs-actions"><button class="btn ghost" type="button" onclick="window.print()">Print</button></div>
+      <article class="abs-body">${body}${a.keywords ? `<p class="abs-kw"><strong>Keywords:</strong> ${esc(a.keywords)}</p>` : ""}${window.MRFA ? MRFA.citeBlock(p) : ""}</article>
+      ${window.MRFA ? `<div class="mini-row abs-mini">${MRFA.saveBtn(p.id)}<button class="mini-btn" type="button" onclick="window.print()"><span aria-hidden="true">⎙</span> Print</button></div>` : ""}
       <nav class="abs-nav" aria-label="Other posters">${nav(list[i - 1], "prev", "Previous")}${nav(list[i + 1], "next", "Next")}</nav>`;
+    wireExtras(data, p);
+  }
+
+  function wireExtras(data, item) {
+    if (!window.MRFA) return;
+    document.querySelectorAll("[data-copy-cite]").forEach((b) => b.addEventListener("click", () => {
+      MRFA.copyText(item.citation, b);
+    }));
+    document.querySelectorAll("[data-save]").forEach((b) => b.addEventListener("click", () => MRFA.saved.toggle(b.dataset.save)));
+    document.querySelectorAll("[data-cal]").forEach((b) => b.addEventListener("click", () =>
+      MRFA.calendar.talks(data.event, [item], `${item.code}-${item.presenter.split(" ").pop()}.ics`)));
   }
 
   // Comma-separated author list, where credentials like "MD" also follow commas.
