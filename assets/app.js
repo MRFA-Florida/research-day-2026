@@ -115,6 +115,7 @@
       </div>
       ${p.bio ? `<p class="p-bio">${esc(p.bio)}</p>` : ""}
     </li>`;
+    $("committee-list").innerHTML = (data.committee || []).map(person).join("");
     $("moderator-list").innerHTML = (data.moderators || []).map(person).join("");
     $("judge-list").innerHTML = (data.judges || []).map(person).join("");
     if (data.judgesNote) { $("judges-note").textContent = data.judgesNote; $("judges-note").hidden = false; }
