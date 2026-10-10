@@ -244,3 +244,17 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .slot.posters .slot-head, .slot.plenary .slot-head { flex-wrap: wrap; }
 .slot.posters .slot-meta, .slot.plenary .slot-meta { flex-basis: 100%; margin-top: .15rem; font-size: .9rem; }
 .fmt { white-space: nowrap; }
+
+/* Moderator and judges */
+.panel-sub { font-size: 1.05rem; color: var(--blue); margin: 1.25rem 0 .6rem; }
+.panel-sub:first-of-type { margin-top: 0; }
+.people { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.person { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem; }
+.person-head { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; align-items: center; }
+.initials.lg { width: 5.5rem; height: 5.5rem; font-size: 1.5rem; box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--blue); }
+.person h4 { font-family: var(--display); font-size: 1.2rem; margin: 0 0 .2rem; }
+.p-title { margin: 0; font-weight: 700; font-size: .95rem; }
+.p-role { margin: .1rem 0 0; color: var(--muted); font-size: .92rem; }
+.p-tag { display: inline-block; margin-top: .5rem; font: 700 .78rem var(--body); padding: .25rem .55rem; border-radius: 999px; background: var(--blue-tint); color: var(--blue); }
+.p-bio { margin: .9rem 0 0; line-height: 1.6; }
+.panel-note { margin: 0; padding: 1rem; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); }

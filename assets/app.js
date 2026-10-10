@@ -93,10 +93,22 @@
     renderPosters("");
 
     // Info
-    if ((data.judges || []).length) {
-      $("judges-wrap").hidden = false;
-      $("judge-list").innerHTML = data.judges.map((j) => `<li>${esc(j)}</li>`).join("");
-    }
+    // Moderator and judges
+    const person = (p) => `<li class="person">
+      <div class="person-head">
+        ${avatar({ presenter: p.name, photo: p.photo }, "lg")}
+        <div>
+          <h4>${esc(p.degrees ? `${p.name}, ${p.degrees}` : p.name)}</h4>
+          ${p.title ? `<p class="p-title">${esc(p.title)}</p>` : ""}
+          ${p.role ? `<p class="p-role">${esc(p.role)}</p>` : ""}
+          ${p.sessions ? `<span class="p-tag">${esc(p.sessions)}</span>` : ""}
+        </div>
+      </div>
+      ${p.bio ? `<p class="p-bio">${esc(p.bio)}</p>` : ""}
+    </li>`;
+    $("moderator-list").innerHTML = (data.moderators || []).map(person).join("");
+    $("judge-list").innerHTML = (data.judges || []).map(person).join("");
+    if (data.judgesNote) { $("judges-note").textContent = data.judgesNote; $("judges-note").hidden = false; }
     $("faq").innerHTML = (data.info || []).map((f) => `<dt>${esc(f.q)}</dt><dd>${esc(f.a)}</dd>`).join("");
     if (e.contactEmail) $("faq").innerHTML += `<dt>Email</dt><dd><a href="mailto:${esc(e.contactEmail)}">${esc(e.contactEmail)}</a></dd>`;
     makeQR($("site-qr"), location.href.split("#")[0].split("?")[0], 112);

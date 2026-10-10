@@ -782,5 +782,17 @@
       "q": "Contact",
       "a": "Questions about the day? Contact the MRFA organizing committee."
     }
-  ]
+  ],
+  "moderators": [
+    {
+      "name": "Regina Castaneda",
+      "degrees": "MD",
+      "title": "Chair, Mayo Clinic Research Fellow Association (MRFA), Florida",
+      "role": "Postdoctoral Research Fellow, Women's Health and Internal Medicine",
+      "photo": "assets/img/speakers/castaneda-regina.jpg",
+      "sessions": "Moderating Sessions I and II",
+      "bio": "Regina Castaneda, MD, chairs the Mayo Clinic Research Fellow Association in Florida and is a postdoctoral research fellow at Mayo Clinic in Jacksonville, where her work focuses on women’s health and internal medicine. Her research examines how menopause and hormone therapy shape cardiometabolic health and response to obesity treatment in midlife women. She is first author of a study in The Lancet Obstetrics, Gynaecology & Women’s Health showing that postmenopausal women using hormone therapy lost about 35% more weight on tirzepatide than those taking tirzepatide alone, and she received a New Investigator Award from The Menopause Society in 2025."
+    }
+  ],
+  "judgesNote": "The judging panel evaluates every oral and poster presentation for scientific merit, methodology, and clarity of presentation. Judges will be announced soon."
 }

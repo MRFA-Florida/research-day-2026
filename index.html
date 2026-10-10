@@ -44,6 +44,7 @@
     <div class="wrap tabs-inner">
       <a href="#program">Program</a>
       <a href="#speakers">Speakers</a>
+      <a href="#panel">Panel</a>
       <a href="#posters" id="tab-posters" hidden>Posters</a>
       <a href="#info">Info</a>
       <button type="button" class="theme-btn" id="theme-btn" aria-label="Theme">
@@ -61,6 +62,15 @@
       <p class="lede" id="event-intro"></p>
       <p class="notice" id="event-notice" hidden></p>
       <ol class="run" id="run"></ol>
+    </section>
+
+    <section id="panel" class="wrap block" aria-labelledby="h-panel">
+      <h2 id="h-panel">Moderator and judges</h2>
+      <h3 class="panel-sub">Moderator</h3>
+      <ul class="people" id="moderator-list"></ul>
+      <h3 class="panel-sub">Judging panel</h3>
+      <ul class="people" id="judge-list"></ul>
+      <p class="panel-note" id="judges-note" hidden></p>
     </section>
 
     <section id="speakers" class="wrap block" aria-labelledby="h-speakers">
@@ -89,10 +99,6 @@
 
     <section id="info" class="wrap block" aria-labelledby="h-info">
       <h2 id="h-info">Info</h2>
-      <div id="judges-wrap" hidden>
-        <h3>Judges</h3>
-        <ul class="judges" id="judge-list"></ul>
-      </div>
       <dl class="faq" id="faq"></dl>
       <div class="award-card" id="award-card" hidden>
         <h3 id="award-title">Audience Choice Award</h3>
