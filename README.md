@@ -78,6 +78,16 @@ Use a talk ID (`s1-04`) or poster ID (`p09`). Optional: `"note": "Runner-up: …
 ### Citations
 Each talk and poster has a pre-built AMA `citation`. If you change a title, author list or abstract code, update the citation too (or ask Claude to regenerate them).
 
+### Abstract Book (PDF)
+The **Download Abstract Book** button in the header serves `assets/abstract-book.pdf`: cover, welcome and program at a glance, contents with page numbers, then every abstract in program order (O-01…O-22, then P-01…P-21), one per page with its AMA citation. It is built from the two data files, so after changing an abstract, title, author or the running order, rebuild it:
+
+```
+pip install playwright pypdf && playwright install chromium
+python3 tools/build_abstract_book.py
+```
+
+Then commit the new PDF (or ask Claude to rebuild it).
+
 ---
 
 ## Testing before the day
@@ -103,6 +113,8 @@ assets/rating.js      Timed "Rate this talk" buttons
 assets/theme.js       Light / dark / auto
 assets/styles.css     Site styles (abstract.css for abstract pages)
 assets/qrcode-generator.js  QR codes (MIT, Kazuhiko Arase)
+assets/abstract-book.pdf    Abstract Book (built by tools/build_abstract_book.py)
+tools/                Abstract Book builder and its fonts (OFL)
 assets/img/           Logo, campus photos, link-preview image, speaker photos
 ```
 
