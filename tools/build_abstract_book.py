@@ -253,7 +253,7 @@ def body_document(pages_for=None):
 <section class="front">
   <h1>Welcome</h1>
   <p class="lede">{esc(E.get('fullName') or 'MRFA Research Day, Florida 2026')}. {esc(E.get('dateLabel'))}, {esc(E.get('location') or 'Kinne Auditorium')}, Mayo Clinic in Florida.</p>
-  <p class="lede">This book collects the {len(talks)} oral and rapid-fire presentations and {len(posters)} posters presented at Research Day, in program order. Abstracts appear as submitted by the authors. The live program, speaker details and Q&amp;A are at <span class="sans">mrfa-florida.github.io/research-day-2026</span>.</p>
+  <p class="lede">This book collects the {len(talks)} oral and rapid-fire presentations and {len(posters)} posters presented at Research Day, in program order. Abstracts appear as submitted by the authors. The live program, speaker details and Q&amp;A are at <span class="sans">mrfa-florida.github.io/research-day-2026</span>.{(' Contact: <span class="sans">' + esc(E['contactEmail']) + '</span>.') if E.get('contactEmail') else ''}</p>
   <h2>Program at a glance</h2>
   <table class="glance">{''.join(rows)}</table>
   <h2>Organizing committee</h2>

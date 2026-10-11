@@ -119,8 +119,10 @@
     $("moderator-list").innerHTML = (data.moderators || []).map(person).join("");
     $("judge-list").innerHTML = (data.judges || []).map(person).join("");
     if (data.judgesNote) { $("judges-note").textContent = data.judgesNote; $("judges-note").hidden = false; }
-    $("faq").innerHTML = (data.info || []).map((f) => `<dt>${esc(f.q)}</dt><dd>${esc(f.a)}</dd>`).join("");
-    if (e.contactEmail) $("faq").innerHTML += `<dt>Email</dt><dd><a href="mailto:${esc(e.contactEmail)}">${esc(e.contactEmail)}</a></dd>`;
+    const mail = (m) => `<a href="mailto:${esc(m)}">${esc(m)}</a>`;
+    $("faq").innerHTML = (data.info || []).map((f) => `<dt>${esc(f.q)}</dt><dd>${esc(f.a)}${f.email ? ` ${mail(f.email)}.` : ""}${
+      f.groups ? `<div class="menu">${f.groups.map((g) => `<div><h4>${esc(g.h)}</h4><ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>` : ""}</dd>`).join("");
+    if (e.contactEmail && !(data.info || []).some((f) => f.email)) $("faq").innerHTML += `<dt>Email</dt><dd>${mail(e.contactEmail)}</dd>`;
     makeQR($("site-qr"), location.href.split("#")[0].split("?")[0], 112);
     if (e.award && e.ratingUrl) {
       $("award-card").hidden = false;

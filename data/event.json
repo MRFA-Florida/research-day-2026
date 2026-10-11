@@ -10,7 +10,7 @@
     "room": "Mayo Clinic in Florida",
     "campus": "Jacksonville, Florida",
     "mapUrl": "",
-    "contactEmail": "",
+    "contactEmail": "MRFAFlorida@mayo.edu",
     "intro": "A day of research from trainees across Mayo Clinic in Florida: two sessions of oral and rapid-fire talks, two poster sessions, and awards to close the day. Tap any talk to see the authors and send a question to the moderator.",
     "defaultQuestionUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=nP9fomM_sk-aitm90DIfmt6hjfGQVi1NnuZVQD2XtwFUOFIwOEFJRU9CNVZFRzZGR0E1REQ1VDJNOS4u",
     "notice": "",
@@ -869,8 +869,44 @@
       "a": "Kinne Auditorium, Mayo Clinic in Florida, Jacksonville."
     },
     {
+      "q": "Food and refreshments",
+      "a": "Breakfast and refreshments are served for all attendees.",
+      "groups": [
+        {
+          "h": "Reception hors d’oeuvres",
+          "items": [
+            "Roasted lamb rack lollipops with sauce",
+            "Coconut shrimp with sauce",
+            "Grilled shrimp",
+            "Cucumber salmon bites",
+            "Vegetable dumplings with sauce",
+            "Mini twice-baked potatoes",
+            "Artisan cheese and seasonal fruit display",
+            "Mini antipasto bites",
+            "Caprese skewers"
+          ]
+        },
+        {
+          "h": "Dessert",
+          "items": [
+            "Tiramisu shooters",
+            "Peach cobbler shooters"
+          ]
+        },
+        {
+          "h": "Beverages",
+          "items": [
+            "Citrus-infused water",
+            "Freshly brewed unsweetened iced tea",
+            "Freshly brewed sweet iced tea"
+          ]
+        }
+      ]
+    },
+    {
       "q": "Contact",
-      "a": "Questions about the day? Contact the MRFA organizing committee."
+      "a": "Questions about the day? Email the MRFA organizing committee at",
+      "email": "MRFAFlorida@mayo.edu"
     }
   ],
   "moderators": [
