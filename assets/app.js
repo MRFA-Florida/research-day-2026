@@ -356,14 +356,14 @@
       ${upNext ? `<p class="nc-next"><strong>Up next</strong> ${upNext}</p>` : ""}`;
   }
 
-  // Collapsed "Happening now" strip under the tabs, with the time (24 h) and date in Florida.
+  // Collapsed "Happening now" strip under the tabs, with the time and date in Florida.
   function renderStrip(st) {
     const strip = document.getElementById("nowstrip");
     if (!strip) return;
     const [y, mo, d] = (preview ? data.event.date : st.n.date).split("-").map(Number);
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const hh = Math.floor(st.min / 60), mm = st.min % 60;
-    $("ns-clock").textContent = `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")} · ${months[mo - 1]} ${d}, ${y}`;
+    $("ns-clock").textContent = `${fmt(`${hh}:${mm}`)} · ${months[mo - 1]} ${d}, ${y}`;
     let label, text;
     if (st.isDay && st.cur) { label = "Happening now"; text = st.live ? `${shortName(st.live)}: ${st.live.title}` : st.cur.title; }
     else if (st.isDay && st.next) { label = "Up next"; text = `${fmt(st.next.start)} ${st.next.title}`; }
