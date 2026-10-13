@@ -1573,8 +1573,9 @@
     {
       "name": "Sanjay Chaudhary",
       "degrees": "MBBS",
-      "role": "Critical Care Medicine, Transplantation Medicine, Nephrology, Mayo Clinic Florida",
-      "photo": "assets/img/speakers/sanjay-chaudhary.jpg"
+      "photo": "assets/img/speakers/sanjay-chaudhary.jpg",
+      "title": "Associate Professor",
+      "role": "Critical Care Medicine, Transplantation Medicine, Nephrology, Mayo Clinic Florida"
     },
     {
       "name": "Remzi Bag",
