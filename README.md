@@ -1,6 +1,6 @@
 # MRFA Research Day, Florida 2026
 
-Event website for the **Mayo Clinic Research Fellow Association (MRFA) Research Day**
+Event website for the **Mayo Clinic Research Fellow’s Association (MRFA) Research Day**
 Thursday, October 29, 2026 · Kinne Auditorium, Mayo Clinic in Florida
 
 **Live site:** https://mrfa-florida.github.io/research-day-2026/
@@ -132,4 +132,4 @@ assets/img/           Logo, campus photos, link-preview image, speaker photos
 
 Maintained by the MRFA Florida organizing committee in the `MRFA-Florida` GitHub organization. Keep at least two current MRFA officers as organization **Owners** so access isn't lost when trainees rotate out.
 
-Mayo Clinic name and logo are used for this Mayo Clinic Research Fellow Association event; confirm brand use with MRFA leadership or Mayo Clinic communications.
+Mayo Clinic name and logo are used for this Mayo Clinic Research Fellow’s Association event; confirm brand use with MRFA leadership or Mayo Clinic communications.

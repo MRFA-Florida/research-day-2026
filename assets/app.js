@@ -10,7 +10,7 @@
     h = h % 12 || 12;
     return `${h}:${String(m).padStart(2, "0")}`+ ` ${ap}`;
   };
-  const initials = (name) => String(name).split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+  const initials = (name) => { const w = String(name).replace(/\(.*?\)/g, "").split(/\s+/).filter((x) => x && !/^[A-Z]\.$/.test(x)); return ((w[0] || "")[0] + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase(); };
 
   // Current date and minutes-of-day in the event's time zone.
   function nowInTZ() {
@@ -64,7 +64,7 @@
     $("event-time").textContent = e.timeLabel || "";
     const place = [e.location, e.room].filter(Boolean).join(", ");
     $("event-place").innerHTML = e.mapUrl ? `<a href="${esc(e.mapUrl)}" style="color:inherit">${esc(place)}</a>` : esc(place);
-    $("event-intro").textContent = e.intro || "";
+    $("event-intro").innerHTML = String(e.intro || "").split(/\n\s*\n/).map((x) => `<p>${esc(x)}</p>`).join("");
     if (e.tagline) { $("tagline").textContent = e.tagline; $("tagline").hidden = false; }
     if (e.notice) { $("event-notice").textContent = e.notice; $("event-notice").hidden = false; }
     if ((data.posters || []).length) { $("posters").hidden = false; $("tab-posters").hidden = false; }
@@ -113,7 +113,7 @@
           ${p.sessions ? `<span class="p-tag">${esc(p.sessions)}</span>` : ""}
         </div>
       </div>
-      ${p.bio ? `<p class="p-bio">${esc(p.bio)}</p>` : ""}
+      ${p.bio ? String(p.bio).split(/\n\s*\n/).map((x) => `<p class="p-bio">${esc(x)}</p>`).join("") : ""}
     </li>`;
     $("committee-list").innerHTML = (data.committee || []).map(person).join("");
     $("moderator-list").innerHTML = (data.moderators || []).map(person).join("");

@@ -214,7 +214,7 @@ h1 span {{ display:block; color: #f3b48a; font-weight: 500; }}
 .ab {{ font-size: 26pt; font-weight: 600; margin: 26pt 0 0; padding-top: 16pt; border-top: 2pt solid rgba(255,255,255,.55); }}
 .f {{ font-family: 'Atkinson Hyperlegible', sans-serif; font-size: 12.5pt; margin: 12pt 0 0; line-height: 1.5; color: #e3edf9; }}
 </style></head><body><div class="c"><div class="s"></div><img src="{logo}" alt="">
-<div class="i"><p class="k">{esc(E.get('host') or 'Mayo Clinic Research Fellow Association (MRFA)')}</p>
+<div class="i"><p class="k">{esc(E.get('host') or 'Mayo Clinic Research Fellow’s Association (MRFA)')}</p>
 <h1>MRFA Research Day <span>Florida 2026</span></h1>
 <p class="ab">Abstract Book</p>
 <p class="f">{esc(E.get('dateLabel'))}<br>{esc(E.get('location') or 'Kinne Auditorium')}, Mayo Clinic in Florida, Jacksonville</p></div></div></body></html>"""
@@ -329,7 +329,7 @@ def main():
     for src in (cover, body):
         for pg in PdfReader(io.BytesIO(src)).pages:
             w.add_page(pg)
-    w.add_metadata({"/Title": "MRFA Research Day, Florida 2026: Abstract Book", "/Author": "Mayo Clinic Research Fellow Association (MRFA), Florida"})
+    w.add_metadata({"/Title": "MRFA Research Day, Florida 2026: Abstract Book", "/Author": "Mayo Clinic Research Fellow’s Association (MRFA), Florida"})
     with open(OUT, "wb") as f:
         w.write(f)
     print(f"Wrote {OUT.relative_to(ROOT)}: {len(w.pages)} pages, {len(pages)} abstracts located")

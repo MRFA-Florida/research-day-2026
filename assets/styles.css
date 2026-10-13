@@ -264,7 +264,7 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .initials.lg { width: 7.5rem; height: 7.5rem; border-radius: 12px; box-shadow: none; border: 1px solid var(--line); font-size: 2rem; }
 .initials.lg img { object-position: center 20%; }
 @media (max-width: 22rem) { .person-head { grid-template-columns: 6rem 1fr; } .initials.lg { width: 6rem; height: 6rem; } }
-.p-tag { white-space: nowrap; }
+.p-tag { white-space: normal; border-radius: 10px; line-height: 1.35; }
 
 /* Secondary actions */
 .mini-row { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
@@ -319,3 +319,5 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .menu h4 { font-family: var(--display); font-size: .95rem; margin: .3rem 0 .25rem; color: var(--blue); }
 .menu ul { margin: 0; padding-left: 1.1rem; }
 .menu li { margin: .1rem 0; }
+.lede p { margin: 0 0 .85rem; }
+.lede p:last-child { margin-bottom: 0; }
