@@ -94,6 +94,9 @@ Then commit the new PDF (or ask Claude to rebuild it).
 
 ---
 
+### Phones showing an old version
+`index.html` and `abstract.html` load the CSS and JavaScript with a `?v=…` number. After changing a file in `assets/` (styles or scripts), bump that number in both pages so phones fetch the new file instead of a cached copy. Changes to `data/*.json` never need this.
+
 ## Testing before the day
 
 Add `?preview=HH:MM` to any page address to see it as if it were that time on the event day:

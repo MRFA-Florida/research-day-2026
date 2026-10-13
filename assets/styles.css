@@ -322,5 +322,12 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .lede p { margin: 0 0 .85rem; }
 .lede p:last-child { margin-bottom: 0; }
 .parea { font-size: .82rem; color: var(--muted); margin-top: .15rem; }
-.prog-photo { margin: 0 0 1.75rem; }
-.prog-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; }
+.prog-intro { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 1.5rem; align-items: start; margin-bottom: 1.5rem; }
+.prog-intro .lede { margin-bottom: 0; }
+.prog-photo { margin: .3rem 0 0; }
+.prog-photo img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% center; border-radius: 12px; opacity: .92; }
+@media (max-width: 760px) {
+  .prog-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .prog-photo { order: -1; margin: 0; }
+  .prog-photo img { aspect-ratio: 5 / 2; object-position: 60% 35%; }
+}
