@@ -43,15 +43,15 @@ a { color: var(--blue); }
 /* Hero: Florida campus at dusk */
 .hero {
   position: relative; color: #fff; isolation: isolate;
-  background: var(--navy) url("img/campus-facade.jpg") 62% center / cover no-repeat;
+  background: var(--navy) var(--hero-lg, url("img/hero/campus-facade.jpg")) var(--hero-pos, 62%) center / cover no-repeat;
   min-height: min(78vh, 40rem); display: flex; align-items: flex-end;
 }
-@media (max-width: 700px) { .hero { background-image: url("img/campus-facade-sm.jpg"); background-position: 70% center; min-height: 34rem; } }
+@media (max-width: 700px) { .hero { background-image: var(--hero-sm, url("img/hero/campus-facade-sm.jpg")); min-height: 34rem; } }
 .hero-shade {
   position: absolute; inset: 0; z-index: -1;
   background:
     linear-gradient(180deg, rgba(10,45,92,.55) 0%, rgba(10,45,92,0) 28%),
-    linear-gradient(0deg, rgba(7,26,54,.96) 8%, rgba(1,87,184,.55) 55%, rgba(1,87,184,.05) 100%);
+    linear-gradient(0deg, rgba(7,26,54,.96) 8%, rgba(1,60,140,.66) 55%, rgba(1,60,140,.22) 100%);
 }
 .hero-inner { width: 100%; padding-top: 1.25rem; padding-bottom: 2.25rem; }
 .logo { display: block; width: 64px; height: 64px; margin: 0 0 1.1rem; }

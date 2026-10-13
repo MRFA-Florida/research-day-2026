@@ -60,6 +60,9 @@ Rules that keep the JSON valid:
 
 **Talk times:** each talk's `start` drives the Now/Next bar, the rating unlock and calendar files. Full orals are 10 minutes and rapid-fire talks 5 minutes.
 
+### Header photos
+The header shows a random photo from `assets/img/hero/` on each visit. The list lives in `assets/hero.js`: upload a wide photo (and a smaller `-sm` copy for phones, about 1000 px wide), then add a line with its name. Remove a line to retire a photo.
+
 ### Speaker photos
 Upload to `assets/img/speakers/` named after the presenter in lowercase with hyphens, e.g. `diego-sanchez-calderin.jpg`, and set the talk's `photo` to that path. Square crops around 400×400 px load fastest; any size works, but large camera files slow the page on phones. A missing photo shows the person's initials.
 

@@ -72,7 +72,7 @@
       "type": "posters",
       "title": "Poster session I",
       "link": "#posters",
-      "who": "30 posters"
+      "who": "31 posters"
     },
     {
       "start": "11:30",
@@ -107,7 +107,7 @@
       "type": "posters",
       "title": "Poster session II",
       "link": "#posters",
-      "who": "29 posters"
+      "who": "30 posters"
     },
     {
       "start": "14:15",
@@ -1056,6 +1056,36 @@
       "number": "P-31",
       "code": "P-31",
       "boardId": "MRFA31",
+      "posterSession": 1,
+      "category": "Surgery, Hepatobiliary Surgery",
+      "presenter": "Ema Portal",
+      "degrees": "",
+      "role": "",
+      "department": "",
+      "title": "Predicting Early Readmission After Pancreatic Resection: Implications for Postoperative Discharge Planning",
+      "pi": "",
+      "abstract": false
+    },
+    {
+      "id": "p32",
+      "number": "P-32",
+      "code": "P-32",
+      "boardId": "MRFA32",
+      "posterSession": 2,
+      "category": "Surgery, Hepatobiliary Surgery",
+      "presenter": "Hisham Sinan",
+      "degrees": "",
+      "role": "",
+      "department": "",
+      "title": "Influence of Surgical Approach on Textbook Outcomes after Pancreaticoduodenectomy and Distal Pancreatectomy",
+      "pi": "",
+      "abstract": false
+    },
+    {
+      "id": "p33",
+      "number": "P-33",
+      "code": "P-33",
+      "boardId": "MRFA33",
       "posterSession": 2,
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Aaliya Rahman",
@@ -1065,13 +1095,13 @@
       "title": "Association of ACP at ICU Admission with Outcomes and Clinical Interventions",
       "pi": "Ricardo Diaz Milian",
       "abstract": true,
-      "citation": "Rahman A, Diaz Milian R, Borkar S, Menser T, Guru P. Association of ACP at ICU Admission with Outcomes and Clinical Interventions. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-31."
+      "citation": "Rahman A, Diaz Milian R, Borkar S, Menser T, Guru P. Association of ACP at ICU Admission with Outcomes and Clinical Interventions. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-33."
     },
     {
-      "id": "p32",
-      "number": "P-32",
-      "code": "P-32",
-      "boardId": "MRFA32",
+      "id": "p34",
+      "number": "P-34",
+      "code": "P-34",
+      "boardId": "MRFA34",
       "posterSession": 2,
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Aarti Desai",
@@ -1086,10 +1116,10 @@
       "photo": "assets/img/speakers/aarti-desai.jpg"
     },
     {
-      "id": "p33",
-      "number": "P-33",
-      "code": "P-33",
-      "boardId": "MRFA33",
+      "id": "p35",
+      "number": "P-35",
+      "code": "P-35",
+      "boardId": "MRFA35",
       "posterSession": 2,
       "category": "Clinical Neurology & Neurosurgery",
       "presenter": "Ahmed Saad",
@@ -1104,10 +1134,10 @@
       "photo": "assets/img/speakers/ahmed-saad.jpg"
     },
     {
-      "id": "p34",
-      "number": "P-34",
-      "code": "P-34",
-      "boardId": "MRFA34",
+      "id": "p36",
+      "number": "P-36",
+      "code": "P-36",
+      "boardId": "MRFA36",
       "posterSession": 2,
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Alexis J. Magana",
@@ -1122,10 +1152,10 @@
       "photo": "assets/img/speakers/alexis-j-magana.jpg"
     },
     {
-      "id": "p35",
-      "number": "P-35",
-      "code": "P-35",
-      "boardId": "MRFA35",
+      "id": "p37",
+      "number": "P-37",
+      "code": "P-37",
+      "boardId": "MRFA37",
       "posterSession": 2,
       "category": "Pain, Rehabilitation & Musculoskeletal",
       "presenter": "Andres Monge Ferrin",
@@ -1137,10 +1167,10 @@
       "abstract": false
     },
     {
-      "id": "p36",
-      "number": "P-36",
-      "code": "P-36",
-      "boardId": "MRFA36",
+      "id": "p38",
+      "number": "P-38",
+      "code": "P-38",
+      "boardId": "MRFA38",
       "posterSession": 2,
       "category": "Neuro-oncology",
       "presenter": "Anna Nulk",
@@ -1150,13 +1180,13 @@
       "title": "Atorvastatin-Mediated Targeting of Lipid Metabolic Reprogramming in Glioblastoma",
       "pi": "Loic Deleyrolle",
       "abstract": true,
-      "citation": "Nulk AR, Redmon E, Searl N, et al. Atorvastatin-Mediated Targeting of Lipid Metabolic Reprogramming in Glioblastoma. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-36."
+      "citation": "Nulk AR, Redmon E, Searl N, et al. Atorvastatin-Mediated Targeting of Lipid Metabolic Reprogramming in Glioblastoma. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-38."
     },
     {
-      "id": "p37",
-      "number": "P-37",
-      "code": "P-37",
-      "boardId": "MRFA37",
+      "id": "p39",
+      "number": "P-39",
+      "code": "P-39",
+      "boardId": "MRFA39",
       "posterSession": 2,
       "category": "Neuro-oncology",
       "presenter": "Anvi K. Reddy",
@@ -1166,13 +1196,13 @@
       "title": "Hypofractionated Radiotherapy in Glioblastoma: A Review of Comparative Effects on Safety, Tumor Control, and Survival",
       "pi": "Daniel M. Trifiletti, MD",
       "abstract": true,
-      "citation": "Reddy AK, Trifiletti DM, Lehrer E, et al. Hypofractionated Radiotherapy in Glioblastoma: A Review of Comparative Effects on Safety, Tumor Control, and Survival. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-37."
+      "citation": "Reddy AK, Trifiletti DM, Lehrer E, et al. Hypofractionated Radiotherapy in Glioblastoma: A Review of Comparative Effects on Safety, Tumor Control, and Survival. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-39."
     },
     {
-      "id": "p38",
-      "number": "P-38",
-      "code": "P-38",
-      "boardId": "MRFA38",
+      "id": "p40",
+      "number": "P-40",
+      "code": "P-40",
+      "boardId": "MRFA40",
       "posterSession": 2,
       "category": "Neuroscience & Neurodegeneration (basic)",
       "presenter": "Ayaka Tatsumoto",
@@ -1187,10 +1217,10 @@
       "photo": "assets/img/speakers/ayaka-tatsumoto.jpg"
     },
     {
-      "id": "p39",
-      "number": "P-39",
-      "code": "P-39",
-      "boardId": "MRFA39",
+      "id": "p41",
+      "number": "P-41",
+      "code": "P-41",
+      "boardId": "MRFA41",
       "posterSession": 2,
       "category": "Cancer & Translational Biology",
       "presenter": "Breethiga Velusamy",
@@ -1202,10 +1232,10 @@
       "abstract": false
     },
     {
-      "id": "p40",
-      "number": "P-40",
-      "code": "P-40",
-      "boardId": "MRFA40",
+      "id": "p42",
+      "number": "P-42",
+      "code": "P-42",
+      "boardId": "MRFA42",
       "posterSession": 2,
       "category": "Surgery, Wound Care & Orthopedics",
       "presenter": "Dhruva Kumar Lokesh",
@@ -1215,13 +1245,13 @@
       "title": "Prevalence of Micronutrient Deficiencies in Patients with Chronic Wounds: A Descriptive Analysis of 344 Patients",
       "pi": "Dr. Thea Price",
       "abstract": true,
-      "citation": "Lokesh DK, Muniz A, Price T. Prevalence of Micronutrient Deficiencies in Patients with Chronic Wounds: A Descriptive Analysis of 344 Patients. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-40."
+      "citation": "Lokesh DK, Muniz A, Price T. Prevalence of Micronutrient Deficiencies in Patients with Chronic Wounds: A Descriptive Analysis of 344 Patients. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-42."
     },
     {
-      "id": "p41",
-      "number": "P-41",
-      "code": "P-41",
-      "boardId": "MRFA41",
+      "id": "p43",
+      "number": "P-43",
+      "code": "P-43",
+      "boardId": "MRFA43",
       "posterSession": 2,
       "category": "Surgery, Wound Care & Orthopedics",
       "presenter": "Dhruva Kumar Lokesh",
@@ -1231,13 +1261,13 @@
       "title": "The effectiveness of Minimally Invasive Therapy for Hidradenitis Suppurative (MITHS) as a maintenance therapy in Hidradenitis Suppurativa: A novel treatment approach",
       "pi": "Dr. Thea Price",
       "abstract": true,
-      "citation": "Lokesh DK, Muniz A, Price T. The effectiveness of Minimally Invasive Therapy for Hidradenitis Suppurative (MITHS) as a maintenance therapy in Hidradenitis Suppurativa: A novel treatment approach. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-41."
+      "citation": "Lokesh DK, Muniz A, Price T. The effectiveness of Minimally Invasive Therapy for Hidradenitis Suppurative (MITHS) as a maintenance therapy in Hidradenitis Suppurativa: A novel treatment approach. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-43."
     },
     {
-      "id": "p42",
-      "number": "P-42",
-      "code": "P-42",
-      "boardId": "MRFA42",
+      "id": "p44",
+      "number": "P-44",
+      "code": "P-44",
+      "boardId": "MRFA44",
       "posterSession": 2,
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Diego Sanchez-Calderin",
@@ -1252,10 +1282,10 @@
       "photo": "assets/img/speakers/diego-sanchez-calderin.jpg"
     },
     {
-      "id": "p43",
-      "number": "P-43",
-      "code": "P-43",
-      "boardId": "MRFA43",
+      "id": "p45",
+      "number": "P-45",
+      "code": "P-45",
+      "boardId": "MRFA45",
       "posterSession": 2,
       "category": "Women's Health, Weight & Shared Decisions",
       "presenter": "Diego Sepulveda",
@@ -1270,10 +1300,10 @@
       "photo": "assets/img/speakers/diego-sepulveda.jpg"
     },
     {
-      "id": "p44",
-      "number": "P-44",
-      "code": "P-44",
-      "boardId": "MRFA44",
+      "id": "p46",
+      "number": "P-46",
+      "code": "P-46",
+      "boardId": "MRFA46",
       "posterSession": 2,
       "category": "Cancer & Translational Biology",
       "presenter": "Emilio Cagmat",
@@ -1285,10 +1315,10 @@
       "abstract": false
     },
     {
-      "id": "p45",
-      "number": "P-45",
-      "code": "P-45",
-      "boardId": "MRFA45",
+      "id": "p47",
+      "number": "P-47",
+      "code": "P-47",
+      "boardId": "MRFA47",
       "posterSession": 2,
       "category": "Health Services, Digital Health & Community",
       "presenter": "Fan Wang",
@@ -1303,10 +1333,10 @@
       "photo": "assets/img/speakers/fan-wang.jpg"
     },
     {
-      "id": "p46",
-      "number": "P-46",
-      "code": "P-46",
-      "boardId": "MRFA46",
+      "id": "p48",
+      "number": "P-48",
+      "code": "P-48",
+      "boardId": "MRFA48",
       "posterSession": 2,
       "category": "Cancer & Translational Biology",
       "presenter": "Felix Lopez Dominici",
@@ -1316,13 +1346,13 @@
       "title": "Pancreatic Findings on Prior Low-Dose Chest CT Examinations Before Pancreatic Ductal Adenocarcinoma Diagnosis: A Blinded Review Using RADPEER Criteria",
       "pi": "M. B. Wallace",
       "abstract": true,
-      "citation": "Lopez Dominici F, Osagiede O, LeGout J, Bolan C, Wallace MB. Pancreatic Findings on Prior Low-Dose Chest CT Examinations Before Pancreatic Ductal Adenocarcinoma Diagnosis: A Blinded Review Using RADPEER Criteria. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-46."
+      "citation": "Lopez Dominici F, Osagiede O, LeGout J, Bolan C, Wallace MB. Pancreatic Findings on Prior Low-Dose Chest CT Examinations Before Pancreatic Ductal Adenocarcinoma Diagnosis: A Blinded Review Using RADPEER Criteria. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-48."
     },
     {
-      "id": "p47",
-      "number": "P-47",
-      "code": "P-47",
-      "boardId": "MRFA47",
+      "id": "p49",
+      "number": "P-49",
+      "code": "P-49",
+      "boardId": "MRFA49",
       "posterSession": 2,
       "category": "Pain, Rehabilitation & Musculoskeletal",
       "presenter": "Leonardo Ospino",
@@ -1332,13 +1362,13 @@
       "title": "Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center",
       "pi": "Christine Hunt",
       "abstract": true,
-      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-47."
+      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-49."
     },
     {
-      "id": "p48",
-      "number": "P-48",
-      "code": "P-48",
-      "boardId": "MRFA48",
+      "id": "p50",
+      "number": "P-50",
+      "code": "P-50",
+      "boardId": "MRFA50",
       "posterSession": 2,
       "category": "Neuroscience & Neurodegeneration (basic)",
       "presenter": "Grace Samtani",
@@ -1353,10 +1383,10 @@
       "photo": "assets/img/speakers/grace-samtani.jpg"
     },
     {
-      "id": "p49",
-      "number": "P-49",
-      "code": "P-49",
-      "boardId": "MRFA49",
+      "id": "p51",
+      "number": "P-51",
+      "code": "P-51",
+      "boardId": "MRFA51",
       "posterSession": 2,
       "category": "Clinical Neurology & Neurosurgery",
       "presenter": "Harshvardhan G. Iyer",
@@ -1366,13 +1396,13 @@
       "title": "Comparative Outcomes of Endonasal and Transoral Odontoidectomy: An Institutional Experience and Meta-Analysis",
       "pi": "Akinduro Spine Oncology Laboratory / Dr. Oluwaseun O. Akinduro",
       "abstract": true,
-      "citation": "Iyer HG, Vega-Medina PA, Ghaderi S, et al. Comparative Outcomes of Endonasal and Transoral Odontoidectomy: An Institutional Experience and Meta-Analysis. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-49."
+      "citation": "Iyer HG, Vega-Medina PA, Ghaderi S, et al. Comparative Outcomes of Endonasal and Transoral Odontoidectomy: An Institutional Experience and Meta-Analysis. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-51."
     },
     {
-      "id": "p50",
-      "number": "P-50",
-      "code": "P-50",
-      "boardId": "MRFA50",
+      "id": "p52",
+      "number": "P-52",
+      "code": "P-52",
+      "boardId": "MRFA52",
       "posterSession": 2,
       "category": "Neuroscience & Neurodegeneration (basic)",
       "presenter": "Jackie Barua",
@@ -1384,10 +1414,10 @@
       "abstract": false
     },
     {
-      "id": "p51",
-      "number": "P-51",
-      "code": "P-51",
-      "boardId": "MRFA51",
+      "id": "p53",
+      "number": "P-53",
+      "code": "P-53",
+      "boardId": "MRFA53",
       "posterSession": 2,
       "category": "Health Services, Digital Health & Community",
       "presenter": "Jiakun Yu",
@@ -1399,10 +1429,10 @@
       "abstract": false
     },
     {
-      "id": "p52",
-      "number": "P-52",
-      "code": "P-52",
-      "boardId": "MRFA52",
+      "id": "p54",
+      "number": "P-54",
+      "code": "P-54",
+      "boardId": "MRFA54",
       "posterSession": 2,
       "category": "Pain, Rehabilitation & Musculoskeletal",
       "presenter": "Marcia Pina Martins Santos",
@@ -1414,10 +1444,10 @@
       "abstract": false
     },
     {
-      "id": "p53",
-      "number": "P-53",
-      "code": "P-53",
-      "boardId": "MRFA53",
+      "id": "p55",
+      "number": "P-55",
+      "code": "P-55",
+      "boardId": "MRFA55",
       "posterSession": 2,
       "category": "Health Services, Digital Health & Community",
       "presenter": "Natasha Panesar",
@@ -1429,10 +1459,10 @@
       "abstract": false
     },
     {
-      "id": "p54",
-      "number": "P-54",
-      "code": "P-54",
-      "boardId": "MRFA54",
+      "id": "p56",
+      "number": "P-56",
+      "code": "P-56",
+      "boardId": "MRFA56",
       "posterSession": 2,
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Rijan Kafle",
@@ -1447,10 +1477,10 @@
       "photo": "assets/img/speakers/rijan-kafle.jpg"
     },
     {
-      "id": "p55",
-      "number": "P-55",
-      "code": "P-55",
-      "boardId": "MRFA55",
+      "id": "p57",
+      "number": "P-57",
+      "code": "P-57",
+      "boardId": "MRFA57",
       "posterSession": 2,
       "category": "Neuroscience & Neurodegeneration (basic)",
       "presenter": "Shaina Matveev",
@@ -1460,13 +1490,13 @@
       "title": "High Resolution In Situ Visualization of Astrocyte-Associated Nanoscale Structures Through Combined TurboID Labeling and Expansion Microscopy",
       "pi": "Ikezu Lab / Tsuneya Ikezu",
       "abstract": true,
-      "citation": "Matveev S, Akamine S, McQuaker-Kajiwara J, et al. High Resolution In Situ Visualization of Astrocyte-Associated Nanoscale Structures Through Combined TurboID Labeling and Expansion Microscopy. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-55."
+      "citation": "Matveev S, Akamine S, McQuaker-Kajiwara J, et al. High Resolution In Situ Visualization of Astrocyte-Associated Nanoscale Structures Through Combined TurboID Labeling and Expansion Microscopy. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-57."
     },
     {
-      "id": "p56",
-      "number": "P-56",
-      "code": "P-56",
-      "boardId": "MRFA56",
+      "id": "p58",
+      "number": "P-58",
+      "code": "P-58",
+      "boardId": "MRFA58",
       "posterSession": 2,
       "category": "Neuroscience & Neurodegeneration (basic)",
       "presenter": "Shoshin Akamine",
@@ -1478,10 +1508,10 @@
       "abstract": false
     },
     {
-      "id": "p57",
-      "number": "P-57",
-      "code": "P-57",
-      "boardId": "MRFA57",
+      "id": "p59",
+      "number": "P-59",
+      "code": "P-59",
+      "boardId": "MRFA59",
       "posterSession": 2,
       "category": "Neuro-oncology",
       "presenter": "Srabasti Sengupta",
@@ -1496,10 +1526,10 @@
       "photo": "assets/img/speakers/srabasti-sengupta.jpg"
     },
     {
-      "id": "p58",
-      "number": "P-58",
-      "code": "P-58",
-      "boardId": "MRFA58",
+      "id": "p60",
+      "number": "P-60",
+      "code": "P-60",
+      "boardId": "MRFA60",
       "posterSession": 2,
       "category": "Surgery, Wound Care & Orthopedics",
       "presenter": "Taylor Rakauskas",
@@ -1509,13 +1539,13 @@
       "title": "Retrospective Review of Upper Extremity Acral and Nonacral Glomus Tumors",
       "pi": "Edward Haupt",
       "abstract": true,
-      "citation": "Rakauskas T, Tarrat Guadalupe C, Sherman C, Aziz K. Retrospective Review of Upper Extremity Acral and Nonacral Glomus Tumors. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-58."
+      "citation": "Rakauskas T, Tarrat Guadalupe C, Sherman C, Aziz K. Retrospective Review of Upper Extremity Acral and Nonacral Glomus Tumors. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-60."
     },
     {
-      "id": "p59",
-      "number": "P-59",
-      "code": "P-59",
-      "boardId": "MRFA59",
+      "id": "p61",
+      "number": "P-61",
+      "code": "P-61",
+      "boardId": "MRFA61",
       "posterSession": 2,
       "category": "Clinical Neurology & Neurosurgery",
       "presenter": "Yugant Khand",
@@ -1536,7 +1566,6 @@
       "degrees": "MBBS",
       "title": "Critical Care Medicine",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session I · Poster Session I",
       "photo": "assets/img/speakers/sanjay-chaudhary.jpg"
     },
     {
@@ -1544,7 +1573,6 @@
       "degrees": "MD",
       "title": "Pulmonary and Critical Care Medicine, Lung Transplant Program",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session I",
       "photo": "assets/img/speakers/remzi-bag.jpg"
     },
     {
@@ -1552,7 +1580,6 @@
       "degrees": "PhD",
       "title": "Associate Professor",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II · Poster Session II",
       "photo": "assets/img/speakers/loic-deleyrolle.jpg"
     },
     {
@@ -1560,7 +1587,6 @@
       "degrees": "MD",
       "title": "Transplant Nephrology, Nephrology and Hypertension",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II · Poster Session II",
       "photo": "assets/img/speakers/hani-wadei.jpg"
     },
     {
@@ -1568,7 +1594,6 @@
       "degrees": "MD, PhD",
       "title": "Endocrinology, Diabetes, Metabolism and Nutrition",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II",
       "photo": "assets/img/speakers/maria-daniela-hurtado-andrade.jpg"
     },
     {
@@ -1576,7 +1601,6 @@
       "degrees": "MD",
       "title": "Assistant Professor of Medicine, General Internal Medicine",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II",
       "photo": "assets/img/speakers/juan-cardenas-rosales.jpg"
     },
     {
@@ -1584,7 +1608,6 @@
       "degrees": "MD, MSc",
       "title": "Allergy and Immunology, Pulmonary Medicine",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II",
       "photo": "assets/img/speakers/kimberly-blumenthal.jpg"
     }
   ],
