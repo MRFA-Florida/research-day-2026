@@ -1679,5 +1679,34 @@
         ]
       }
     ]
+  },
+  "s1-11": {
+    "category": "Clinical Sciences",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Menopause affects every woman who reaches midlife, yet its symptoms are usually measured as a total severity score or studied one at a time, leaving unknown how they combine within individual women. We asked whether menopause has an underlying structure of distinct, persistent symptom phenotypes that hold across hormone therapy (HT) use and menopausal stage and reproduce across care settings."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We analyzed the Menopause Rating Scale, in two independent Mayo Clinic registries, the Data Registry on Experiences of Aging, Menopause, and Sexuality (DREAMS; women seeking menopause care, n = 4,048) and the Hormones and Experiences of Aging registry (HERA; primary care patients surveyed without seeking menopause care, n = 3,655). Phenotypes were discovered by unsupervised latent class analysis in untreated postmenopausal DREAMS women (n = 1,361), tested for measurement invariance across HT use and menopausal stage, and replicated in HERA (pooled n = 7,703). One-year persistence was estimated with a continuous-time hidden Markov model (627 women, 1,376 visits), and prevalence across years since the final menstrual period with bias-corrected regression adjusted for HT use and care setting (n = 3,885)."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Four phenotypes emerged, Multisymptomatic, Urogenital, Psychological-dominant, and Minimal (Figure 1A). Women separated sharply (mean assignment probability 0.86; Figure 1B). Phenotypes were the same across HT use, menopausal stage and care setting (ΔBIC +263, +155 and +180 against group-specific profiles); only prevalence differed: HT users were more often Minimal (12% vs 6%), perimenopausal women more often Psychological-dominant (35% vs 14%), and women seeking care more often Urogenital-dominant (33% vs 23%). On average, 73% of women remained in the same phenotype one year later (Figure 1C). Over the 10 years after menopause, Psychological-dominant declined from 24% to 16% (−7.4 points; 95% CI −12.4 to −2.7) and Minimal rose from 9% to 15% (+6.0; 2.6 to 9.2), while the other two phenotypes were stable (Figure 1D)."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Menopause is not a uniform experience but at least four distinct, persistent symptom phenotypes, consistent across treatment and menopausal stage, and replicated in an independent sample of women not seeking care. As subtyping has done for other heterogeneous conditions, this structure provides a foundation for mechanistic research, phenotype-specific trials and person-centered menopause care."
+        ]
+      }
+    ]
   }
 }

@@ -205,18 +205,18 @@
       "start": "09:45",
       "format": "Rapid-fire",
       "presenter": "Jaime I. Castillo Silva",
-      "pi": "Women's Health",
+      "pi": "Stephanie S. Faubion",
       "title": "Unraveling Menopause: Four Distinct Symptom Phenotypes",
-      "coauthors": "",
+      "coauthors": "Regina Castaneda, Juliana M. Kling, Ekta Kapoor, Kristin Cole, Stacey Winham, Joan Griffen, Chrisandra L. Shufelt, Stephanie S. Faubion",
       "questionUrl": "",
       "photo": "assets/img/speakers/jaime-i-castillo-silva.jpg",
       "minutes": 5,
-      "abstract": false,
+      "abstract": true,
       "degrees": "MD",
       "role": "Research Fellow",
       "department": "Women's Health and Internal Medicine",
       "code": "O-05",
-      "citation": "Castillo Silva JI. Unraveling Menopause: Four Distinct Symptom Phenotypes. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-05."
+      "citation": "Castillo Silva JI, Castaneda R, Kling JM, et al. Unraveling Menopause: Four Distinct Symptom Phenotypes. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-05."
     },
     {
       "id": "s1-05",
@@ -862,10 +862,10 @@
       "role": "Research Fellow",
       "department": "Women's Health and Internal Medicine",
       "title": "Unraveling Menopause: Four Distinct Symptom Phenotypes",
-      "pi": "Women's Health",
-      "abstract": false,
+      "pi": "Stephanie S. Faubion",
+      "abstract": true,
       "talk": "s1-11",
-      "citation": "Castillo Silva JI. Unraveling Menopause: Four Distinct Symptom Phenotypes. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-05.",
+      "citation": "Castillo Silva JI, Castaneda R, Kling JM, et al. Unraveling Menopause: Four Distinct Symptom Phenotypes. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-05.",
       "photo": "assets/img/speakers/jaime-i-castillo-silva.jpg"
     },
     {
