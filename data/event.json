@@ -1703,15 +1703,6 @@
   "awardsNote": "Recipients will be announced at the Awards Ceremony at 2:15 PM on October 29 and posted here.",
   "committee": [
     {
-      "name": "Sebastian Fernandez-Bussy",
-      "degrees": "MD",
-      "title": "James C. and Sarah K. Kennedy Dean of Research, Mayo Clinic in Florida",
-      "role": "Professor of Medicine; Chair, Division of Pulmonary, Allergy and Sleep Medicine",
-      "photo": "assets/img/speakers/fernandez-bussy-sebastian.jpg",
-      "sessions": "Dean of Research, Mayo Clinic Florida",
-      "bio": "Sebastian Fernandez-Bussy, MD, the James C. and Sarah K. Kennedy Dean of Research at Mayo Clinic in Florida, serves as Professor of Medicine. He is an internationally recognized interventional pulmonologist and is Chair of the Division of Pulmonary, Allergy and Sleep Medicine and Director of both the Section of Interventional Pulmonology and the Procedure Innovation Team at Mayo Clinic Florida.\n\nHis clinical and research interests focus on advancing minimally invasive approaches to thoracic disease, including robot-assisted and translational bronchoscopy, bronchoscopic ablation for thoracic malignancies, chronic obstructive pulmonary disease (COPD), central airway disorders, and the development of artificial intelligence–driven diagnostic and prognostic biomarkers. Dr. Fernandez-Bussy completed his medical training in Argentina and pursued advanced training at the University of Florida and Heidelberg University, where he currently serves as a Visiting Professor. In addition, he directs the Endoscopy Department of the Latin American Thoracic Society, contributing to the advancement of interventional pulmonology and pulmonary endoscopy worldwide."
-    },
-    {
       "name": "Regina Castaneda",
       "degrees": "MD",
       "title": "Chair, Mayo Clinic Research Fellow’s Association (MRFA), Florida",
@@ -1719,6 +1710,15 @@
       "photo": "assets/img/speakers/castaneda-regina.jpg",
       "sessions": "Mayo Clinic Research Fellow’s Association - Florida - Chair",
       "bio": "Regina Castaneda, MD, appointed as Florida Chair of the Mayo Clinic Research Fellow’s Association in 2026, is a postdoctoral research fellow in women’s health and internal medicine at Mayo Clinic Florida. Her research focuses on the intersection of obesity, menopause, and cardiometabolic health, with a particular interest in precision medicine for obesity treatment for midlife women. She is currently pursuing a master’s degree in Clinical and Translational Sciences at the Mayo Clinic College of Medicine and Science. Dr. Castaneda has led multiple first-author publications in leading journals, including The Lancet, Annals of Internal Medicine, and JAMA Internal Medicine. She has been recently recognized with the 2026 Women in Endocrinology Young Investigator Award, the 2025 New Investigator Award from The Menopause Society, and the Excellence in Clinical Research Award from the Mayo Clinic Research Fellows’ Association. As an aspiring endocrinologist and physician-scientist, she is committed to advancing evidence-based care for women across the lifespan."
+    },
+    {
+      "name": "Sebastian Fernandez-Bussy",
+      "degrees": "MD",
+      "title": "James C. and Sarah K. Kennedy Dean of Research, Mayo Clinic in Florida",
+      "role": "Professor of Medicine; Chair, Division of Pulmonary, Allergy and Sleep Medicine",
+      "photo": "assets/img/speakers/fernandez-bussy-sebastian.jpg",
+      "sessions": "Dean of Research, Mayo Clinic Florida",
+      "bio": "Sebastian Fernandez-Bussy, MD, the James C. and Sarah K. Kennedy Dean of Research at Mayo Clinic in Florida, serves as Professor of Medicine. He is an internationally recognized interventional pulmonologist and is Chair of the Division of Pulmonary, Allergy and Sleep Medicine and Director of both the Section of Interventional Pulmonology and the Procedure Innovation Team at Mayo Clinic Florida.\n\nHis clinical and research interests focus on advancing minimally invasive approaches to thoracic disease, including robot-assisted and translational bronchoscopy, bronchoscopic ablation for thoracic malignancies, chronic obstructive pulmonary disease (COPD), central airway disorders, and the development of artificial intelligence–driven diagnostic and prognostic biomarkers. Dr. Fernandez-Bussy completed his medical training in Argentina and pursued advanced training at the University of Florida and Heidelberg University, where he currently serves as a Visiting Professor. In addition, he directs the Endoscopy Department of the Latin American Thoracic Society, contributing to the advancement of interventional pulmonology and pulmonary endoscopy worldwide."
     }
   ]
 }
