@@ -322,3 +322,5 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .lede p { margin: 0 0 .85rem; }
 .lede p:last-child { margin-bottom: 0; }
 .parea { font-size: .82rem; color: var(--muted); margin-top: .15rem; }
+.prog-photo { margin: 0 0 1.75rem; }
+.prog-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; }
