@@ -272,7 +272,7 @@ def body_document(pages_for=None):
   <p class="lede">This book collects the {len(talks)} oral and rapid-fire presentations and {len(posters)} posters presented at Research Day, in program order. Posters that accompany an oral presentation point to that abstract. Abstracts appear as submitted by the authors. The live program, speaker details and Q&amp;A are at <span class="sans">mrfa-florida.github.io/research-day-2026</span>.{(' Contact: <span class="sans">' + esc(E['contactEmail']) + '</span>.') if E.get('contactEmail') else ''}</p>
   <h2>Program at a glance</h2>
   <table class="glance">{''.join(rows)}</table>
-  <h2>Organizing committee</h2>
+  <h2>Leadership</h2>
   <div class="people">{''.join(people)}</div>
 </section>
 <section class="toc">

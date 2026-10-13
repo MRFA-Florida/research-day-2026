@@ -16,7 +16,8 @@ The site is plain HTML, CSS and JavaScript hosted free on GitHub Pages. There is
 |---|---|
 | **Program** | Full agenda with a live **Now / Next** bar on the event day (Florida time). Each talk opens to show presenter, PI, co-authors and actions. Full oral talks are highlighted in blue. |
 | **Speakers** | Cards with photo, degrees, role and department. Filter by session or format. |
-| **Panel** | Organizing committee, moderator and judges, with photos and short bios. |
+| **Leadership** | Dean of Research and MRFA Florida Chair, with photos and bios (first section under the header). |
+| **Panel** | Moderator and judges, with photos. |
 | **Posters** | Searchable list grouped by category, each linked to its abstract. |
 | **Awards** | Award categories; winners appear here once announced. Explains the Audience Choice Award. |
 | **My agenda** | Talks and posters an attendee saved with ☆ Save (kept on their device). |
