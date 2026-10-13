@@ -244,19 +244,19 @@
       "order": 7,
       "start": "09:55",
       "format": "Full oral",
-      "presenter": "Fiorela Martinez",
+      "presenter": "Leonardo Ospino",
       "pi": "Christine Hunt",
       "title": "Adverse Childhood Experiences and Functional Outcomes Following Interdisciplinary Pain Rehabilitation: A Retrospective Cohort Study",
-      "coauthors": "Sebastian Encalada, Jordan Hoprich, Johanna Mosquera-Moscoso, Christopher Sletten",
+      "coauthors": "Fiorela Martinez, MD, Sebastian Encalada, Jordan Hoprich, Johanna Mosquera-Moscoso, Christopher Sletten",
       "questionUrl": "",
-      "photo": "assets/img/speakers/fiorela-martinez.jpg",
+      "photo": "assets/img/speakers/leonardo-ospino.jpg",
       "minutes": 10,
       "abstract": true,
-      "degrees": "MD",
-      "role": "Research Trainee",
+      "degrees": "",
+      "role": "",
       "department": "Department of Pain Medicine",
       "code": "O-07",
-      "citation": "Martinez F, Encalada S, Hoprich J, Mosquera-Moscoso J, Sletten C. Adverse Childhood Experiences and Functional Outcomes Following Interdisciplinary Pain Rehabilitation: A Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-07."
+      "citation": "Ospino L, Martinez F, Encalada S, Hoprich J, Mosquera-Moscoso J, Sletten C. Adverse Childhood Experiences and Functional Outcomes Following Interdisciplinary Pain Rehabilitation: A Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-07."
     },
     {
       "id": "s1-08",
@@ -861,49 +861,56 @@
       "degrees": "MBBS",
       "title": "Critical Care Medicine",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session I · Poster Session I"
+      "sessions": "Oral Session I · Poster Session I",
+      "photo": "assets/img/speakers/sanjay-chaudhary.jpg"
     },
     {
       "name": "Remzi Bag",
       "degrees": "MD",
       "title": "Pulmonary and Critical Care Medicine, Lung Transplant Program",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session I"
+      "sessions": "Oral Session I",
+      "photo": "assets/img/speakers/remzi-bag.jpg"
     },
     {
       "name": "Loic Deleyrolle",
       "degrees": "PhD",
       "title": "Associate Professor",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II · Poster Session II"
+      "sessions": "Oral Session II · Poster Session II",
+      "photo": "assets/img/speakers/loic-deleyrolle.jpg"
     },
     {
       "name": "Hani Wadei",
       "degrees": "MD",
       "title": "Transplant Nephrology, Nephrology and Hypertension",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II · Poster Session II"
+      "sessions": "Oral Session II · Poster Session II",
+      "photo": "assets/img/speakers/hani-wadei.jpg"
     },
     {
       "name": "Maria Daniela Hurtado Andrade",
       "degrees": "MD, PhD",
       "title": "Endocrinology, Diabetes, Metabolism and Nutrition",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II"
+      "sessions": "Oral Session II",
+      "photo": "assets/img/speakers/maria-daniela-hurtado-andrade.jpg"
     },
     {
       "name": "Juan C. Cardenas Rosales",
       "degrees": "MD",
       "title": "Assistant Professor of Medicine, General Internal Medicine",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II"
+      "sessions": "Oral Session II",
+      "photo": "assets/img/speakers/juan-cardenas-rosales.jpg"
     },
     {
       "name": "Kimberly G. Blumenthal",
       "degrees": "MD, MSc",
       "title": "Allergy and Immunology, Pulmonary Medicine",
       "role": "Mayo Clinic Florida",
-      "sessions": "Oral Session II"
+      "sessions": "Oral Session II",
+      "photo": "assets/img/speakers/kimberly-blumenthal.jpg"
     }
   ],
   "info": [
