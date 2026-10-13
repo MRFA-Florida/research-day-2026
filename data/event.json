@@ -43,7 +43,18 @@
       "end": "09:15",
       "type": "plenary",
       "title": "Welcome and opening remarks",
-      "who": "Regina Castaneda, MD, Chair, MRFA Florida, and Sebastian Fernandez-Bussy, MD, Dean of Research"
+      "speakers": [
+        {
+          "name": "Regina Castaneda, MD",
+          "role": "Chair, MRFA Florida",
+          "photo": "assets/img/speakers/regina-castaneda-v4.jpg"
+        },
+        {
+          "name": "Sebastian Fernandez-Bussy, MD",
+          "role": "Dean of Research",
+          "photo": "assets/img/speakers/fernandez-bussy-sebastian.jpg"
+        }
+      ]
     },
     {
       "start": "09:15",

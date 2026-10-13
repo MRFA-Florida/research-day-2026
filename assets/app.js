@@ -82,14 +82,16 @@
       const counts = talks.length ? `${talks.filter((t) => /full/i.test(t.format)).length} full talks, ${talks.filter((t) => /rapid/i.test(t.format)).length} rapid-fire` : "";
       const nRapid = talks.filter((t) => fmtClass(t.format) === "rapid").length;
       const extra = slotExtra(s);
-      const toggle = extra ? `<label class="slot-toggle"><input type="checkbox" data-expand="slot-${i}"><span class="sw" aria-hidden="true"></span>${esc(extra.label)}</label>` : "";
-      const fold = talks.length ? `<button type="button" class="slot-fold" data-fold="slot-${i}" aria-expanded="true" aria-label="Collapse the talks in ${esc(s.title)}"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>` : "";
-      return `<li class="slot ${esc(s.type || "")}" id="slot-${i}" data-start="${esc(s.start || "")}" data-end="${esc(s.end || "")}">
+      const foldable = talks.length || extra;
+      const what = talks.length ? "the talks" : extra ? extra.label.replace(/^Show /, "the ") : "";
+      const fold = foldable ? `<button type="button" class="slot-fold" data-fold="slot-${i}" aria-expanded="false" aria-label="Show ${esc(what)} in ${esc(s.title)}"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>` : "";
+      const people = (s.speakers || []).length ? `<div class="slot-people">${s.speakers.map((p) => `<span class="sp">${avatar({ presenter: p.name, photo: p.photo }, "sm")}<span><strong>${esc(p.name)}</strong>${p.role ? `<small>${esc(p.role)}</small>` : ""}</span></span>`).join("")}</div>` : "";
+      return `<li class="slot ${esc(s.type || "")}${foldable ? " foldable folded" : ""}" id="slot-${i}" data-start="${esc(s.start || "")}" data-end="${esc(s.end || "")}">
         <div class="slot-head">
           <span class="slot-title">${esc(s.title)}<span class="now-label" hidden>Now</span></span>
           <span class="slot-when">${when}${fold}</span>
           ${meta ? `<div class="slot-meta">${meta}</div>` : ""}
-          ${toggle}
+          ${people}
         </div>
         ${talks.length ? `<ul class="talks" aria-label="${esc(s.title)}: ${counts}">${talks.map(talkHTML).join("")}</ul>` : ""}
         ${extra ? `<div class="slot-extra">${extra.html}</div>` : ""}
@@ -326,6 +328,9 @@
         if (min >= s && min < e) { t.classList.add("live"); liveTalk = t; }
       });
     }
+    // Event day: open the current block once (unless the visitor folded it) and fill the "Happening now" card.
+    if (cur && cur.classList.contains("foldable") && !cur.dataset.touched && !cur.dataset.auto) { setFold(cur, false); cur.dataset.auto = "1"; }
+    renderNowCard(isDay, cur, next, liveTalk);
     const bar = $("nowbar");
     bar.hidden = !isDay || (!cur && !next);
     if (!bar.hidden) {
@@ -343,11 +348,16 @@
   });
   // Arrow in a session header: show or hide all of that session's talks.
   document.addEventListener("click", (ev) => {
-    const b = ev.target.closest("[data-fold]");
+    let b = ev.target.closest("[data-fold]");
+    if (!b) {
+      const head = ev.target.closest(".foldable > .slot-head");
+      if (!head || ev.target.closest("a, button, input, label")) return;
+      b = head.querySelector("[data-fold]");
+    }
     if (!b) return;
-    const slot = $(b.dataset.fold), open = slot.classList.toggle("folded") === false;
-    b.setAttribute("aria-expanded", open);
-    b.setAttribute("aria-label", `${open ? "Collapse" : "Expand"} the talks in ${slot.querySelector(".slot-title").firstChild.textContent}`);
+    const slot = $(b.dataset.fold);
+    setFold(slot, !slot.classList.contains("folded"));
+    slot.dataset.touched = "1";
   });
   // Opening index.html#talk-… (e.g. from the Speakers page) expands that talk.
   function openFromHash() {
@@ -359,12 +369,39 @@
     unfold(d);
     d.open = true; d.scrollIntoView({ block: "center" });
   }
-  function unfold(d) {
-    const slot = d.closest(".slot");
-    if (slot && slot.classList.contains("folded")) { slot.classList.remove("folded"); const b = slot.querySelector("[data-fold]"); if (b) b.setAttribute("aria-expanded", "true"); }
+  function setFold(slot, folded) {
+    slot.classList.toggle("folded", folded);
+    const b = slot.querySelector("[data-fold]");
+    if (b) { b.setAttribute("aria-expanded", String(!folded)); b.setAttribute("aria-label", b.getAttribute("aria-label").replace(/^(Show|Hide)/, folded ? "Show" : "Hide")); }
   }
+  function unfold(d) { const slot = d.closest(".slot"); if (slot && slot.classList.contains("folded")) setFold(slot, false); }
   window.addEventListener("hashchange", openFromHash);
   document.addEventListener("click", (ev) => { if (ev.target.closest('a[href$="#awards"]')) $("awards-fold").open = true; });
+
+  function renderNowCard(isDay, cur, next, liveTalk) {
+    const card = $("now-card");
+    if (!isDay || (!cur && !next)) { card.hidden = true; return; }
+    const title = (el) => el ? el.querySelector(".slot-title").firstChild.textContent.trim() : "";
+    const when = (el) => el ? `${fmt(el.dataset.start)} – ${fmt(el.dataset.end)}` : "";
+    const lt = liveTalk && talksById[liveTalk.id.replace(/^talk-/, "")];
+    let upNext = "";
+    if (lt) {
+      const sib = liveTalk.closest("li").nextElementSibling, nt = sib && talksById[sib.querySelector(".talk").id.replace(/^talk-/, "")];
+      upNext = nt ? `${fmt(nt.start)} · ${esc(nt.title)}, ${esc(fullName(nt))}` : next ? `${fmt(next.dataset.start)} · ${esc(title(next))}` : "";
+    } else if (next) upNext = `${fmt(next.dataset.start)} · ${esc(title(next))}`;
+    card.hidden = false;
+    card.innerHTML = cur ? `
+      <p class="nc-kicker"><span class="nc-dot" aria-hidden="true"></span>Happening now · ${esc(title(cur))} <span class="nc-when">${when(cur)}</span></p>
+      ${lt ? `<div class="nc-talk">${avatar(lt, "md")}<div>
+          <p class="nc-meta">${esc(lt.format)} · ${esc(lt.code)} · ${fmt(lt.start)}</p>
+          <a class="nc-title" href="#talk-${esc(lt.id)}" data-open="${esc(lt.id)}">${esc(lt.title)}</a>
+          <p class="nc-who">${esc(fullName(lt))}${roleLine(lt) ? ` · ${esc(roleLine(lt))}` : ""}</p>
+          <div class="nc-actions">${questionUrl(lt) ? `<a class="btn" href="${esc(questionUrl(lt))}" target="_blank" rel="noopener">Ask a question</a>` : ""}${window.MRFARating ? MRFARating.button(lt, data.event) : ""}</div>
+        </div></div>` : ""}
+      ${upNext ? `<p class="nc-next"><strong>Up next</strong> ${upNext}</p>` : ""}`
+      : `<p class="nc-kicker">Starting soon</p><p class="nc-next"><strong>${fmt(next.dataset.start)}</strong> ${esc(title(next))}</p>`;
+    if (window.MRFARating) MRFARating.refresh();
+  }
 
   // Events
   document.addEventListener("click", (ev) => {

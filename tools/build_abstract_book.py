@@ -236,6 +236,8 @@ def body_document(pages_for=None):
             n = 1 if a["start"] < "12:00" else 2
             ps = [p for p in posters if p.get("posterSession", 1) == n]
             extra = f"<br><small>Posters {esc(ps[0]['code'])} to {esc(ps[-1]['code'])}</small>" if ps else ""
+        elif a.get("speakers"):
+            extra = "<br><small>" + "; ".join(esc(f"{x['name']}, {x['role']}") for x in a["speakers"]) + "</small>"
         elif a.get("who"):
             extra = f"<br><small>{esc(a['who'])}</small>"
         rows.append(f"<tr><td>{fmt(a['start'])} to {fmt(a['end'])}</td><td>{esc(a['title'])}{extra}</td></tr>")

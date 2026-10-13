@@ -14,7 +14,7 @@ The site is plain HTML, CSS and JavaScript hosted free on GitHub Pages. There is
 
 | Section | What attendees see |
 |---|---|
-| **Program** | Full agenda with a live **Now / Next** bar on the event day (Florida time). Each talk opens to show presenter, PI, co-authors and actions. Full oral talks are highlighted in blue. The arrow in each session header shows or hides that session's talks; poster sessions and lunch have "Show posters" / "Show menu" switches. |
+| **Program** | Full agenda with a live **Now / Next** bar on the event day (Florida time). Each talk opens to show presenter, PI, co-authors and actions. Full oral talks are highlighted in blue. Every session, poster session and lunch is folded by default behind an arrow (tap the header to open). On the event day a **Happening now** card above the agenda shows the current block, the live talk with Ask/Rate buttons and what is up next, and the current block opens automatically. Opening remarks show speaker headshots (`speakers` in the agenda item). |
 | **Speakers and posters** (`speakers.html`) | Separate page: speaker cards (filter by session or format) and, under the **Posters** filter (`speakers.html#posters`), the searchable poster list by poster session. |
 | **Leadership** | Dean of Research and MRFA Florida Chair, with photos and bios (first section under the header). |
 | **Panel** | Moderator and judges, with photos. |
