@@ -99,6 +99,8 @@
     document.title = `${p.title} | MRFA Research Day, Florida 2026`;
     document.querySelectorAll(".abs-back").forEach((el) => { el.href = "./#posters"; el.textContent = "Back to posters"; });
     const multi = a.affiliations && a.affiliations.length > 1;
+    const isPres = (n) => clean(n) === clean(p.presenter) || n.split(" ").pop() === p.presenter.split(" ").pop() && n[0] === p.presenter[0];
+    const onBehalf = a.authors && !a.authors.some(isPres);
     const authors = (a.authors || [p.presenter]).map((n, k) => {
       const sup = multi && a.authorAffil ? `<sup>${a.authorAffil[k] || ""}</sup>` : "";
       return clean(n) === clean(p.presenter) || n.split(" ").pop() === p.presenter.split(" ").pop() && n[0] === p.presenter[0]
@@ -114,7 +116,7 @@
       <h1 class="abs-title">${esc(p.title)}</h1>
       <p class="abs-authors">${authors}</p>
       ${affil}
-      <p class="abs-note">Presenting author underlined.${p.pi ? ` Principal investigator: ${esc(p.pi)}.` : ""}</p>
+      <p class="abs-note">${onBehalf ? `Presented by ${esc(p.presenter)} on behalf of the authors.` : "Presenting author underlined."}${p.pi ? ` Principal investigator: ${esc(p.pi)}.` : ""}</p>
       <div class="abs-presenter">
         <div class="initials" aria-hidden="true"><span>${esc(initials(p.presenter))}</span></div>
         <div><strong>${esc(p.degrees ? `${p.presenter}, ${p.degrees}` : p.presenter)}</strong>${who ? `<span class="small role">${esc(who)}</span>` : ""}<span class="small">Presenting at the poster sessions, 10:30 AM and 1:15 PM</span></div>

@@ -253,7 +253,7 @@
       "minutes": 10,
       "abstract": true,
       "degrees": "",
-      "role": "",
+      "role": "Research Trainee",
       "department": "Department of Pain Medicine",
       "code": "O-07",
       "citation": "Ospino L, Martinez F, Encalada S, Hoprich J, Mosquera-Moscoso J, Sletten C. Adverse Childhood Experiences and Functional Outcomes Following Interdisciplinary Pain Rehabilitation: A Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-07."
@@ -759,8 +759,8 @@
     {
       "id": "p15",
       "number": "P-15",
-      "presenter": "Fiorela Martinez",
-      "degrees": "MD",
+      "presenter": "Leonardo Ospino",
+      "degrees": "",
       "role": "Research Trainee",
       "department": "Department of Pain Medicine",
       "category": "Clinical Sciences",
@@ -768,7 +768,8 @@
       "pi": "Christine Hunt",
       "abstract": true,
       "code": "P-15",
-      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-15."
+      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-15.",
+      "photo": "assets/img/speakers/leonardo-ospino.jpg"
     },
     {
       "id": "p16",

@@ -115,11 +115,12 @@ def poster_page(p):
     meta = ["Poster sessions I and II"] + ([p["category"]] if p.get("category") else [])
     who = ", ".join(x for x in [p.get("role"), p.get("department")] if x)
     body = body_html(a) if a.get("sections") else '<p class="missing">Abstract not available at the time of publication.</p>'
-    return page(p.get("code") or p["number"], "Poster", "poster", meta, p["title"], authors, affil_html(a, multi), p.get("pi"), who, body, p.get("citation") if a.get("sections") else None, pres=f"{pres}, {p['degrees']}" if p.get("degrees") else pres)
+    behalf = bool(a.get("authors")) and not any(is_pres(n) for n in a["authors"])
+    return page(p.get("code") or p["number"], "Poster", "poster", meta, p["title"], authors, affil_html(a, multi), p.get("pi"), who, body, p.get("citation") if a.get("sections") else None, pres=f"{pres}, {p['degrees']}" if p.get("degrees") else pres, behalf=behalf)
 
 
-def page(code, fmt_label, kind, meta, title, authors, affil, pi, who, body, cite, pres=None):
-    note = "Presenting author underlined." + (f" Principal investigator: {esc(pi)}." if pi else "")
+def page(code, fmt_label, kind, meta, title, authors, affil, pi, who, body, cite, pres=None, behalf=False):
+    note = (f"Presented by {esc(pres)} on behalf of the authors." if behalf else "Presenting author underlined.") + (f" Principal investigator: {esc(pi)}." if pi else "")
     who_line = f'<p class="who"><strong>Presenter:</strong> {esc(pres)}, {esc(who)}</p>' if pres and who else (f'<p class="who"><strong>Presenter:</strong> {esc(who)}</p>' if who else "")
     return f"""
 <section class="abs" id="a-{esc(code)}">
