@@ -27,6 +27,7 @@
     const i = talks.findIndex((t) => t.id === id);
     if (i < 0) { $("abs").innerHTML = `<p class="empty">That talk isn’t in the program. <a href="./#program">See all talks</a>.</p>`; return; }
     const t = talks[i], a = abstracts[id];
+    const asPoster = (data.posters || []).find((p) => p.talk === t.id);
     document.title = `${t.title} | MRFA Research Day, Florida 2026`;
 
     // Authors: presenter (underlined) followed by co-authors, without repeating the presenter.
@@ -58,7 +59,7 @@
       <h1 class="abs-title">${esc(t.title)}</h1>
       <p class="abs-authors">${authorsHTML}</p>
       ${affil}
-      <p class="abs-note">Presenting author underlined.${t.pi ? ` Principal investigator: ${esc(t.pi)}.` : ""}</p>
+      <p class="abs-note">Presenting author underlined.${t.pi ? ` Principal investigator: ${esc(t.pi)}.` : ""}${asPoster ? ` Also presented as poster ${esc(asPoster.code)} in poster session ${asPoster.posterSession === 2 ? "II, 1:15 PM" : "I, 10:30 AM"}.` : ""}</p>
 
       <div class="abs-presenter">
         <div class="initials" aria-hidden="true"><span>${esc(initials(t.presenter))}</span>${photo}</div>
@@ -96,6 +97,9 @@
     const i = list.findIndex((p) => p.id === pid);
     if (i < 0) { $("abs").innerHTML = `<p class="empty">That poster isn’t listed. <a href="./#posters">See all posters</a>.</p>`; return; }
     const p = list[i], a = abstracts[pid] || {};
+    if (p.talk) { location.replace(`abstract.html?talk=${encodeURIComponent(p.talk)}`); return; }
+    const own = list.filter((x) => !x.talk), k = own.indexOf(p);
+    const ps = p.posterSession === 2 ? ["II", "1:15 PM"] : ["I", "10:30 AM"];
     document.title = `${p.title} | MRFA Research Day, Florida 2026`;
     document.querySelectorAll(".abs-back").forEach((el) => { el.href = "./#posters"; el.textContent = "Back to posters"; });
     const multi = a.affiliations && a.affiliations.length > 1;
@@ -107,11 +111,11 @@
         ? `<span class="presenting">${esc(n)}</span>${sup}` : `${esc(n)}${sup}`;
     }).join(", ");
     const affil = a.affiliations ? `<ul class="abs-affil">${a.affiliations.map((x, k) => `<li>${multi ? `<sup>${k + 1}</sup> ` : ""}${esc(x)}</li>`).join("")}</ul>` : "";
-    const body = (a.sections || []).map((s) => `${s.h ? `<h2>${esc(s.h)}</h2>` : ""}${s.p.map((x) => `<p>${esc(x)}</p>`).join("")}`).join("");
+    const body = (a.sections || []).map((s) => `${s.h ? `<h2>${esc(s.h)}</h2>` : ""}${s.p.map((x) => `<p>${esc(x)}</p>`).join("")}`).join("") || `<p class="abs-missing">The abstract for this poster will be posted soon.</p>`;
     const nav = (x, cls, label) => x ? `<a class="${cls}" href="abstract.html?poster=${esc(x.id)}"><small>${label}: ${esc(x.number)}</small><span>${esc(clean(x.presenter))}</span></a>` : "";
     const who = [p.role, p.department].filter(Boolean).join(", ");
     $("abs").innerHTML = `
-      <p class="abs-meta"><span class="fmt poster">Poster</span><span class="abs-code">Abstract ${esc(p.code || p.number)}</span><span>Poster sessions I and II</span>
+      <p class="abs-meta"><span class="fmt poster">Poster</span><span class="abs-code">Abstract ${esc(p.code || p.number)}</span><span>Poster session ${ps[0]}</span>
         ${p.category ? `<span class="sep" aria-hidden="true"></span><span>${esc(p.category)}</span>` : ""}</p>
       <h1 class="abs-title">${esc(p.title)}</h1>
       <p class="abs-authors">${authors}</p>
@@ -119,11 +123,11 @@
       <p class="abs-note">${onBehalf ? `Presented by ${esc(p.presenter)} on behalf of the authors.` : "Presenting author underlined."}${p.pi ? ` Principal investigator: ${esc(p.pi)}.` : ""}</p>
       <div class="abs-presenter">
         <div class="initials" aria-hidden="true"><span>${esc(initials(p.presenter))}</span></div>
-        <div><strong>${esc(p.degrees ? `${p.presenter}, ${p.degrees}` : p.presenter)}</strong>${who ? `<span class="small role">${esc(who)}</span>` : ""}<span class="small">Presenting at the poster sessions, 10:30 AM and 1:15 PM</span></div>
+        <div><strong>${esc(p.degrees ? `${p.presenter}, ${p.degrees}` : p.presenter)}</strong>${who ? `<span class="small role">${esc(who)}</span>` : ""}<span class="small">Presenting at poster session ${ps[0]}, ${ps[1]}</span></div>
       </div>
-      <article class="abs-body">${body}${a.keywords ? `<p class="abs-kw"><strong>Keywords:</strong> ${esc(a.keywords)}</p>` : ""}${window.MRFA ? MRFA.citeBlock(p) : ""}</article>
+      <article class="abs-body">${body}${a.keywords ? `<p class="abs-kw"><strong>Keywords:</strong> ${esc(a.keywords)}</p>` : ""}${window.MRFA && p.citation ? MRFA.citeBlock(p) : ""}</article>
       ${window.MRFA ? `<div class="mini-row abs-mini">${MRFA.saveBtn(p.id)}<button class="mini-btn" type="button" onclick="window.print()"><span aria-hidden="true">⎙</span> Print</button></div>` : ""}
-      <nav class="abs-nav" aria-label="Other posters">${nav(list[i - 1], "prev", "Previous")}${nav(list[i + 1], "next", "Next")}</nav>`;
+      <nav class="abs-nav" aria-label="Other posters">${nav(own[k - 1], "prev", "Previous")}${nav(own[k + 1], "next", "Next")}</nav>`;
     wireExtras(data, p);
   }
 

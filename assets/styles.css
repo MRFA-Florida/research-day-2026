@@ -321,3 +321,4 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .menu li { margin: .1rem 0; }
 .lede p { margin: 0 0 .85rem; }
 .lede p:last-child { margin-bottom: 0; }
+.parea { font-size: .82rem; color: var(--muted); margin-top: .15rem; }

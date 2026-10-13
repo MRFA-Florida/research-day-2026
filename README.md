@@ -51,12 +51,12 @@ Rules that keep the JSON valid:
 | `event` | Name, date, `timeLabel` shown in the header, location, intro, tagline, `defaultQuestionUrl` (Q&A form), `ratingUrl` (rating form), `ratingCloses`, Audience Choice text (`award`), calendar times (`calStart`, `calEnd`) |
 | `agenda` | Program blocks. `type` is `session`, `plenary`, `break` or `posters`. Sessions list their talk IDs in `talks` and name the `moderator` |
 | `talks` | One entry per oral presentation: `id`, `code` (O-01…), `session`, `order`, `start`, `minutes`, `format` (`Full oral` / `Rapid-fire`), `presenter`, `degrees`, `role`, `department`, `pi`, `coauthors`, `title`, `photo`, `abstract` (true/false), `citation` |
-| `posters` | One entry per poster: `id` (p01…), `number`/`code` (P-01…), presenter details, `category`, `title`, `citation` |
+| `posters` | One entry per poster: `id` (p01…p59), `number`/`code` (P-01…, same order as the MRFA01… board IDs in `boardId`), `posterSession` (1 or 2), presenter details, `category` (research area), `title`, `citation`. A poster that accompanies an oral talk has `talk` set to that talk's ID and links to the talk's abstract. `abstract: false` shows "Abstract to be posted" |
 | `committee`, `moderators`, `judges` | People cards: `name`, `degrees`, `title`, `role`, `photo`, `sessions` (tag), `bio`. An empty `judges` list shows `judgesNote` instead |
 | `awards` | Award categories and winners (see below) |
 | `info` | Question-and-answer pairs in the Info section |
 
-**IDs:** talks are `s1-01`…`s1-11` (Session I) and `s2-01`…`s2-11` (Session II). IDs were assigned before the final running order, so a talk may sit in the other session than its ID suggests; `session`, `order` and the agenda's `talks` list decide where it appears; posters are `p01`…`p21`. IDs link the agenda, abstracts, saved items and awards together, so don't change them without updating every place they appear.
+**IDs:** talks are `s1-01`…`s1-11` (Session I) and `s2-01`…`s2-11` (Session II). IDs were assigned before the final running order, so a talk may sit in the other session than its ID suggests; `session`, `order` and the agenda's `talks` list decide where it appears; posters are `p01`…`p59`. IDs link the agenda, abstracts, saved items and awards together, so don't change them without updating every place they appear.
 
 **Talk times:** each talk's `start` drives the Now/Next bar, the rating unlock and calendar files. Full orals are 10 minutes and rapid-fire talks 5 minutes.
 

@@ -183,19 +183,24 @@
   function renderPosters(q) {
     q = q.trim().toLowerCase();
     const all = data.posters || [];
-    const list = all.filter((p) => !q || [p.number, p.presenter, p.title, p.category, p.department].join(" ").toLowerCase().includes(q));
-    const groups = [...new Set(all.map((p) => p.category))];
-    $("poster-list").innerHTML = groups.map((g) => {
-      const items = list.filter((p) => p.category === g);
+    const list = all.filter((p) => !q || [p.number, p.boardId, p.presenter, p.title, p.category, p.department].join(" ").toLowerCase().includes(q));
+    const sessions = [[1, "Poster session I", "10:30 – 11:30 AM"], [2, "Poster session II", "1:15 – 2:15 PM"]];
+    const link = (p) => p.talk ? `abstract.html?talk=${esc(p.talk)}` : `abstract.html?poster=${esc(p.id)}`;
+    $("poster-list").innerHTML = sessions.map(([n, label, time]) => {
+      const items = list.filter((p) => (p.posterSession || 1) === n);
       if (!items.length) return "";
-      return `<li class="pgroup"><h3>${esc(g)} <span>${items.length}</span></h3><ul>${items.map((p) => `<li class="poster">
+      return `<li class="pgroup"><h3>${esc(label)}, ${esc(time)} <span>${items.length}</span></h3><ul>${items.map((p) => {
+        const t = p.talk && talksById[p.talk];
+        return `<li class="poster">
         <span class="pnum">${esc(p.number)}</span>
         <div>
-          <div class="ttl">${p.abstract ? `<a href="abstract.html?poster=${esc(p.id)}">${esc(p.title)}</a>` : esc(p.title)}</div>
+          <div class="ttl">${p.abstract ? `<a href="${link(p)}">${esc(p.title)}</a>` : esc(p.title)}</div>
           <div class="who"><strong>${esc(fullName(p))}</strong>${p.department ? `, ${esc(p.department)}` : ""}</div>
+          <div class="parea">${esc(p.category || "")}${t ? ` · Also an oral presentation, ${esc(t.code)} at ${fmt(t.start)}` : ""}${!p.abstract ? " · Abstract to be posted" : ""}</div>
           ${window.MRFA ? `<div class="mini-row">${MRFA.saveBtn(p.id)}${p.citation ? MRFA.citeBtn(p.id) : ""}</div>` : ""}
         </div>
-      </li>`).join("")}</ul></li>`;
+      </li>`;
+      }).join("")}</ul></li>`;
     }).join("");
     $("poster-empty").hidden = list.length > 0;
   }
@@ -206,7 +211,7 @@
       const w = a.winner && itemById(a.winner.id);
       if (!w) return `<li class="award pending"><h3>${esc(a.title)}</h3><p>To be announced at 2:15 PM</p></li>`;
       const isPoster = !!postersById[w.id];
-      const link = isPoster ? `abstract.html?poster=${esc(w.id)}` : `abstract.html?talk=${esc(w.id)}`;
+      const link = isPoster ? (w.talk ? `abstract.html?talk=${esc(w.talk)}` : `abstract.html?poster=${esc(w.id)}`) : `abstract.html?talk=${esc(w.id)}`;
       return `<li class="award won">
         <h3><span aria-hidden="true">🏆</span> ${esc(a.title)}</h3>
         <div class="award-win">
@@ -232,7 +237,7 @@
         <div><a href="#talk-${esc(t.id)}" data-open="${esc(t.id)}">${esc(t.title)}</a><span class="mine-who">${esc(fullName(t))}, ${esc(t.code)}</span></div>
         ${MRFA.saveBtn(t.id)}</li>`),
       ...posters.map((p) => `<li class="mine-item"><span class="mine-time">Poster</span>
-        <div><a href="abstract.html?poster=${esc(p.id)}">${esc(p.title)}</a><span class="mine-who">${esc(fullName(p))}, ${esc(p.code)}</span></div>
+        <div><a href="${p.talk ? `abstract.html?talk=${esc(p.talk)}` : `abstract.html?poster=${esc(p.id)}`}">${esc(p.title)}</a><span class="mine-who">${esc(fullName(p))}, ${esc(p.code)}, poster session ${p.posterSession === 2 ? "II" : "I"}</span></div>
         ${MRFA.saveBtn(p.id)}</li>`),
     ].join("");
     $("mine-empty").hidden = ids.length > 0;

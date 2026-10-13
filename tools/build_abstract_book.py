@@ -112,7 +112,7 @@ def poster_page(p):
         return clean(n) == clean(pres) or (n.split(" ")[-1] == pres.split(" ")[-1] and n[:1] == pres[:1])
 
     authors = ", ".join((f'<span class="pres">{esc(n)}</span>' if is_pres(n) else esc(n)) + sups(a, k, multi) for k, n in enumerate(a.get("authors") or [pres]))
-    meta = ["Poster sessions I and II"] + ([p["category"]] if p.get("category") else [])
+    meta = [f"Poster session {'II' if p.get('posterSession') == 2 else 'I'}"] + ([p["category"]] if p.get("category") else [])
     who = ", ".join(x for x in [p.get("role"), p.get("department")] if x)
     body = body_html(a) if a.get("sections") else '<p class="missing">Abstract not available at the time of publication.</p>'
     behalf = bool(a.get("authors")) and not any(is_pres(n) for n in a["authors"])
@@ -233,7 +233,9 @@ def body_document(pages_for=None):
             n = 1 if a["start"] < "12:00" else 2
             extra = f"<br><small>Abstracts {talks_in(talks, n)}. Moderator: {esc(a.get('moderator'))}</small>"
         elif a["type"] == "posters":
-            extra = f"<br><small>Abstracts {esc(posters[0]['code'])} to {esc(posters[-1]['code'])}</small>"
+            n = 1 if a["start"] < "12:00" else 2
+            ps = [p for p in posters if p.get("posterSession", 1) == n]
+            extra = f"<br><small>Posters {esc(ps[0]['code'])} to {esc(ps[-1]['code'])}</small>" if ps else ""
         elif a.get("who"):
             extra = f"<br><small>{esc(a['who'])}</small>"
         rows.append(f"<tr><td>{fmt(a['start'])} to {fmt(a['end'])}</td><td>{esc(a['title'])}{extra}</td></tr>")
@@ -243,18 +245,31 @@ def body_document(pages_for=None):
         img = data_uri(ROOT / p["photo"]) if p.get("photo") and (ROOT / p["photo"]).exists() else ""
         people.append(f'<div>{f"<img src={chr(34)}{img}{chr(34)} alt={chr(34)}{chr(34)}>" if img else ""}<p><b>{esc(p["name"])}, {esc(p.get("degrees"))}</b></p><p class="r">{esc(p.get("title"))}</p></div>')
 
-    def toc_list(items, codekey):
-        return "<ol>" + "".join(
-            f'<li><span class="c">{esc(x[codekey] if x.get(codekey) else x["number"])}</span><span><span class="t">{esc(x["title"])}</span><br><span class="n">{esc(x["presenter"])}{", " + esc(x["degrees"]) if x.get("degrees") else ""}</span></span><span class="p">{pg(x.get("code") or x["number"])}</span></li>'
-            for x in items) + "</ol>"
+    tcode = {t["id"]: t["code"] for t in talks}
 
+    def toc_list(items, codekey):
+        out = []
+        for x in items:
+            code = x.get(codekey) or x["number"]
+            note, page_of = "", code
+            if x.get("talk"):
+                note, page_of = f" · see oral abstract {tcode.get(x['talk'], '')}", tcode.get(x["talk"], "")
+            elif "talk" not in x and "session" not in x and not ab.get(x["id"], {}).get("sections"):
+                note, page_of = " · abstract not available", None
+            name = esc(x["presenter"]) + (", " + esc(x["degrees"]) if x.get("degrees") else "")
+            out.append(f'<li><span class="c">{esc(code)}</span><span><span class="t">{esc(x["title"])}</span><br><span class="n">{name}{note}</span></span><span class="p">{pg(page_of) if page_of else ""}</span></li>')
+        return "<ol>" + "".join(out) + "</ol>"
+
+    own = [p for p in posters if not p.get("talk") and ab.get(p["id"], {}).get("sections")]
+    ps1 = [p for p in posters if p.get("posterSession", 1) == 1]
+    ps2 = [p for p in posters if p.get("posterSession") == 2]
     s1 = [t for t in talks if t["session"] == 1]
     s2 = [t for t in talks if t["session"] == 2]
     front = f"""
 <section class="front">
   <h1>Welcome</h1>
   <p class="lede">{esc(E.get('fullName') or 'MRFA Research Day, Florida 2026')}. {esc(E.get('dateLabel'))}, {esc(E.get('location') or 'Kinne Auditorium')}, Mayo Clinic in Florida.</p>
-  <p class="lede">This book collects the {len(talks)} oral and rapid-fire presentations and {len(posters)} posters presented at Research Day, in program order. Abstracts appear as submitted by the authors. The live program, speaker details and Q&amp;A are at <span class="sans">mrfa-florida.github.io/research-day-2026</span>.{(' Contact: <span class="sans">' + esc(E['contactEmail']) + '</span>.') if E.get('contactEmail') else ''}</p>
+  <p class="lede">This book collects the {len(talks)} oral and rapid-fire presentations and {len(posters)} posters presented at Research Day, in program order. Posters that accompany an oral presentation point to that abstract. Abstracts appear as submitted by the authors. The live program, speaker details and Q&amp;A are at <span class="sans">mrfa-florida.github.io/research-day-2026</span>.{(' Contact: <span class="sans">' + esc(E['contactEmail']) + '</span>.') if E.get('contactEmail') else ''}</p>
   <h2>Program at a glance</h2>
   <table class="glance">{''.join(rows)}</table>
   <h2>Organizing committee</h2>
@@ -264,7 +279,8 @@ def body_document(pages_for=None):
   <h1 style="font-family:'Familjen Grotesk',sans-serif;font-size:22pt;margin:0;color:{NAVY}">Contents</h1>
   <h3>Oral presentations, Session I</h3>{toc_list(s1, 'code')}
   <h3>Oral presentations, Session II</h3>{toc_list(s2, 'code')}
-  <h3>Posters</h3>{toc_list(posters, 'code')}
+  <h3>Poster session I</h3>{toc_list(ps1, 'code')}
+  <h3>Poster session II</h3>{toc_list(ps2, 'code')}
 </section>"""
 
     def divider(kicker, title, sub):
@@ -277,8 +293,11 @@ def body_document(pages_for=None):
     parts.append(divider("Oral presentations", "Session II", f"{fmt(s_time[2]['start'])} to {fmt(s_time[2]['end'])}, Kinne Auditorium. Moderator: {esc(s_time[2].get('moderator'))}"))
     parts += [talk_page(t) for t in s2]
     pss = [a for a in ev["agenda"] if a["type"] == "posters"]
-    parts.append(divider("Posters", "Poster sessions", " and ".join(f"{fmt(a['start'])} to {fmt(a['end'])}" for a in pss)))
-    parts += [poster_page(p) for p in posters]
+    for n, a in enumerate(pss, 1):
+        mine = [p for p in own if p.get("posterSession", 1) == n]
+        if mine:
+            parts.append(divider("Posters", f"Poster session {'I' * n}", f"{fmt(a['start'])} to {fmt(a['end'])}. Abstracts for posters that accompany an oral presentation appear with the oral sessions."))
+            parts += [poster_page(p) for p in mine]
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{CSS}</style></head><body>{"".join(parts)}</body></html>'
 
 
