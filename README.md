@@ -56,7 +56,7 @@ Rules that keep the JSON valid:
 | `awards` | Award categories and winners (see below) |
 | `info` | Question-and-answer pairs in the Info section |
 
-**IDs:** talks are `s1-01`…`s1-11` (Session I) and `s2-01`…`s2-11` (Session II); posters are `p01`…`p21`. IDs link the agenda, abstracts, saved items and awards together, so don't change them without updating every place they appear.
+**IDs:** talks are `s1-01`…`s1-11` (Session I) and `s2-01`…`s2-11` (Session II). IDs were assigned before the final running order, so a talk may sit in the other session than its ID suggests; `session`, `order` and the agenda's `talks` list decide where it appears; posters are `p01`…`p21`. IDs link the agenda, abstracts, saved items and awards together, so don't change them without updating every place they appear.
 
 **Talk times:** each talk's `start` drives the Now/Next bar, the rating unlock and calendar files. Full orals are 10 minutes and rapid-fire talks 5 minutes.
 
@@ -64,7 +64,7 @@ Rules that keep the JSON valid:
 Upload to `assets/img/speakers/` named after the presenter in lowercase with hyphens, e.g. `diego-sanchez-calderin.jpg`, and set the talk's `photo` to that path. Square crops around 400×400 px load fastest; any size works, but large camera files slow the page on phones. A missing photo shows the person's initials.
 
 ### Q&A and rating forms
-Both are Microsoft Forms with a "Which talk?" dropdown whose options must match the site exactly, e.g. `I-4 Diego Sanchez-Calderin` (session in Roman numerals, running order, presenter name without degrees). The site shows "In the forms, choose …" next to each button. **If you change the running order or a presenter, update both forms' dropdowns.**
+Both are Microsoft Forms with a "Which talk?" dropdown whose options must match the site exactly, e.g. `I-4 Paola Suarez Meade` (session in Roman numerals, running order, presenter name without degrees). The site shows "In the forms, choose …" next to each button. **If you change the running order or a presenter, update both forms' dropdowns.**
 
 ### Announcing award winners
 In `data/event.json` → `awards`, replace `null` with the winning ID:

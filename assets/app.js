@@ -34,7 +34,7 @@
 
   function questionUrl(t) { return t.questionUrl || data.event.defaultQuestionUrl || ""; }
 
-  // Exactly matches the dropdown option in the Q&A form, e.g. "I-4 Diego Sanchez-Calderin".
+  // Exactly matches the dropdown option in the Q&A form, e.g. "I-4 Paola Suarez Meade".
   const fullName = (t) => t.degrees ? `${t.presenter}, ${t.degrees}` : t.presenter;
   const roleLine = (t) => [t.role, t.department].filter(Boolean).join(", ");
   const pickLabel = (t) => `${t.session === 1 ? "I" : "II"}-${t.order} ${String(t.presenter).replace(/,.*$/, "").trim()}`;
