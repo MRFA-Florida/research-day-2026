@@ -1708,5 +1708,48 @@
         ]
       }
     ]
+  },
+  "p62": {
+    "authors": [
+      "Brianna Tapia-Dierking",
+      "Adrian Rivera-Alsina",
+      "Jhan C. Salazar Salazar",
+      "Alfredo Quiñones-Hinojosa",
+      "Maria F. Gonzalez-Aponte",
+      "Hugo Guerrero-Cazares"
+    ],
+    "category": "Neuro-oncology",
+    "sections": [
+      {
+        "h": "Background",
+        "p": [
+          "Glioblastoma (GBM) is the most common and lethal primary brain tumor in adults, with a median survival of 15 months despite surgery, radiation, and chemotherapy with temozolomide (TMZ). These devastating trends highlight the importance of understanding the intrinsic mechanisms driving aggressive GBM progression to develop better therapeutic strategies. Recent evidence suggests that GBM tumors have circadian rhythms that regulate the response to chemotherapy with TMZ, with maximum efficacy obtained when administered in the morning compared to evening. However, we do not know if daily rhythms in clock gene expression and sensitivity to TMZ vary depending on GBM location."
+        ]
+      },
+      {
+        "h": "Hypothesis",
+        "p": [
+          "Because GBM biology can significantly change depending on where cells are located within a tumor and the surrounding tumor microenvironment, we hypothesize that circadian regulation of clock gene expression and sensitivity to daily TMZ varies depending on location."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "To test this hypothesis, we obtained GBM cells from tumor margin and core regions and transduced them with luciferase reporters driven by the promoters of the core clock genes BMAL1 or PER2. We next recorded clock gene-driven bioluminescence continuously for 3 days to measure circadian oscillations in BMAL1 and PER2 expression. We found that GBM cells from the tumor margin show daily rhythms in clock gene expression, while cells from the tumor core show a disrupted circadian clock. To assess if daily sensitivity to TMZ also varied between margin and core regions of GBM, we treated cells with various TMZ doses at two circadian times and measured viability 72h post-treatment using the AlamarBlue assay."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "We found that GBM margin, but not core cells, show time-of-day differences in sensitivity to TMZ. These results suggest that circadian regulation of clock gene expression and daily TMZ efficacy depends on the spatial origin of the cells within the tumor."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Ultimately, these results can lead to personalized, time- and location-informed strategies that improve GBM outcomes."
+        ]
+      }
+    ]
   }
 }

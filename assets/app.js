@@ -1,6 +1,8 @@
 (() => {
   const TZ = "America/New_York";
-  const $ = (id) => document.getElementById(id);
+  // Missing elements (e.g. on speakers.html) resolve to a detached stand-in so shared code can run on any page.
+  const $ = (id) => document.getElementById(id) || document.createElement("div");
+  const onIndex = !!document.getElementById("run");
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const toMin = (hhmm) => { const [h, m] = String(hhmm).split(":").map(Number); return h * 60 + m; };
   const fmt = (hhmm) => {
@@ -27,7 +29,7 @@
 
   fetch(`data/event.json?v=${Date.now()}`, { cache: "no-store" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((d) => { data = d; render(); tick(); setInterval(tick, 30000); if (window.MRFARating) MRFARating.init(d.event); })
+    .then((d) => { data = d; render(); openFromHash(); tick(); setInterval(tick, 30000); if (window.MRFARating) MRFARating.init(d.event); })
     .catch(() => {
       $("run").innerHTML = `<li class="empty">The program couldn’t load. Check that data/event.json is valid JSON (a missing comma is the usual cause), then refresh.</li>`;
     });
@@ -79,13 +81,19 @@
       const when = s.start ? `${fmt(s.start)}${s.end ? ` – ${fmt(s.end)}` : ""}` : esc(s.timeLabel || "");
       const meta = [s.moderator ? `<span class="who-row">${s.moderatorPhoto ? avatar({ presenter: s.moderator, photo: s.moderatorPhoto }, "sm") : ""}Moderator: ${esc(s.moderator)}</span>` : "", s.who ? (s.link ? `<a class="slot-link" href="${esc(s.link)}">${esc(s.who)}</a>` : esc(s.who)) : ""].filter(Boolean).join("<br>");
       const counts = talks.length ? `${talks.filter((t) => /full/i.test(t.format)).length} full talks, ${talks.filter((t) => /rapid/i.test(t.format)).length} rapid-fire` : "";
-      return `<li class="slot ${esc(s.type || "")}" data-start="${esc(s.start || "")}" data-end="${esc(s.end || "")}">
+      const nRapid = talks.filter((t) => fmtClass(t.format) === "rapid").length;
+      const extra = slotExtra(s);
+      const toggleLabel = nRapid ? "Show rapid-fire details" : extra ? extra.label : "";
+      const toggle = toggleLabel ? `<label class="slot-toggle"><input type="checkbox" data-expand="slot-${i}"><span class="sw" aria-hidden="true"></span>${esc(toggleLabel)}</label>` : "";
+      return `<li class="slot ${esc(s.type || "")}" id="slot-${i}" data-start="${esc(s.start || "")}" data-end="${esc(s.end || "")}">
         <div class="slot-head">
           <span class="slot-title">${esc(s.title)}<span class="now-label" hidden>Now</span></span>
           <span class="slot-when">${when}</span>
           ${meta ? `<div class="slot-meta">${meta}</div>` : ""}
+          ${toggle}
         </div>
         ${talks.length ? `<ul class="talks" aria-label="${esc(s.title)}: ${counts}">${talks.map(talkHTML).join("")}</ul>` : ""}
+        ${extra ? `<div class="slot-extra">${extra.html}</div>` : ""}
       </li>`;
     }).join("");
 
@@ -142,14 +150,33 @@
   const avatar = (t, cls = "") => `<div class="initials ${cls}" aria-hidden="true"><span>${esc(initials(t.presenter.replace(/\(.*?\)/g, "").replace(/,.*$/, "")))}</span>${
     t.photo ? `<img src="${esc(t.photo)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>`;
   const fmtClass = (f) => (/rapid/i.test(f || "") ? "rapid" : "full");
+  const shortName = (t) => String(t.presenter).replace(/\(.*?\)\s*/g, "").replace(/,.*$/, "").trim();
+  // Collapsible extras for poster-session and meal slots (hidden until the slot's checkbox is ticked).
+  function slotExtra(s) {
+    if (s.type === "posters") {
+      const n = s.start < "12:00" ? 1 : 2;
+      const ps = (data.posters || []).filter((p) => (p.posterSession || 1) === n);
+      if (!ps.length) return null;
+      const link = (p) => p.talk ? `abstract.html?talk=${esc(p.talk)}` : `abstract.html?poster=${esc(p.id)}`;
+      return { label: `Show posters (${ps.length})`, html: `<ul class="mini-list">${ps.map((p) => `<li><span class="pnum">${esc(p.number)}</span>${
+        p.abstract ? `<a class="ml-title" href="${link(p)}">${esc(p.title)}</a>` : `<span class="ml-title">${esc(p.title)}</span>`}<span class="ml-who">${esc(shortName(p))}</span></li>`).join("")}</ul>
+        <p class="ml-more"><a href="#posters">Search all posters</a></p>` };
+    }
+    if (/lunch/i.test(s.title || "")) {
+      const food = (data.info || []).find((f) => f.groups);
+      if (!food) return null;
+      return { label: "Show menu", html: `<div class="menu">${food.groups.map((g) => `<div><h4>${esc(g.h)}</h4><ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>` };
+    }
+    return null;
+  }
   function talkHTML(t) {
-    return `<li class="${fmtClass(t.format) === "full" ? "is-full" : ""}"><details class="talk" id="talk-${esc(t.id)}" data-start="${esc(t.start || "")}">
+    return `<li class="${fmtClass(t.format) === "full" ? "is-full" : "is-rapid"}"><details class="talk" id="talk-${esc(t.id)}" data-start="${esc(t.start || "")}">
       <summary>
         <span class="ord">${esc(t.order)}${t.start ? `<small>${fmt(t.start)}</small>` : ""}</span>
-        <span>
+        <span class="talk-main">
           ${t.format ? `<span class="fmt ${fmtClass(t.format)}">${esc(t.format)}</span>` : ""}${t.code ? `<span class="code">${esc(t.code)}</span>` : ""}
           <span class="talk-title">${esc(t.title)}</span>
-          <span class="talk-who">${esc(fullName(t))}</span>
+          <span class="talk-who">${esc(fullName(t))}</span><span class="talk-who-short">${esc(shortName(t))}</span>
         </span>
         <svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </summary>
@@ -174,7 +201,7 @@
         <h3>${esc(fullName(t))}</h3>
         <p class="aff">${esc(roleLine(t))}${t.pi ? `<br>PI: ${esc(t.pi)}` : ""}</p>
         <p class="ttl">${esc(t.title)}</p>
-        <p class="when"><a href="#talk-${esc(t.id)}" data-open="${esc(t.id)}">Session ${esc(t.session)}, talk ${esc(t.order)}${t.start ? ` at ${fmt(t.start)}` : ""}</a>, ${esc(t.format || "")}</p>
+        <p class="when"><a href="${onIndex ? "" : "./"}#talk-${esc(t.id)}" data-open="${esc(t.id)}">Session ${esc(t.session)}, talk ${esc(t.order)}${t.start ? ` at ${fmt(t.start)}` : ""}</a>, ${esc(t.format || "")}</p>
         ${actionsHTML(t)}
       </div>
     </li>`).join("");
@@ -290,6 +317,23 @@
     }
   }
 
+  // Expand/collapse a slot's rapid-fire talks, poster list or menu.
+  document.addEventListener("change", (ev) => {
+    const cb = ev.target.closest("[data-expand]");
+    if (cb) $(cb.dataset.expand).classList.toggle("expanded", cb.checked);
+  });
+  // Opening index.html#talk-… (e.g. from the Speakers page) expands that talk.
+  function openFromHash() {
+    const m = location.hash.match(/^#talk-(.+)$/);
+    if (!m) return;
+    const d = document.getElementById("talk-" + m[1]);
+    if (!d) return;
+    const slot = d.closest(".slot"), cb = slot && slot.querySelector("[data-expand]");
+    if (cb && !cb.checked && d.closest(".is-rapid")) { cb.checked = true; slot.classList.add("expanded"); }
+    d.open = true; d.scrollIntoView({ block: "center" });
+  }
+  window.addEventListener("hashchange", openFromHash);
+
   // Events
   document.addEventListener("click", (ev) => {
     const chip = ev.target.closest(".chip");
@@ -318,12 +362,17 @@
       MRFA.calendar.talks(data.event, MRFA.saved.all().map((id) => talksById[id]).filter(Boolean), "My-MRFA-agenda.ics"); return;
     }
     const open = ev.target.closest("[data-open]");
-    if (open) { const d = $("talk-" + open.dataset.open); if (d) d.open = true; }
+    if (open && onIndex) {
+      const d = document.getElementById("talk-" + open.dataset.open);
+      if (d) { const slot = d.closest(".slot"), cb = slot && slot.querySelector("[data-expand]");
+        if (cb && !cb.checked && d.closest(".is-rapid")) { cb.checked = true; slot.classList.add("expanded"); }
+        d.open = true; }
+    }
   });
   $("poster-search").addEventListener("input", (e) => renderPosters(e.target.value));
 
   // Highlight the tab for the section in view
-  const tabs = [...document.querySelectorAll(".tabs a")];
+  const tabs = onIndex ? [...document.querySelectorAll(".tabs a")] : [];
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (en.isIntersecting) tabs.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id));

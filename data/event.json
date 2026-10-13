@@ -107,7 +107,7 @@
       "type": "posters",
       "title": "Poster session II",
       "link": "#posters",
-      "who": "30 posters"
+      "who": "31 posters"
     },
     {
       "start": "14:15",
@@ -1560,6 +1560,22 @@
       "talk": "s2-07",
       "citation": "Khand Y, Tarabeah S, Saad A, Tatum W, Freund B. Risk of Incident Seizures and Epilepsy After a Diagnosis of Idiopathic Intracranial Hypertension: A Matched Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-21.",
       "photo": "assets/img/speakers/yugant-khand.jpg"
+    },
+    {
+      "id": "p62",
+      "number": "P-62",
+      "code": "P-62",
+      "boardId": "",
+      "posterSession": 2,
+      "category": "Neuro-oncology",
+      "presenter": "Brianna Tapia-Dierking",
+      "degrees": "",
+      "role": "",
+      "department": "",
+      "title": "Distinct circadian rhythms in the glioblastoma margin and core regulate time-dependent temozolomide sensitivity",
+      "pi": "Hugo Guerrero-Cazares",
+      "abstract": true,
+      "citation": "Tapia-Dierking B, Rivera-Alsina A, Salazar Salazar JC, et al. Distinct circadian rhythms in the glioblastoma margin and core regulate time-dependent temozolomide sensitivity. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-62."
     }
   ],
   "judges": [
