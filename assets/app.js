@@ -29,7 +29,7 @@
 
   fetch(`data/event.json?v=${Date.now()}`, { cache: "no-store" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((d) => { data = d; render(); openFromHash(); tick(); setInterval(tick, 30000); if (window.MRFARating) MRFARating.init(d.event); })
+    .then((d) => { data = d; render(); openFromHash(); tick(); setInterval(tick, 15000); if (window.MRFARating) MRFARating.init(d.event); })
     .catch(() => {
       $("run").innerHTML = `<li class="empty">The program couldn’t load. Check that data/event.json is valid JSON (a missing comma is the usual cause), then refresh.</li>`;
     });
@@ -209,7 +209,7 @@
     $("speaker-list").hidden = posters;
     $("posters").hidden = !posters;
     if (!posters) renderSpeakers(f);
-    if (!onIndex) document.querySelectorAll(".tabs a").forEach((x) => x.setAttribute("aria-current", x.getAttribute("href") === (posters ? "speakers.html#posters" : "speakers.html")));
+    if (!onIndex) document.querySelectorAll(".tabs-inner > a").forEach((x) => x.setAttribute("aria-current", x.getAttribute("href") === (posters ? "speakers.html#posters" : "speakers.html")));
   }
   window.addEventListener("hashchange", () => { if (!onIndex && data) setView(location.hash === "#posters" ? "posters" : "all"); });
 
@@ -299,46 +299,85 @@
     el.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
   }
 
-  // Live "now / next"
-  function tick() {
-    if (!data) return;
+  // Live "now / next", computed from the agenda so it works on every page.
+  function liveState() {
     const n = nowInTZ();
-    const isDay = preview || n.date === data.event.date;
+    const isDay = !!preview || n.date === data.event.date;
     const min = preview ? toMin(preview) : n.min;
-    const slots = [...document.querySelectorAll(".slot")];
-    let cur = null, next = null;
-    slots.forEach((el) => {
-      if (!el.dataset.start || !el.dataset.end) return;
-      const s = toMin(el.dataset.start), e = toMin(el.dataset.end);
-      const isNow = isDay && min >= s && min < e;
-      el.classList.toggle("now", isNow);
-      el.classList.toggle("past", isDay && min >= e);
-      el.querySelector(".now-label").hidden = !isNow;
-      if (isNow) cur = el;
-      if (isDay && !next && s > min) next = el;
-    });
-    // Live talk inside a session
-    document.querySelectorAll(".talk").forEach((t) => t.classList.remove("live"));
-    let liveTalk = null;
-    if (cur) {
-      const talks = [...cur.querySelectorAll(".talk")].filter((t) => t.dataset.start);
-      talks.forEach((t, i) => {
-        const s = toMin(t.dataset.start);
-        const e = talks[i + 1] ? toMin(talks[i + 1].dataset.start) : toMin(cur.dataset.end);
-        if (min >= s && min < e) { t.classList.add("live"); liveTalk = t; }
+    const ag = (data.agenda || []).filter((a) => a.start && a.end);
+    const cur = isDay ? ag.find((a) => min >= toMin(a.start) && min < toMin(a.end)) : null;
+    const next = isDay ? ag.find((a) => toMin(a.start) > min) : null;
+    let live = null, after = null;
+    if (cur && cur.talks) {
+      const ts = cur.talks.map((id) => talksById[id]).filter((t) => t && t.start);
+      ts.forEach((t, i) => {
+        const e = ts[i + 1] ? toMin(ts[i + 1].start) : toMin(cur.end);
+        if (min >= toMin(t.start) && min < e) { live = t; after = ts[i + 1] || null; }
       });
     }
-    // Event day: open the current block once (unless the visitor folded it) and fill the "Happening now" card.
-    if (cur && cur.classList.contains("foldable") && !cur.dataset.touched && !cur.dataset.auto) { setFold(cur, false); cur.dataset.auto = "1"; }
-    renderNowCard(isDay, cur, next, liveTalk);
-    const bar = $("nowbar");
-    bar.hidden = !isDay || (!cur && !next);
-    if (!bar.hidden) {
-      const title = (el) => el ? el.querySelector(".slot-title").firstChild.textContent : "";
-      const who = (t) => t.querySelector(".talk-who").textContent + ": " + t.querySelector(".talk-title").textContent;
-      $("now-text").textContent = liveTalk ? who(liveTalk) : (cur ? title(cur) : "Not started yet");
-      $("next-text").textContent = next ? `${fmt(next.dataset.start)} ${title(next)}` : "That’s the last item";
+    return { n, isDay, min, cur, next, live, after, idx: (a) => (data.agenda || []).indexOf(a) };
+  }
+
+  function tick() {
+    if (!data) return;
+    const st = liveState();
+    document.querySelectorAll(".slot").forEach((el) => {
+      if (!el.dataset.start || !el.dataset.end) return;
+      const isNow = st.isDay && st.min >= toMin(el.dataset.start) && st.min < toMin(el.dataset.end);
+      el.classList.toggle("now", isNow);
+      el.classList.toggle("past", st.isDay && st.min >= toMin(el.dataset.end));
+      el.querySelector(".now-label").hidden = !isNow;
+    });
+    document.querySelectorAll(".talk").forEach((t) => t.classList.toggle("live", !!st.live && t.id === `talk-${st.live.id}`));
+    // Event day: open the current block once (unless the visitor folded it).
+    const curEl = st.cur && document.getElementById(`slot-${st.idx(st.cur)}`);
+    if (curEl && curEl.classList.contains("foldable") && !curEl.dataset.touched && !curEl.dataset.auto) { setFold(curEl, false); curEl.dataset.auto = "1"; }
+    const card = $("now-card");
+    card.hidden = !st.isDay || (!st.cur && !st.next);
+    if (!card.hidden) card.innerHTML = nowHTML(st);
+    renderStrip(st);
+    if (window.MRFARating) MRFARating.refresh();
+  }
+
+  const talkLink = (t) => `${onIndex ? "" : "./"}#talk-${esc(t.id)}`;
+  function nowHTML(st) {
+    const { cur, next, live, after } = st;
+    const when = (a) => `${fmt(a.start)} – ${fmt(a.end)}`;
+    const upNext = live && after ? `${fmt(after.start)} · ${esc(after.title)}, ${esc(fullName(after))}` : next ? `${fmt(next.start)} · ${esc(next.title)}` : "";
+    if (!cur) return next ? `<p class="nc-kicker">Starting soon</p><p class="nc-next"><strong>${fmt(next.start)}</strong> ${esc(next.title)}</p>` : `<p class="nc-kicker">That’s a wrap</p><p class="nc-next">Thank you for joining MRFA Research Day.</p>`;
+    return `
+      <p class="nc-kicker"><span class="nc-dot" aria-hidden="true"></span>Happening now · ${esc(cur.title)} <span class="nc-when">${when(cur)}</span></p>
+      ${live ? `<div class="nc-talk">${avatar(live, "md")}<div>
+          <p class="nc-meta">${esc(live.format)} · ${esc(live.code)} · ${fmt(live.start)}</p>
+          <a class="nc-title" href="${talkLink(live)}" data-open="${esc(live.id)}">${esc(live.title)}</a>
+          <p class="nc-who">${esc(fullName(live))}${roleLine(live) ? ` · ${esc(roleLine(live))}` : ""}</p>
+          <div class="nc-actions">${questionUrl(live) ? `<a class="btn" href="${esc(questionUrl(live))}" target="_blank" rel="noopener">Ask a question</a>` : ""}${window.MRFARating ? MRFARating.button(live, data.event) : ""}</div>
+        </div></div>` : ""}
+      ${upNext ? `<p class="nc-next"><strong>Up next</strong> ${upNext}</p>` : ""}`;
+  }
+
+  // Collapsed "Happening now" strip under the tabs, with the time (24 h) and date in Florida.
+  function renderStrip(st) {
+    const strip = document.getElementById("nowstrip");
+    if (!strip) return;
+    const [y, mo, d] = (preview ? data.event.date : st.n.date).split("-").map(Number);
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const hh = Math.floor(st.min / 60), mm = st.min % 60;
+    $("ns-clock").textContent = `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")} · ${months[mo - 1]} ${d}, ${y}`;
+    let label, text;
+    if (st.isDay && st.cur) { label = "Happening now"; text = st.live ? `${shortName(st.live)}: ${st.live.title}` : st.cur.title; }
+    else if (st.isDay && st.next) { label = "Up next"; text = `${fmt(st.next.start)} ${st.next.title}`; }
+    else if (st.isDay) { label = "Research Day"; text = "That’s a wrap. Thank you for joining!"; }
+    else {
+      const days = Math.round((Date.UTC(...data.event.date.split("-").map((v, i) => i === 1 ? v - 1 : +v)) - Date.UTC(y, mo - 1, d)) / 864e5);
+      label = "Research Day";
+      text = days > 0 ? `Thursday, October 29 · in ${days} day${days === 1 ? "" : "s"}` : "Thank you for joining MRFA Research Day 2026";
     }
+    strip.classList.toggle("is-live", st.isDay && !!st.cur);
+    $("ns-label").textContent = label;
+    $("ns-text").textContent = text;
+    $("ns-body").innerHTML = st.isDay ? nowHTML(st) + (onIndex ? "" : `<p class="nc-next"><a href="./#program">Open the full program</a></p>`)
+      : `<p class="nc-next">The live view starts on the day: the current session, the talk on stage with Ask and Rate buttons, and what’s up next. ${data.event.timeLabel ? `Program: ${esc(data.event.timeLabel)}, ` : ""}${esc(data.event.location || "Kinne Auditorium")}.</p>`;
   }
 
   // Expand/collapse a slot's rapid-fire talks, poster list or menu.
@@ -378,31 +417,6 @@
   window.addEventListener("hashchange", openFromHash);
   document.addEventListener("click", (ev) => { if (ev.target.closest('a[href$="#awards"]')) $("awards-fold").open = true; });
 
-  function renderNowCard(isDay, cur, next, liveTalk) {
-    const card = $("now-card");
-    if (!isDay || (!cur && !next)) { card.hidden = true; return; }
-    const title = (el) => el ? el.querySelector(".slot-title").firstChild.textContent.trim() : "";
-    const when = (el) => el ? `${fmt(el.dataset.start)} – ${fmt(el.dataset.end)}` : "";
-    const lt = liveTalk && talksById[liveTalk.id.replace(/^talk-/, "")];
-    let upNext = "";
-    if (lt) {
-      const sib = liveTalk.closest("li").nextElementSibling, nt = sib && talksById[sib.querySelector(".talk").id.replace(/^talk-/, "")];
-      upNext = nt ? `${fmt(nt.start)} · ${esc(nt.title)}, ${esc(fullName(nt))}` : next ? `${fmt(next.dataset.start)} · ${esc(title(next))}` : "";
-    } else if (next) upNext = `${fmt(next.dataset.start)} · ${esc(title(next))}`;
-    card.hidden = false;
-    card.innerHTML = cur ? `
-      <p class="nc-kicker"><span class="nc-dot" aria-hidden="true"></span>Happening now · ${esc(title(cur))} <span class="nc-when">${when(cur)}</span></p>
-      ${lt ? `<div class="nc-talk">${avatar(lt, "md")}<div>
-          <p class="nc-meta">${esc(lt.format)} · ${esc(lt.code)} · ${fmt(lt.start)}</p>
-          <a class="nc-title" href="#talk-${esc(lt.id)}" data-open="${esc(lt.id)}">${esc(lt.title)}</a>
-          <p class="nc-who">${esc(fullName(lt))}${roleLine(lt) ? ` · ${esc(roleLine(lt))}` : ""}</p>
-          <div class="nc-actions">${questionUrl(lt) ? `<a class="btn" href="${esc(questionUrl(lt))}" target="_blank" rel="noopener">Ask a question</a>` : ""}${window.MRFARating ? MRFARating.button(lt, data.event) : ""}</div>
-        </div></div>` : ""}
-      ${upNext ? `<p class="nc-next"><strong>Up next</strong> ${upNext}</p>` : ""}`
-      : `<p class="nc-kicker">Starting soon</p><p class="nc-next"><strong>${fmt(next.dataset.start)}</strong> ${esc(title(next))}</p>`;
-    if (window.MRFARating) MRFARating.refresh();
-  }
-
   // Events
   document.addEventListener("click", (ev) => {
     const chip = ev.target.closest(".chip");
@@ -439,7 +453,7 @@
   $("poster-search").addEventListener("input", (e) => renderPosters(e.target.value));
 
   // Highlight the tab for the section in view
-  const tabs = onIndex ? [...document.querySelectorAll(".tabs a")] : [];
+  const tabs = onIndex ? [...document.querySelectorAll(".tabs-inner > a")] : [];
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (en.isIntersecting) tabs.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id));
