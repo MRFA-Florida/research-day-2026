@@ -83,12 +83,12 @@
       const counts = talks.length ? `${talks.filter((t) => /full/i.test(t.format)).length} full talks, ${talks.filter((t) => /rapid/i.test(t.format)).length} rapid-fire` : "";
       const nRapid = talks.filter((t) => fmtClass(t.format) === "rapid").length;
       const extra = slotExtra(s);
-      const toggleLabel = nRapid ? "Show rapid-fire details" : extra ? extra.label : "";
-      const toggle = toggleLabel ? `<label class="slot-toggle"><input type="checkbox" data-expand="slot-${i}"><span class="sw" aria-hidden="true"></span>${esc(toggleLabel)}</label>` : "";
+      const toggle = extra ? `<label class="slot-toggle"><input type="checkbox" data-expand="slot-${i}"><span class="sw" aria-hidden="true"></span>${esc(extra.label)}</label>` : "";
+      const fold = talks.length ? `<button type="button" class="slot-fold" data-fold="slot-${i}" aria-expanded="true" aria-label="Collapse the talks in ${esc(s.title)}"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>` : "";
       return `<li class="slot ${esc(s.type || "")}" id="slot-${i}" data-start="${esc(s.start || "")}" data-end="${esc(s.end || "")}">
         <div class="slot-head">
           <span class="slot-title">${esc(s.title)}<span class="now-label" hidden>Now</span></span>
-          <span class="slot-when">${when}</span>
+          <span class="slot-when">${when}${fold}</span>
           ${meta ? `<div class="slot-meta">${meta}</div>` : ""}
           ${toggle}
         </div>
@@ -322,17 +322,30 @@
     const cb = ev.target.closest("[data-expand]");
     if (cb) $(cb.dataset.expand).classList.toggle("expanded", cb.checked);
   });
+  // Arrow in a session header: show or hide all of that session's talks.
+  document.addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-fold]");
+    if (!b) return;
+    const slot = $(b.dataset.fold), open = slot.classList.toggle("folded") === false;
+    b.setAttribute("aria-expanded", open);
+    b.setAttribute("aria-label", `${open ? "Collapse" : "Expand"} the talks in ${slot.querySelector(".slot-title").firstChild.textContent}`);
+  });
   // Opening index.html#talk-… (e.g. from the Speakers page) expands that talk.
   function openFromHash() {
+    if (location.hash === "#awards") $("awards-fold").open = true;
     const m = location.hash.match(/^#talk-(.+)$/);
     if (!m) return;
     const d = document.getElementById("talk-" + m[1]);
     if (!d) return;
-    const slot = d.closest(".slot"), cb = slot && slot.querySelector("[data-expand]");
-    if (cb && !cb.checked && d.closest(".is-rapid")) { cb.checked = true; slot.classList.add("expanded"); }
+    unfold(d);
     d.open = true; d.scrollIntoView({ block: "center" });
   }
+  function unfold(d) {
+    const slot = d.closest(".slot");
+    if (slot && slot.classList.contains("folded")) { slot.classList.remove("folded"); const b = slot.querySelector("[data-fold]"); if (b) b.setAttribute("aria-expanded", "true"); }
+  }
   window.addEventListener("hashchange", openFromHash);
+  document.addEventListener("click", (ev) => { if (ev.target.closest('a[href$="#awards"]')) $("awards-fold").open = true; });
 
   // Events
   document.addEventListener("click", (ev) => {
@@ -364,9 +377,7 @@
     const open = ev.target.closest("[data-open]");
     if (open && onIndex) {
       const d = document.getElementById("talk-" + open.dataset.open);
-      if (d) { const slot = d.closest(".slot"), cb = slot && slot.querySelector("[data-expand]");
-        if (cb && !cb.checked && d.closest(".is-rapid")) { cb.checked = true; slot.classList.add("expanded"); }
-        d.open = true; }
+      if (d) { unfold(d); d.open = true; }
     }
   });
   $("poster-search").addEventListener("input", (e) => renderPosters(e.target.value));

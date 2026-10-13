@@ -20,9 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Familjen+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <script src="assets/hero.js?v=202610131600"></script>
-  <script src="assets/theme.js?v=202610131600"></script>
-  <link rel="stylesheet" href="assets/styles.css?v=202610131600">
+  <script src="assets/hero.js?v=202610131631"></script>
+  <script src="assets/theme.js?v=202610131631"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=202610131631">
   <link rel="icon" href="assets/img/mayo-clinic-logo.svg" type="image/svg+xml">
 </head>
 <body>
@@ -59,9 +59,9 @@
       <a href="#leadership">Leadership</a>
       <a href="#program">Program</a>
       <a href="speakers.html">Speakers</a>
+      <a href="#awards">Awards</a>
       <a href="#panel">Panel</a>
       <a href="#posters" id="tab-posters" hidden>Posters</a>
-      <a href="#awards">Awards</a>
       <a href="#mine">My agenda</a>
       <a href="#info">Info</a>
       <button type="button" class="theme-btn" id="theme-btn" aria-label="Theme">
@@ -86,6 +86,26 @@
       <ol class="run" id="run"></ol>
     </section>
 
+    <section id="awards" class="wrap block" aria-labelledby="h-awards">
+      <details class="sec-fold" id="awards-fold">
+        <summary>
+          <h2 id="h-awards">Awards</h2>
+          <span class="fold-note">4 awards · recipients announced at 2:15 PM</span>
+          <svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p class="lede" id="awards-note"></p>
+        <ul class="awards" id="award-list"></ul>
+        <div class="award-card" id="award-card" hidden>
+          <h3 id="award-title">Audience Choice Award</h3>
+          <div id="award-text"></div>
+          <div class="award-row">
+            <a class="btn rate-btn" id="award-open" data-start="09:15" data-open-label="Rate a talk" target="_blank" rel="noopener" aria-disabled="true">Rate this talk</a>
+            <div class="qr" id="award-qr" aria-label="QR code for the rating form"></div>
+          </div>
+        </div>
+      </details>
+    </section>
+
     <section id="panel" class="wrap block" aria-labelledby="h-panel">
       <h2 id="h-panel">Moderator and judges</h2>
       <h3 class="panel-sub">Moderator</h3>
@@ -107,19 +127,6 @@
       <p class="empty" id="poster-empty" hidden>No posters match that search. Try a last name or a poster number like P-12.</p>
     </section>
 
-    <section id="awards" class="wrap block" aria-labelledby="h-awards">
-      <h2 id="h-awards">Awards</h2>
-      <p class="lede" id="awards-note"></p>
-      <ul class="awards" id="award-list"></ul>
-      <div class="award-card" id="award-card" hidden>
-        <h3 id="award-title">Audience Choice Award</h3>
-        <div id="award-text"></div>
-        <div class="award-row">
-          <a class="btn rate-btn" id="award-open" data-start="09:15" data-open-label="Rate a talk" target="_blank" rel="noopener" aria-disabled="true">Rate this talk</a>
-          <div class="qr" id="award-qr" aria-label="QR code for the rating form"></div>
-        </div>
-      </div>
-    </section>
 
     <section id="mine" class="wrap block" aria-labelledby="h-mine">
       <h2 id="h-mine">My agenda</h2>
@@ -176,9 +183,9 @@
     </form>
   </dialog>
 
-  <script src="assets/qrcode-generator.js?v=202610131600"></script>
-  <script src="assets/extras.js?v=202610131600"></script>
-  <script src="assets/rating.js?v=202610131600"></script>
-  <script src="assets/app.js?v=202610131600"></script>
+  <script src="assets/qrcode-generator.js?v=202610131631"></script>
+  <script src="assets/extras.js?v=202610131631"></script>
+  <script src="assets/rating.js?v=202610131631"></script>
+  <script src="assets/app.js?v=202610131631"></script>
 </body>
 </html>

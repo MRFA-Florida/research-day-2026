@@ -14,12 +14,12 @@ The site is plain HTML, CSS and JavaScript hosted free on GitHub Pages. There is
 
 | Section | What attendees see |
 |---|---|
-| **Program** | Full agenda with a live **Now / Next** bar on the event day (Florida time). Each talk opens to show presenter, PI, co-authors and actions. Full oral talks are highlighted in blue. Rapid-fire talks show a short title and name until "Show rapid-fire details" is switched on; poster sessions and lunch have "Show posters" / "Show menu" switches. |
+| **Program** | Full agenda with a live **Now / Next** bar on the event day (Florida time). Each talk opens to show presenter, PI, co-authors and actions. Full oral talks are highlighted in blue. The arrow in each session header shows or hides that session's talks; poster sessions and lunch have "Show posters" / "Show menu" switches. |
 | **Speakers** (`speakers.html`) | Separate page: cards with photo, degrees, role and department. Filter by session or format. |
 | **Leadership** | Dean of Research and MRFA Florida Chair, with photos and bios (first section under the header). |
 | **Panel** | Moderator and judges, with photos. |
 | **Posters** | Searchable list grouped by poster session, each linked to its abstract. |
-| **Awards** | Award categories; winners appear here once announced. Explains the Audience Choice Award. |
+| **Awards** | Collapsible section (before the panel): award categories, winners once announced, and how the Audience Choice Award works. |
 | **My agenda** | Talks and posters an attendee saved with ☆ Save (kept on their device). |
 | **Info** | FAQ, Q&A form, and a QR code for the site. |
 | **Abstract pages** | `abstract.html?talk=s1-04` or `abstract.html?poster=p09`: journal-style abstract with authors, affiliations, abstract code, and **Cite this abstract** (AMA). |
