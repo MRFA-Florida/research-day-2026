@@ -322,16 +322,3 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .lede p { margin: 0 0 .85rem; }
 .lede p:last-child { margin-bottom: 0; }
 .parea { font-size: .82rem; color: var(--muted); margin-top: .15rem; }
-.prog-intro { position: relative; isolation: isolate; margin: 0 0 1.5rem; padding: 1.4rem 1.5rem; border-radius: 16px; overflow: hidden; }
-.prog-intro .lede { position: relative; margin: 0; max-width: min(34rem, 60%); color: var(--ink); }
-.prog-photo { position: absolute; inset: 0; margin: 0; z-index: -2; }
-.prog-photo picture, .prog-photo img { display: block; width: 100%; height: 100%; }
-.prog-photo img { object-fit: cover; object-position: 70% 40%; }
-.prog-intro::before { content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 92%, transparent) 45%, color-mix(in srgb, var(--paper) 55%, transparent) 72%, color-mix(in srgb, var(--paper) 10%, transparent) 100%); }
-@media (max-width: 760px) {
-  .prog-intro { padding: 1.1rem 1rem; }
-  .prog-intro .lede { max-width: none; }
-  .prog-photo img { object-position: 65% 40%; }
-  .prog-intro::before { background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, color-mix(in srgb, var(--paper) 86%, transparent) 100%); }
-}
