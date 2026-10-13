@@ -1059,12 +1059,13 @@
       "posterSession": 1,
       "category": "Surgery, Hepatobiliary Surgery",
       "presenter": "Ema Portal",
-      "degrees": "",
-      "role": "",
-      "department": "",
+      "degrees": "MD",
+      "role": "Research Trainee",
+      "department": "Department of Surgery",
       "title": "Predicting Early Readmission After Pancreatic Resection: Implications for Postoperative Discharge Planning",
-      "pi": "",
-      "abstract": false
+      "pi": "John A. Stauffer",
+      "abstract": true,
+      "citation": "Portal E, Verastegui A, Muniz A, et al. Predicting Early Readmission After Pancreatic Resection: Implications for Postoperative Discharge Planning. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-31."
     },
     {
       "id": "p32",
@@ -1074,12 +1075,13 @@
       "posterSession": 2,
       "category": "Surgery, Hepatobiliary Surgery",
       "presenter": "Hisham Sinan",
-      "degrees": "",
-      "role": "",
-      "department": "",
+      "degrees": "MD",
+      "role": "Research Trainee",
+      "department": "Department of Surgery",
       "title": "Influence of Surgical Approach on Textbook Outcomes after Pancreaticoduodenectomy and Distal Pancreatectomy",
-      "pi": "",
-      "abstract": false
+      "pi": "John A. Stauffer",
+      "abstract": true,
+      "citation": "Sinan H, Muniz A, Verastegui A, et al. Influence of Surgical Approach on Textbook Outcomes after Pancreaticoduodenectomy and Distal Pancreatectomy. Presented at: Mayo Clinic Research Fellow’s Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-32."
     },
     {
       "id": "p33",

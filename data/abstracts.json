@@ -1590,5 +1590,94 @@
         ]
       }
     ]
+  },
+  "p31": {
+    "authors": [
+      "Ema Portal",
+      "Alfredo Verastegui",
+      "Andrea Muniz",
+      "Nadya Hicks",
+      "Jorge A. Urbina",
+      "Laura G. Hoek",
+      "Sibi K. Thiyagarajan",
+      "Mary Tice",
+      "Katherine Poruk",
+      "John A. Stauffer"
+    ],
+    "affiliations": [
+      "Department of Surgery, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "category": "Surgery, Hepatobiliary Surgery",
+    "keywords": "Surgical Outcomes; Textbook Outcomes; Pancreatectomy",
+    "sections": [
+      {
+        "h": "Background",
+        "p": [
+          "Early readmission after pancreatic resection remains a significant challenge. We sought to identify predictors of 30-day surgical readmission and assess their consistency across pancreaticoduodenectomy (PD) and distal pancreatectomy (DP)."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We conducted a single-center retrospective cohort study of pancreatic resections performed between 2018 and 2024. The primary outcome was unplanned 30-day surgical readmission; secondary outcomes included any readmission and index-admission reoperation. Multivariable logistic regression identified independent predictors, with Firth penalization applied to procedure-specific models."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Among 636 patients, 127 (20.0%) experienced surgical readmission. In multivariable analysis, ASA class IV (adjusted odds ratio [aOR] 8.51, 95% CI 2.27–31.59), postoperative pancreatic fistula (aOR 5.59, 95% CI 2.72–11.53), delayed gastric emptying (aOR 6.24, 95% CI 3.32–11.77), and abdominal abscess (aOR 15.21, 95% CI 7.52–32.32) independently predicted surgical readmission. Pancreatic fistula, delayed gastric emptying, and abdominal abscess remained significant in both PD and DP subgroups, without significant interactions by procedure type. Any 30-day readmission occurred in 149 of 653 patients (22.8%). An exploratory complication-based risk stratification demonstrated increasing surgical readmission rates from 7.4% without complications to 90.9% with all three complications (p for trend <0.001)."
+        ]
+      },
+      {
+        "h": "Conclusions",
+        "p": [
+          "Pancreas-specific complications and poor preoperative physiologic status are strongly associated with early surgical readmission, with consistent findings across PD and DP. Identifying these complications before discharge may help guide risk-adapted postoperative surveillance and discharge planning."
+        ]
+      }
+    ]
+  },
+  "p32": {
+    "authors": [
+      "Hisham Sinan",
+      "Andrea Muniz",
+      "Alfredo Verastegui",
+      "Jorge A. Urbina",
+      "Sibi K. Thiyagarajan",
+      "Laura G. Hoek",
+      "Mary Tice",
+      "Katherine Poruk",
+      "John A. Stauffer"
+    ],
+    "affiliations": [
+      "Department of Surgery, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "category": "Surgery, Hepatobiliary Surgery",
+    "keywords": "Surgical Outcomes; Textbook Outcomes; Pancreatectomy",
+    "sections": [
+      {
+        "h": "Background",
+        "p": [
+          "Traditional postoperative metrics inadequately capture the complexity of pancreatic surgery, prompting adoption of the composite Textbook Outcome (TBO) as a more comprehensive benchmark. We evaluated the impact of surgical approach on TBO after pancreaticoduodenectomy (PD) or distal pancreatectomy (DP)."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We performed a single-center retrospective study of all PD-DP resections performed at Mayo Clinic Florida between 2010–2024, excluding total pancreatectomy, unclassified resections, and conversions. The primary outcome, TBO, defined as absence of clinically relevant pancreatic fistula, postpancreatectomy hemorrhage, major complications, 30-day readmission, and in-hospital mortality. Multivariable logistic regression identified predictors of TBO failure, stratified by procedure type. Results are reported as adjusted odds ratios (aOR) with 95% confidence intervals."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Among 1,218 resections (718 PD; 500 DP), TBO was achieved in 67.0% of PD and 84.8% of DP. In PD, TBO failure (33.0%) did not differ significantly by surgical approach (p=0.103). Liver fibrosis or cirrhosis (aOR 3.96, 95% CI 1.20–13.10; p=0.024) and vascular resection (aOR 1.69, 95% CI 1.02–2.82; p=0.044) independently predicted TBO failure, whereas pancreatic or periampullary adenocarcinoma was associated with lower odds (aOR 0.60, 95% CI 0.41–0.88; p=0.009). In DP, TBO failure occurred in 15.2% and differed significantly by approach (30.4% open, 11.6% laparoscopic, 25.7% robotic; p<0.001). Laparoscopic DP was independently associated with lower odds of TBO failure compared with open resection (aOR 0.31, 95% CI 0.16–0.61; p<0.001). Age was not independently associated with TBO failure in either cohort."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Our findings highlight that surgical approach influences TBO in DP but not pancreaticoduodenectomy, with laparoscopic DP achieving the highest composite outcomes and age alone not limiting success."
+        ]
+      }
+    ]
   }
 }
