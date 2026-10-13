@@ -71,7 +71,7 @@
       "end": "11:30",
       "type": "posters",
       "title": "Poster session I",
-      "link": "#posters",
+      "link": "speakers.html#posters",
       "who": "31 posters"
     },
     {
@@ -106,7 +106,7 @@
       "end": "14:15",
       "type": "posters",
       "title": "Poster session II",
-      "link": "#posters",
+      "link": "speakers.html#posters",
       "who": "31 posters"
     },
     {

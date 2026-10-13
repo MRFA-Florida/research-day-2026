@@ -69,7 +69,6 @@
     $("event-intro").innerHTML = String(e.intro || "").split(/\n\s*\n/).map((x) => `<p>${esc(x)}</p>`).join("");
     if (e.tagline) { $("tagline").textContent = e.tagline; $("tagline").hidden = false; }
     if (e.notice) { $("event-notice").textContent = e.notice; $("event-notice").hidden = false; }
-    if ((data.posters || []).length) { $("posters").hidden = false; $("tab-posters").hidden = false; }
     $("foot-host").textContent = `${e.name} ${e.edition || ""}, ${e.host || ""}`.trim();
 
     (data.talks || []).forEach((t) => (talksById[t.id] = t));
@@ -99,10 +98,10 @@
 
     // Speakers
     const sessions = [...new Set((data.talks || []).map((t) => t.session).filter(Boolean))];
-    const filters = [["all", "All"], ...sessions.map((n) => [`s${n}`, `Session ${n}`]), ["full", "Full oral"], ["rapid", "Rapid-fire"]];
+    const filters = [["all", "All"], ...sessions.map((n) => [`s${n}`, `Session ${n}`]), ["full", "Full oral"], ["rapid", "Rapid-fire"], ...((data.posters || []).length ? [["posters", `Posters (${data.posters.length})`]] : [])];
     $("talk-filters").innerHTML = filters.map(([k, label], i) =>
       `<button type="button" class="chip" data-f="${k}" aria-pressed="${i === 0}">${esc(label)}</button>`).join("");
-    renderSpeakers("all");
+    setView(location.hash === "#posters" ? "posters" : "all");
 
     // Posters
     renderPosters("");
@@ -158,9 +157,18 @@
       const ps = (data.posters || []).filter((p) => (p.posterSession || 1) === n);
       if (!ps.length) return null;
       const link = (p) => p.talk ? `abstract.html?talk=${esc(p.talk)}` : `abstract.html?poster=${esc(p.id)}`;
-      return { label: `Show posters (${ps.length})`, html: `<ul class="mini-list">${ps.map((p) => `<li><span class="pnum">${esc(p.number)}</span>${
-        p.abstract ? `<a class="ml-title" href="${link(p)}">${esc(p.title)}</a>` : `<span class="ml-title">${esc(p.title)}</span>`}<span class="ml-who">${esc(shortName(p))}</span></li>`).join("")}</ul>
-        <p class="ml-more"><a href="#posters">Search all posters</a></p>` };
+      return { label: `Show posters (${ps.length})`, html: `<ul class="mini-list">${ps.map((p) => {
+        const t = p.talk && talksById[p.talk];
+        return `<li>
+          <span class="pnum">${esc(p.number)}</span>
+          <div class="ml-body">
+            ${p.abstract ? `<a class="ml-title" href="${link(p)}">${esc(p.title)}</a>` : `<span class="ml-title">${esc(p.title)}</span>`}
+            <span class="ml-who"><strong>${esc(fullName(p))}</strong>${p.department ? `, ${esc(p.department)}` : ""}</span>
+            <span class="ml-area">${esc(p.category || "")}${t ? ` · Also oral ${esc(t.code)}` : ""}${!p.abstract ? " · Abstract to be posted" : ""}</span>
+            ${window.MRFA ? `<div class="mini-row">${MRFA.saveBtn(p.id)}${p.citation ? MRFA.citeBtn(p.id) : ""}</div>` : ""}
+          </div>
+        </li>`; }).join("")}</ul>
+        <p class="ml-more"><a href="speakers.html#posters">Search all posters</a></p>` };
     }
     if (/lunch/i.test(s.title || "")) {
       const food = (data.info || []).find((f) => f.groups);
@@ -191,6 +199,17 @@
       </div>
     </details></li>`;
   }
+
+  // Speakers page: the chips switch between speaker cards and the poster list.
+  function setView(f) {
+    document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c.dataset.f === f));
+    const posters = f === "posters";
+    $("speaker-list").hidden = posters;
+    $("posters").hidden = !posters;
+    if (!posters) renderSpeakers(f);
+    if (!onIndex) document.querySelectorAll(".tabs a").forEach((x) => x.setAttribute("aria-current", x.getAttribute("href") === (posters ? "speakers.html#posters" : "speakers.html")));
+  }
+  window.addEventListener("hashchange", () => { if (!onIndex && data) setView(location.hash === "#posters" ? "posters" : "all"); });
 
   function renderSpeakers(f) {
     const list = (data.talks || []).filter((t) =>
@@ -351,8 +370,8 @@
   document.addEventListener("click", (ev) => {
     const chip = ev.target.closest(".chip");
     if (chip) {
-      document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c === chip));
-      renderSpeakers(chip.dataset.f);
+      setView(chip.dataset.f);
+      if (!onIndex) history.replaceState(null, "", chip.dataset.f === "posters" ? "#posters" : location.pathname);
       if (window.MRFARating) MRFARating.refresh();
       return;
     }

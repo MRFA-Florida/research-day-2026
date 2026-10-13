@@ -15,10 +15,9 @@ The site is plain HTML, CSS and JavaScript hosted free on GitHub Pages. There is
 | Section | What attendees see |
 |---|---|
 | **Program** | Full agenda with a live **Now / Next** bar on the event day (Florida time). Each talk opens to show presenter, PI, co-authors and actions. Full oral talks are highlighted in blue. The arrow in each session header shows or hides that session's talks; poster sessions and lunch have "Show posters" / "Show menu" switches. |
-| **Speakers** (`speakers.html`) | Separate page: cards with photo, degrees, role and department. Filter by session or format. |
+| **Speakers and posters** (`speakers.html`) | Separate page: speaker cards (filter by session or format) and, under the **Posters** filter (`speakers.html#posters`), the searchable poster list by poster session. |
 | **Leadership** | Dean of Research and MRFA Florida Chair, with photos and bios (first section under the header). |
 | **Panel** | Moderator and judges, with photos. |
-| **Posters** | Searchable list grouped by poster session, each linked to its abstract. |
 | **Awards** | Collapsible section (before the panel): award categories, winners once announced, and how the Audience Choice Award works. |
 | **My agenda** | Talks and posters an attendee saved with ☆ Save (kept on their device). |
 | **Info** | FAQ, Q&A form, and a QR code for the site. |

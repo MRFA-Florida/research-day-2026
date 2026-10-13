@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Speakers | MRFA Research Day, Florida 2026</title>
+  <title>Speakers and posters | MRFA Research Day, Florida 2026</title>
   <meta name="description" content="Thursday, October 29, 2026, Kinne Auditorium. Program, speakers, posters, abstracts and live Q&A.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MRFA Research Day, Florida 2026">
@@ -20,9 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Familjen+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <script src="assets/theme.js?v=202610131631"></script>
-  <link rel="stylesheet" href="assets/abstract.css?v=202610131631">
-  <link rel="stylesheet" href="assets/styles.css?v=202610131631">
+  <script src="assets/theme.js?v=202610131634"></script>
+  <link rel="stylesheet" href="assets/abstract.css?v=202610131634">
+  <link rel="stylesheet" href="assets/styles.css?v=202610131634">
   <link rel="icon" href="assets/img/mayo-clinic-logo.svg" type="image/svg+xml">
 </head>
 <body class="speakers-page">
@@ -39,10 +39,10 @@
     <div class="wrap tabs-inner">
       <a href="./#leadership">Leadership</a>
       <a href="./#program">Program</a>
-      <a href="speakers.html" aria-current="true">Speakers</a>
+      <a href="speakers.html">Speakers</a>
       <a href="./#awards">Awards</a>
       <a href="./#panel">Panel</a>
-      <a href="./#posters">Posters</a>
+      <a href="speakers.html#posters">Posters</a>
       <a href="./#mine">My agenda</a>
       <a href="./#info">Info</a>
       <button type="button" class="theme-btn" id="theme-btn" aria-label="Theme">
@@ -56,10 +56,20 @@
 
   <main>
     <section id="speakers" class="wrap block" aria-labelledby="h-speakers">
-      <h1 id="h-speakers" class="page-h">Speakers</h1>
-      <p class="lede">All 22 oral and rapid-fire presenters. Filter by session or format, or open a talk in the program.</p>
+      <h1 id="h-speakers" class="page-h">Speakers and posters</h1>
+      <p class="lede">All oral and rapid-fire presenters and every poster. Filter by session, format or Posters.</p>
       <div class="filters" id="talk-filters" role="group" aria-label="Filter speakers"></div>
       <ul class="speakers" id="speaker-list"></ul>
+    </section>
+    <section id="posters" class="wrap block posters-view" aria-labelledby="h-posters">
+      <h2 id="h-posters" class="sr">Posters</h2>
+      <p class="lede">Posters are presented in two sessions: Session I from 10:30 to 11:30 AM and Session II from 1:15 to 2:15 PM. Select a title to read the abstract.</p>
+      <label class="search">
+        <span class="sr">Search posters</span>
+        <input type="search" id="poster-search" placeholder="Search by name, title, research area or number" autocomplete="off">
+      </label>
+      <ul class="posters" id="poster-list"></ul>
+      <p class="empty" id="poster-empty" hidden>No posters match that search. Try a last name or a poster number like P-12.</p>
     </section>
   </main>
 
@@ -82,9 +92,9 @@
     </form>
   </dialog>
 
-  <script src="assets/qrcode-generator.js?v=202610131631"></script>
-  <script src="assets/extras.js?v=202610131631"></script>
-  <script src="assets/rating.js?v=202610131631"></script>
-  <script src="assets/app.js?v=202610131631"></script>
+  <script src="assets/qrcode-generator.js?v=202610131634"></script>
+  <script src="assets/extras.js?v=202610131634"></script>
+  <script src="assets/rating.js?v=202610131634"></script>
+  <script src="assets/app.js?v=202610131634"></script>
 </body>
 </html>

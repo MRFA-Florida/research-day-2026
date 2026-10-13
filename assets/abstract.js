@@ -95,13 +95,13 @@
   function renderPoster(data, abstracts, pid) {
     const list = data.posters || [];
     const i = list.findIndex((p) => p.id === pid);
-    if (i < 0) { $("abs").innerHTML = `<p class="empty">That poster isn’t listed. <a href="./#posters">See all posters</a>.</p>`; return; }
+    if (i < 0) { $("abs").innerHTML = `<p class="empty">That poster isn’t listed. <a href="speakers.html#posters">See all posters</a>.</p>`; return; }
     const p = list[i], a = abstracts[pid] || {};
     if (p.talk) { location.replace(`abstract.html?talk=${encodeURIComponent(p.talk)}`); return; }
     const own = list.filter((x) => !x.talk), k = own.indexOf(p);
     const ps = p.posterSession === 2 ? ["II", "1:15 PM"] : ["I", "10:30 AM"];
     document.title = `${p.title} | MRFA Research Day, Florida 2026`;
-    document.querySelectorAll(".abs-back").forEach((el) => { el.href = "./#posters"; el.textContent = "Back to posters"; });
+    document.querySelectorAll(".abs-back").forEach((el) => { el.href = "speakers.html#posters"; el.textContent = "Back to posters"; });
     const multi = a.affiliations && a.affiliations.length > 1;
     const isPres = (n) => clean(n) === clean(p.presenter) || n.split(" ").pop() === p.presenter.split(" ").pop() && n[0] === p.presenter[0];
     const onBehalf = a.authors && !a.authors.some(isPres);
