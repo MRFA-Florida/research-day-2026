@@ -1716,59 +1716,7 @@
     },
     {
       "q": "Food and refreshments",
-      "a": "Breakfast is served during registration (8:00–9:00 AM), before the opening remarks, and lunch is served at 11:30 AM. Both are open to all attendees. (V) marks vegetarian options.",
-      "groups": [
-        {
-          "h": "Breakfast, 8:00 AM",
-          "items": [
-            "Fruit and yogurt parfait: Greek vanilla yogurt, fresh fruit, banana bread, granola, dried cranberries and honey",
-            "Classic American breakfast: scrambled eggs, seasoned potatoes, bacon, sausage and fresh sliced fruit"
-          ]
-        },
-        {
-          "h": "Breakfast beverages",
-          "items": [
-            "Hot regular coffee with condiments",
-            "Bottled and canned juices",
-            "Fruit-infused water"
-          ]
-        },
-        {
-          "h": "Lunch: pizza",
-          "items": [
-            "Classic cheese (V): mozzarella, parmesan, crushed tomato",
-            "Pepperoni: mozzarella, pepperoni, crushed tomato",
-            "Carnivore: mozzarella, sausage, pepperoni, salami, bacon, crushed tomato",
-            "White Out (V): mozzarella, arugula, red onion, alfredo, hot honey",
-            "Farm Truck (V): mozzarella, spinach, mushrooms, bell pepper, red onion, black olive, crushed tomato, basil"
-          ]
-        },
-        {
-          "h": "Lunch: boxed salads",
-          "items": [
-            "Berry Fields (V): feta, strawberry, blueberry, candied pecan, spring mix, strawberry balsamic vinaigrette (some with blackened chicken)",
-            "Chili Margarita: grilled chicken, Monterey Jack, cheddar, corn and black bean salsa, guacamole, pico de gallo, tortilla strips, spring mix, avocado ranch",
-            "Served with pita chips, a cookie and bottled water"
-          ]
-        },
-        {
-          "h": "Lunch: to share",
-          "items": [
-            "Breads and spreads (V): creamy spinach and artichoke dip, bruschetta, hummus, baked pita, crostini, tortilla chips",
-            "Mediterranean (V): hummus, whipped feta, marinated artichoke, roasted red pepper and mushroom, grilled vegetables, olives, pita",
-            "Pretzel twist (V): warm pretzels, cheddar cheese sauce, green chili queso, whole grain mustard",
-            "Fruit and cheese (V): strawberry, blueberry, grape, whipped ricotta, cheddar, pepper jack, fig spread, honey, crostini"
-          ]
-        },
-        {
-          "h": "Lunch: beverages",
-          "items": [
-            "Hot regular coffee with condiments",
-            "Sparkling aqua frescas: strawberry lime, mint cucumber, watermelon basil",
-            "Sweet and unsweetened iced tea"
-          ]
-        }
-      ]
+      "a": "Breakfast is served during registration (8:00–9:00 AM) and lunch at 11:30 AM, both open to all attendees. Open Registration or Lunch in the program to see the menus."
     },
     {
       "q": "Contact",
