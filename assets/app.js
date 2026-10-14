@@ -172,10 +172,8 @@
         </li>`; }).join("")}</ul>
         <p class="ml-more"><a href="speakers.html#posters">Search all posters</a></p>` };
     }
-    if (/lunch/i.test(s.title || "")) {
-      const food = (data.info || []).find((f) => f.groups);
-      if (!food) return null;
-      return { label: "Show menu", html: `<div class="menu">${food.groups.map((g) => `<div><h4>${esc(g.h)}</h4><ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>` };
+    if ((s.menu || []).length) {
+      return { label: "Show menu", html: `<div class="menu">${s.menu.map((g) => `<div><h4>${esc(g.h)}</h4><ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>` };
     }
     return null;
   }

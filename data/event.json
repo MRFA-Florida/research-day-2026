@@ -36,7 +36,24 @@
       "start": "08:00",
       "end": "09:00",
       "type": "break",
-      "title": "Registration and breakfast"
+      "title": "Registration and breakfast",
+      "menu": [
+        {
+          "h": "Breakfast",
+          "items": [
+            "Fruit and yogurt parfait: Greek vanilla yogurt, fresh fruit, banana bread, granola, dried cranberries and honey",
+            "Classic American breakfast: scrambled eggs, seasoned potatoes, bacon, sausage and fresh sliced fruit"
+          ]
+        },
+        {
+          "h": "Beverages",
+          "items": [
+            "Hot regular coffee with condiments",
+            "Bottled and canned juices",
+            "Fruit-infused water"
+          ]
+        }
+      ]
     },
     {
       "start": "09:00",
@@ -89,7 +106,38 @@
       "start": "11:30",
       "end": "12:00",
       "type": "break",
-      "title": "Lunch"
+      "title": "Lunch",
+      "menu": [
+        {
+          "h": "Reception hors d’oeuvres",
+          "items": [
+            "Roasted lamb rack lollipops with sauce",
+            "Coconut shrimp with sauce",
+            "Grilled shrimp",
+            "Cucumber salmon bites",
+            "Vegetable dumplings with sauce",
+            "Mini twice-baked potatoes",
+            "Artisan cheese and seasonal fruit display",
+            "Mini antipasto bites",
+            "Caprese skewers"
+          ]
+        },
+        {
+          "h": "Dessert",
+          "items": [
+            "Tiramisu shooters",
+            "Peach cobbler shooters"
+          ]
+        },
+        {
+          "h": "Beverages",
+          "items": [
+            "Citrus-infused water",
+            "Freshly brewed unsweetened iced tea",
+            "Freshly brewed sweet iced tea"
+          ]
+        }
+      ]
     },
     {
       "start": "12:00",
@@ -1662,10 +1710,25 @@
     },
     {
       "q": "Food and refreshments",
-      "a": "Breakfast and refreshments are served for all attendees.",
+      "a": "Breakfast is served during registration (8:00–9:00 AM), before the opening remarks, and refreshments are served at lunch (11:30 AM–12:00 PM). Both are open to all attendees.",
       "groups": [
         {
-          "h": "Reception hors d’oeuvres",
+          "h": "Breakfast, 8:00 AM",
+          "items": [
+            "Fruit and yogurt parfait: Greek vanilla yogurt, fresh fruit, banana bread, granola, dried cranberries and honey",
+            "Classic American breakfast: scrambled eggs, seasoned potatoes, bacon, sausage and fresh sliced fruit"
+          ]
+        },
+        {
+          "h": "Breakfast beverages",
+          "items": [
+            "Hot regular coffee with condiments",
+            "Bottled and canned juices",
+            "Fruit-infused water"
+          ]
+        },
+        {
+          "h": "Lunch: reception hors d’oeuvres",
           "items": [
             "Roasted lamb rack lollipops with sauce",
             "Coconut shrimp with sauce",
@@ -1679,14 +1742,14 @@
           ]
         },
         {
-          "h": "Dessert",
+          "h": "Lunch: dessert",
           "items": [
             "Tiramisu shooters",
             "Peach cobbler shooters"
           ]
         },
         {
-          "h": "Beverages",
+          "h": "Lunch: beverages",
           "items": [
             "Citrus-infused water",
             "Freshly brewed unsweetened iced tea",
