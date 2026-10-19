@@ -100,7 +100,8 @@
       "type": "posters",
       "title": "Poster session I",
       "link": "speakers.html#posters",
-      "who": "31 posters"
+      "who": "31 posters",
+      "setup": "Set up 8:00–9:00 AM · remove by 11:30 AM"
     },
     {
       "start": "11:30",
@@ -172,7 +173,8 @@
       "type": "posters",
       "title": "Poster session II",
       "link": "speakers.html#posters",
-      "who": "31 posters"
+      "who": "31 posters",
+      "setup": "Set up 11:30 AM–12:00 PM · remove by 2:15 PM"
     },
     {
       "start": "14:15",
@@ -1705,6 +1707,10 @@
     {
       "q": "Presentation formats",
       "a": "Full oral presentations are 10 minutes each (8 in total, 4 per session). Rapid-fire presentations are 5 minutes each (14 in total, 7 per session)."
+    },
+    {
+      "q": "Poster guidelines",
+      "a": "Posters must be 48\" × 36\" (landscape) or 36\" × 48\" (portrait); larger posters may not be displayed. Poster Session I (10:30–11:30 AM): set up during registration and breakfast (8:00–9:00 AM) and remove by 11:30 AM. Poster Session II (1:15–2:15 PM): set up during lunch (11:30 AM–12:00 PM) and remove by 2:15 PM, before the awards ceremony. Please stay at your poster for the whole session, as judges evaluate posters during this time. Oral and rapid-fire presenters must also present their poster to remain eligible for the Outstanding Abstract Award."
     },
     {
       "q": "How do I ask a question?",

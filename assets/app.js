@@ -159,7 +159,7 @@
       const ps = (data.posters || []).filter((p) => (p.posterSession || 1) === n);
       if (!ps.length) return null;
       const link = (p) => p.talk ? `abstract.html?talk=${esc(p.talk)}` : `abstract.html?poster=${esc(p.id)}`;
-      return { label: `Show posters (${ps.length})`, html: `<ul class="mini-list">${ps.map((p) => {
+      return { label: `Show posters (${ps.length})`, html: `${s.setup ? `<p class="ml-setup">${esc(s.setup)} · 48″ × 36″ or 36″ × 48″</p>` : ""}<ul class="mini-list">${ps.map((p) => {
         const t = p.talk && talksById[p.talk];
         return `<li>
           <span class="pnum">${esc(p.number)}</span>

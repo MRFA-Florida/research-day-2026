@@ -403,3 +403,4 @@ a.ml-title:hover { color: var(--blue); text-decoration: underline; }
 .ns-body { max-height: 70vh; overflow-y: auto; background: var(--paper); }
 .nowstrip[open] { background: var(--paper); box-shadow: 0 8px 18px rgba(10,45,92,.12); }
 @media (max-width: 34rem) { .ns-sum { flex-wrap: wrap; row-gap: .1rem; } .ns-text { order: 5; flex-basis: 100%; } .ns-clock { margin-left: auto; } }
+.ml-setup { margin: 0 0 .4rem; font-size: .85rem; color: var(--muted); }
