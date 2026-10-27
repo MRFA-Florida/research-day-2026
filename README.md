@@ -82,6 +82,15 @@ Use a talk ID (`s1-04`) or poster ID (`p09`). Optional: `"note": "Runner-up: …
 ### Citations
 Each talk and poster has a pre-built AMA `citation`. If you change a title, author list or abstract code, update the citation too (or ask Claude to regenerate them).
 
+### Program flyer (PDF)
+The **Program flyer (PDF)** button serves `assets/program-flyer.pdf`: a one-page, print-ready (US Letter) timeline of the day with every talk, the poster sessions and a QR code to the site. Rebuild it after changing the agenda, talks or presenters:
+
+```
+python3 tools/build_program_flyer.py
+```
+
+The script stops with an error if the flyer would spill onto a second page.
+
 ### Abstract Book (PDF)
 The **Download Abstract Book** button in the header serves `assets/abstract-book.pdf`: cover, welcome and program at a glance, contents with page numbers, then every abstract in program order (O-01…O-22, then P-01…P-21), one per page with its AMA citation. It is built from the two data files, so after changing an abstract, title, author or the running order, rebuild it:
 
