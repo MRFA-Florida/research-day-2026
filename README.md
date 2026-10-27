@@ -20,7 +20,7 @@ The site is plain HTML, CSS and JavaScript hosted free on GitHub Pages. There is
 | **Leadership** | Dean of Research and MRFA Florida Chair, with photos and bios (first section under the header). |
 | **Panel** | Moderator and judges, with photos. |
 | **Awards** | Collapsible section (before the panel): award categories, winners once announced, and how the Audience Choice Award works. |
-| **My agenda** | Talks and posters an attendee saved with ☆ Save (kept on their device). |
+| **My agenda** (`agenda.html`) | Own page (also repeated at the bottom of the main page): talks and posters an attendee saved with ☆ Save, kept on their device and refreshed whenever the page is opened. |
 | **Info** | FAQ, Q&A form, and a QR code for the site. |
 | **Abstract pages** | `abstract.html?talk=s1-04` or `abstract.html?poster=p09`: journal-style abstract with authors, affiliations, abstract code, and **Cite this abstract** (AMA). |
 

@@ -207,7 +207,7 @@
     $("speaker-list").hidden = posters;
     $("posters").hidden = !posters;
     if (!posters) renderSpeakers(f);
-    if (!onIndex) document.querySelectorAll(".tabs-inner > a").forEach((x) => x.setAttribute("aria-current", x.getAttribute("href") === (posters ? "speakers.html#posters" : "speakers.html")));
+    if (!onIndex && document.getElementById("speaker-list")) document.querySelectorAll(".tabs-inner > a").forEach((x) => x.setAttribute("aria-current", x.getAttribute("href") === (posters ? "speakers.html#posters" : "speakers.html")));
   }
   window.addEventListener("hashchange", () => { if (!onIndex && data) setView(location.hash === "#posters" ? "posters" : "all"); });
 
@@ -278,14 +278,16 @@
     const ids = MRFA.saved.all();
     const talks = ids.map((id) => talksById[id]).filter(Boolean).sort((a, b) => toMin(a.start) - toMin(b.start));
     const posters = ids.map((id) => postersById[id]).filter(Boolean);
-    $("mine-list").innerHTML = [
-      ...talks.map((t) => `<li class="mine-item"><span class="mine-time">${fmt(t.start)}</span>
-        <div><a href="#talk-${esc(t.id)}" data-open="${esc(t.id)}">${esc(t.title)}</a><span class="mine-who">${esc(fullName(t))}, ${esc(t.code)}</span></div>
-        ${MRFA.saveBtn(t.id)}</li>`),
-      ...posters.map((p) => `<li class="mine-item"><span class="mine-time">Poster</span>
+    const pStart = (p) => (p.posterSession === 2 ? "13:15" : "10:30");
+    const rows = [
+      ...talks.map((t) => ({ start: t.start, html: `<li class="mine-item"><span class="mine-time">${fmt(t.start)}</span>
+        <div><a href="${onIndex ? "" : "./"}#talk-${esc(t.id)}" data-open="${esc(t.id)}">${esc(t.title)}</a><span class="mine-who">${esc(fullName(t))}, ${esc(t.code)}</span></div>
+        ${MRFA.saveBtn(t.id)}</li>` })),
+      ...posters.map((p) => ({ start: pStart(p), html: `<li class="mine-item"><span class="mine-time">${fmt(pStart(p))}<small>Poster</small></span>
         <div><a href="${p.talk ? `abstract.html?talk=${esc(p.talk)}` : `abstract.html?poster=${esc(p.id)}`}">${esc(p.title)}</a><span class="mine-who">${esc(fullName(p))}, ${esc(p.code)}, poster session ${p.posterSession === 2 ? "II" : "I"}</span></div>
-        ${MRFA.saveBtn(p.id)}</li>`),
-    ].join("");
+        ${MRFA.saveBtn(p.id)}</li>` })),
+    ].sort((x, y) => toMin(x.start) - toMin(y.start));
+    $("mine-list").innerHTML = rows.map((r) => r.html).join("");
     $("mine-empty").hidden = ids.length > 0;
     $("mine-cal").hidden = talks.length === 0;
   }
@@ -413,6 +415,11 @@
   }
   function unfold(d) { const slot = d.closest(".slot"); if (slot && slot.classList.contains("folded")) setFold(slot, false); }
   window.addEventListener("hashchange", openFromHash);
+  // My agenda stays current when saves happen in another tab or the page is reopened.
+  window.addEventListener("storage", () => { if (data) renderMine(); });
+  window.addEventListener("pageshow", () => { if (data) renderMine(); });
+  document.addEventListener("visibilitychange", () => { if (data && !document.hidden) renderMine(); });
+  if (document.body.classList.contains("agenda-page")) document.querySelectorAll(".tabs-inner > a").forEach((x) => x.setAttribute("aria-current", x.getAttribute("href") === "agenda.html"));
   document.addEventListener("click", (ev) => { if (ev.target.closest('a[href$="#awards"]')) $("awards-fold").open = true; });
 
   // Events
