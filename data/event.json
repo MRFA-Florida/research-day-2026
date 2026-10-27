@@ -100,7 +100,7 @@
       "type": "posters",
       "title": "Poster session I",
       "link": "speakers.html#posters",
-      "who": "32 posters",
+      "who": "31 posters",
       "setup": "Set up 8:00–9:00 AM · remove by 11:30 AM"
     },
     {
@@ -173,7 +173,7 @@
       "type": "posters",
       "title": "Poster session II",
       "link": "speakers.html#posters",
-      "who": "31 posters",
+      "who": "32 posters",
       "setup": "Set up 11:30 AM–12:00 PM · remove by 2:15 PM"
     },
     {
@@ -930,12 +930,9 @@
       "degrees": "MD",
       "role": "Research Fellow",
       "department": "Women's Health and Internal Medicine",
-      "title": "Unraveling Menopause: Four Distinct Symptom Phenotypes",
-      "pi": "Stephanie S. Faubion",
-      "abstract": true,
-      "talk": "s1-11",
-      "citation": "Castillo Silva JI, Castaneda R, Kling JM, et al. Unraveling Menopause: Four Distinct Symptom Phenotypes. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-05.",
-      "photo": "assets/img/speakers/jaime-i-castillo-silva.jpg"
+      "title": "Perimenopause Symptom Network in Latin American Women",
+      "pi": "",
+      "abstract": false
     },
     {
       "id": "p20",
@@ -1651,7 +1648,7 @@
       "number": "P-63",
       "code": "P-63",
       "boardId": "",
-      "posterSession": 1,
+      "posterSession": 2,
       "category": "Women's Health, Weight & Shared Decisions",
       "presenter": "Farinaz Fahimipour",
       "degrees": "MD",
