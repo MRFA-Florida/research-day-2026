@@ -100,7 +100,7 @@
       "type": "posters",
       "title": "Poster session I",
       "link": "speakers.html#posters",
-      "who": "31 posters",
+      "who": "32 posters",
       "setup": "Set up 8:00–9:00 AM · remove by 11:30 AM"
     },
     {
@@ -471,19 +471,19 @@
       "order": 4,
       "start": "12:20",
       "format": "Full oral",
-      "presenter": "Aarti Desai",
+      "presenter": "Andrea Muniz",
       "pi": "Rohan Goswami",
       "title": "Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock",
-      "coauthors": "Rebecca Klingbeil, Hans Mautong, Andrea Muniz, Parag Patel, Anna Shapiro, Rohan Goswami",
+      "coauthors": "Aarti Desai, MBBS, Rebecca Klingbeil, Hans Mautong, Parag Patel, Anna Shapiro, Rohan Goswami",
       "questionUrl": "",
-      "photo": "assets/img/speakers/aarti-desai.jpg",
+      "photo": "assets/img/speakers/andrea-muniz.jpg",
       "minutes": 10,
       "abstract": true,
-      "degrees": "MBBS",
-      "role": "Research Fellow",
+      "degrees": "MD",
+      "role": "",
       "department": "Division of Heart Failure and Transplantation",
       "code": "O-15",
-      "citation": "Desai A, Klingbeil R, Mautong H, et al. Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-15."
+      "citation": "Muniz A, Desai A, Klingbeil R, et al. Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-15."
     },
     {
       "id": "s2-11",
@@ -1173,16 +1173,16 @@
       "boardId": "MRFA34",
       "posterSession": 2,
       "category": "Cardiovascular, Transplant & Critical Care",
-      "presenter": "Aarti Desai",
-      "degrees": "MBBS",
-      "role": "Research Fellow",
+      "presenter": "Andrea Muniz",
+      "degrees": "MD",
+      "role": "",
       "department": "Division of Heart Failure and Transplantation",
       "title": "Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock",
       "pi": "Rohan Goswami",
       "abstract": true,
       "talk": "s2-04",
-      "citation": "Desai A, Klingbeil R, Mautong H, et al. Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-15.",
-      "photo": "assets/img/speakers/aarti-desai.jpg"
+      "citation": "Muniz A, Desai A, Klingbeil R, et al. Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-15.",
+      "photo": "assets/img/speakers/andrea-muniz.jpg"
     },
     {
       "id": "p35",
@@ -1424,7 +1424,7 @@
       "boardId": "MRFA49",
       "posterSession": 2,
       "category": "Pain, Rehabilitation & Musculoskeletal",
-      "presenter": "Leonardo Ospino",
+      "presenter": "Shrekshya Khadka",
       "degrees": "",
       "role": "Research Trainee",
       "department": "Department of Pain Medicine",
@@ -1643,6 +1643,22 @@
       "pi": "Hugo Guerrero-Cazares",
       "abstract": true,
       "citation": "Tapia-Dierking B, Rivera-Alsina A, Salazar Salazar JC, et al. Distinct circadian rhythms in the glioblastoma margin and core regulate time-dependent temozolomide sensitivity. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-62."
+    },
+    {
+      "id": "p63",
+      "number": "P-63",
+      "code": "P-63",
+      "boardId": "",
+      "posterSession": 1,
+      "category": "Women's Health, Weight & Shared Decisions",
+      "presenter": "Farinaz Fahimipour",
+      "degrees": "MD",
+      "role": "Research Fellow",
+      "department": "Department of Family Medicine",
+      "title": "Breastfeeding Beyond the Clinic: The Value of Virtual Lactation Consultation",
+      "pi": "Therese Anderson",
+      "abstract": true,
+      "citation": "Fahimipour F, Pujalte G, Wight J, Anderson T. Breastfeeding Beyond the Clinic: The Value of Virtual Lactation Consultation. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-63."
     }
   ],
   "judges": [

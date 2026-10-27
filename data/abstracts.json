@@ -1751,5 +1751,47 @@
         ]
       }
     ]
+  },
+  "p63": {
+    "authors": [
+      "Farinaz Fahimipour, MD",
+      "George Pujalte, MD",
+      "Jeffrey Wight, PhD",
+      "Therese Anderson, MD"
+    ],
+    "affiliations": [
+      "Department of Family Medicine, Mayo Clinic, Jacksonville, Florida"
+    ],
+    "category": "Women's Health, Weight & Shared Decisions",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Virtual lactation consultants have been assisting mothers in the first year postpartum to help reduce anxiety through easily accessible evidence-based virtual support. Virtual lactation companies have Certified International Board of Lactation Consultant Examiners (IBLCE) on staff to provide medical and clinical expertise focusing on patient-centered care.",
+          "Longitudinal evaluation is needed to determine whether ongoing virtual support helps mothers maintain positive breastfeeding experiences and overcome feeding challenges."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "This prospective, single-arm pilot study enrolled lactating mothers receiving care through Mayo Clinic Family Medicine. Eligible participants intended to breastfeed or express breastmilk, provided informed consent, and had access to an internet-enabled device. Breastfeeding experience was evaluated using the Maternal Breastfeeding Evaluation Scale (MBES)."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Twenty-four participants completed the initial assessment, and 22 completed the 3-month assessment, corresponding to a 91.7% follow-up rate.",
+          "54% of the babies enrolled were over 12 weeks old. 88% of the mothers agreed initially that being able to nurse was important, although 24% of them did not enjoy nursing. 50% worried about initial weight gain and 42% found breastfeeding emotionally draining.",
+          "The average across the 10 analyzed items increased from 3.60 ± 0.65 at the initial assessment to 3.66 ± 0.62 at 3 months. Seven of the 10 items showed numerical improvement, but no individual item had a statistically significant change."
+        ]
+      },
+      {
+        "h": "Conclusions",
+        "p": [
+          "Participants generally entered the study with positive breastfeeding experiences, yet many still reported meaningful concerns or challenges. This suggests virtual lactation support may be relevant not only for mothers having trouble, but those seeking reassurance or continued guidance.",
+          "Continued participation across later postpartum stages further suggests that lactation support may remain valuable as breastfeeding needs and challenges evolve."
+        ]
+      }
+    ]
   }
 }
