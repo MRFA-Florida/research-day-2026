@@ -480,8 +480,8 @@
       "minutes": 10,
       "abstract": true,
       "degrees": "MD",
-      "role": "",
-      "department": "Division of Heart Failure and Transplantation",
+      "role": "Visiting Research Fellow",
+      "department": "Cardiac Transplant",
       "code": "O-15",
       "citation": "Muniz A, Desai A, Klingbeil R, et al. Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract O-15."
     },
@@ -634,14 +634,15 @@
       "boardId": "MRFA01",
       "posterSession": 1,
       "category": "Cardiovascular, Transplant & Critical Care",
-      "presenter": "Aarti Desai",
-      "degrees": "MBBS",
-      "role": "Research Fellow",
-      "department": "Division of Heart Failure and Transplantation",
+      "presenter": "Andrea Muniz",
+      "degrees": "MD",
+      "role": "Visiting Research Fellow",
+      "department": "Cardiac Transplant",
       "title": "Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support",
       "pi": "Rohan Goswami",
       "abstract": true,
-      "citation": "Desai A, Mautong H, Sharma S, Ruiz J, Leoni J, Goswami R. Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-01."
+      "citation": "Desai A, Mautong H, Sharma S, Ruiz J, Leoni J, Goswami R. Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-01.",
+      "photo": "assets/img/speakers/andrea-muniz.jpg"
     },
     {
       "id": "p02",
@@ -682,12 +683,13 @@
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Andrea Muniz",
       "degrees": "MD",
-      "role": "",
-      "department": "Division of Heart Failure and Transplantation",
+      "role": "Visiting Research Fellow",
+      "department": "Cardiac Transplant",
       "title": "Redefining heart transplant eligibility – Heart-After-Liver Transplant (HALT) as an immunologic desensitization strategy in highly sensitized patients",
       "pi": "Rohan Goswami",
       "abstract": true,
-      "citation": "Muniz A, Ruiz J, Goswami R, et al. Redefining heart transplant eligibility – Heart-After-Liver Transplant (HALT) as an immunologic desensitization strategy in highly sensitized patients. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-04."
+      "citation": "Muniz A, Ruiz J, Goswami R, et al. Redefining heart transplant eligibility – Heart-After-Liver Transplant (HALT) as an immunologic desensitization strategy in highly sensitized patients. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-04.",
+      "photo": "assets/img/speakers/andrea-muniz.jpg"
     },
     {
       "id": "p05",
@@ -1175,8 +1177,8 @@
       "category": "Cardiovascular, Transplant & Critical Care",
       "presenter": "Andrea Muniz",
       "degrees": "MD",
-      "role": "",
-      "department": "Division of Heart Failure and Transplantation",
+      "role": "Visiting Research Fellow",
+      "department": "Cardiac Transplant",
       "title": "Optimal window for lactic acid clearance after Impella 5.5 placement in patients with cardiogenic shock",
       "pi": "Rohan Goswami",
       "abstract": true,
@@ -1428,10 +1430,10 @@
       "degrees": "",
       "role": "Research Trainee",
       "department": "Department of Pain Medicine",
-      "title": "Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center",
+      "title": "Early Adoption of Suzetrigine After FDA Approval: Inpatient and Outpatient Prescribing Patterns at a Large Academic Center",
       "pi": "Christine Hunt",
       "abstract": true,
-      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early adoption of suzetrigine after FDA approval: inpatient and outpatient prescribing patterns at a large academic center. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-49."
+      "citation": "Colontonio MM, Yavuz Kivanc T, Gruenbaum BF, et al. Early Adoption of Suzetrigine After FDA Approval: Inpatient and Outpatient Prescribing Patterns at a Large Academic Center. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-49."
     },
     {
       "id": "p50",
