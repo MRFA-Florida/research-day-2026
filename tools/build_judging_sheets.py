@@ -89,7 +89,7 @@ td.who { overflow: hidden; }
 .nm { font-weight: 700; font-size: 8.4pt; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nm .tag { font: 700 6.2pt 'Familjen Grotesk', sans-serif; text-transform: uppercase; letter-spacing: .05em; color: #8a4b12; margin-left: 4pt; }
 tr.full .nm .tag { color: BLUE; }
-.ttl { color: #4a5868; font-size: 7.4pt; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.ttl { color: #4a5868; font-size: 7.4pt; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
 td.box { padding: 3pt; }
 td.box div { border: 1pt solid #9fb0c8; border-radius: 3pt; height: var(--bh); background: #fff; }
 td.box.tot div { border: 1.4pt solid NAVY; background: #fff; }
@@ -128,7 +128,7 @@ def sheet(kind, title_line, sub, rows, crit, row_h, av_px, page_h, extra_note, b
 
 def oral_html():
     pages = []
-    cols = '<col style="width:.55in"><col style="width:.5in"><col style="width:3.1in">' + '<col style="width:.62in">' * 4 + '<col style="width:.62in"><col style="width:.36in"><col>'
+    cols = '<col style="width:.55in"><col style="width:.5in"><col style="width:4.55in">' + '<col style="width:.52in">' * 4 + '<col style="width:.56in"><col style="width:.34in"><col>'
     for a in [x for x in ev["agenda"] if x.get("type") == "session"]:
         n = 1 if a["start"] < "12:00" else 2
         rows = []
@@ -139,7 +139,7 @@ def oral_html():
                              name=esc(short(t["presenter"]) + (", " + t["degrees"] if t.get("degrees") else "")), tag="Oral 10 min" if full else "Rapid-fire 5 min",
                              title=esc(t["title"])))
         pages.append(sheet("Oral and rapid-fire presentations", f"Session {ROMAN[n]} · {fmt(a['start'])} – {fmt(a['end'])} · Moderator: {esc(a.get('moderator', ''))}",
-                           cols, rows, ORAL, ".47in", ".4in", "7.6in",
+                           cols, rows, ORAL, ".44in", ".38in", "7.6in",
                            f"<b>Return this sheet</b> to the registration desk at the end of Session {ROMAN[n]}.", ".3in"))
     return pages, "@page { size: Letter landscape; margin: .4in; }"
 
@@ -159,7 +159,7 @@ def poster_html():
 
 def build(name, maker, poster=False):
     pages, page_css = maker()
-    css = CSS
+    css = CSS + ("" if poster else ".ttl{line-height:1.13}.rubric{margin:7pt 0 5pt}header{padding:10pt 16pt}")
     if poster:
         css += "footer span:last-child{display:none}footer{white-space:nowrap}.rubric{margin:6pt 0 5pt;gap:4pt}.rubric div{font-size:6.8pt;padding:2.5pt 5pt;line-height:1.15}.rubric b{font-size:7.8pt}.note{font-size:7pt;margin-bottom:3pt}th{font-size:6.8pt;padding:3pt 2pt}footer{padding-top:4pt}.ttl{-webkit-line-clamp:1;white-space:nowrap;text-overflow:ellipsis;display:block}.nm{font-size:7pt;line-height:1.1}.ttl{font-size:6.6pt;line-height:1.1}td.box{padding:2pt 3pt}td.num{font-size:7.8pt}td{padding:0 3pt}header{padding:9pt 14pt}header h1{font-size:14pt}.nm .tag{font-weight:600;text-transform:none;letter-spacing:0;color:#6b7785}"
     doc = f'<!doctype html><html><head><meta charset="utf-8"><style>{font_faces()}{page_css}{css}</style></head><body>{"".join(pages)}</body></html>'
