@@ -92,7 +92,7 @@ python3 tools/build_program_flyer.py
 The script stops with an error if the flyer would spill onto a second page.
 
 ### Judge evaluation sheets (print only, not on the site)
-`python3 tools/build_judging_sheets.py` writes `judging-sheets/judging-oral.pdf` (one landscape page per oral session, with presenter photos) and `judging-sheets/judging-posters.pdf` (one page per poster session). Four criteria scored 1–10, total out of 40, plus a conflict-of-interest box. The folder is git-ignored so the sheets are not published.
+`python3 tools/build_judging_sheets.py` writes `judging-sheets/judging-oral.pdf` (one landscape page per oral session, with presenter photos) and `judging-sheets/judging-posters.pdf` (one page per poster session). Four criteria scored 1–10, total out of 40, plus a conflict-of-interest box. The folder is git-ignored so the sheets are not published. `python3 tools/build_poster_numbers.py` adds `poster-numbers.pdf` there: board number cards, four per page with cut lines.
 
 ### Abstract Book (PDF)
 The **Download Abstract Book** button in the header serves `assets/abstract-book.pdf`: cover, welcome and program at a glance, contents with page numbers, then every abstract in program order (O-01…O-22, then P-01…P-21), one per page with its AMA citation. It is built from the two data files, so after changing an abstract, title, author or the running order, rebuild it:
