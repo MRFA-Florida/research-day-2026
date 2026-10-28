@@ -67,18 +67,18 @@ def html():
 html, body {{ margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
 body {{ width: 8.5in; height: 11in; font: 8.2pt/1.28 'Inter', 'Atkinson Hyperlegible', sans-serif; color: #17202b; display: flex; flex-direction: column; overflow: hidden; }}
 h1, h2, .when, .tag, .t {{ font-family: 'Familjen Grotesk', sans-serif; }}
-header {{ background: {NAVY}; color: #fff; padding: .3in .5in .22in; display: grid; grid-template-columns: auto 1fr auto; gap: .28in; align-items: center; }}
-header img {{ width: .78in; }}
+header {{ background: {NAVY}; color: #fff; padding: .22in .45in .16in; display: grid; grid-template-columns: auto 1fr auto; gap: .28in; align-items: center; }}
+header img {{ width: .62in; }}
 header .k {{ margin: 0 0 3pt; font-size: 8.5pt; color: #cfe0f5; }}
-header h1 {{ margin: 0; font-size: 25pt; line-height: 1; letter-spacing: -.01em; }}
+header h1 {{ margin: 0; font-size: 21pt; line-height: 1; letter-spacing: -.01em; }}
 header h1 span {{ color: {SUNSET}; font-weight: 500; }}
 header .f {{ margin: 6pt 0 0; font-size: 10pt; color: #e3edf9; }}
 header .f b {{ color: #fff; }}
-.qr {{ background: #fff; padding: 5pt; border-radius: 6pt; width: 1.02in; text-align: center; color: {NAVY}; font: 700 6.6pt 'Familjen Grotesk', sans-serif; }}
+.qr {{ background: #fff; padding: 4pt; border-radius: 6pt; width: .86in; text-align: center; color: {NAVY}; font: 700 6.6pt 'Familjen Grotesk', sans-serif; }}
 .qr svg {{ width: 100%; height: auto; display: block; margin-bottom: 2pt; }}
-main {{ flex: 1; padding: .16in .5in 0; display: flex; flex-direction: column; gap: 4pt; }}
+main {{ flex: 1; padding: .1in .45in 0; display: flex; flex-direction: column; gap: 3pt; }}
 .blk {{ border-radius: 6pt; overflow: hidden; break-inside: avoid; }}
-.bh {{ display: grid; grid-template-columns: 1.05in 1fr; column-gap: 8pt; align-items: baseline; padding: 4pt 9pt; background: #e6effa; }}
+.bh {{ display: grid; grid-template-columns: 1.05in 1fr; column-gap: 8pt; align-items: baseline; padding: 2.6pt 8pt; background: #e6effa; }}
 .bh h2 {{ margin: 0; font-size: 10.2pt; color: {NAVY}; }}
 .bh .sub, .bh .mod {{ grid-column: 2; font-size: 7.8pt; color: #4a5868; }}
 .when {{ font-weight: 600; font-size: 8.6pt; color: {BLUE}; white-space: nowrap; font-variant-numeric: tabular-nums; }}
@@ -88,16 +88,16 @@ main {{ flex: 1; padding: .16in .5in 0; display: flex; flex-direction: column; g
 .session .bh h2 {{ color: #fff; }}
 .session .when {{ color: {SUNSET}; }} .session .when .to {{ color: #b8c7da; }}
 .session .bh .mod {{ color: #cfe0f5; }}
-.talks {{ list-style: none; margin: 0; padding: 2pt 9pt 3pt; border: 1px solid #d5dee8; border-top: 0; border-radius: 0 0 6pt 6pt; }}
-.talks li {{ display: grid; grid-template-columns: .36in .44in 1.62in 1fr; gap: 5pt; align-items: baseline; padding: 1.4pt 0; border-bottom: .5pt solid #e6ebf1; white-space: nowrap; }}
+.talks {{ list-style: none; margin: 0; padding: 1pt 8pt 2pt; border: 1px solid #d5dee8; border-top: 0; border-radius: 0 0 6pt 6pt; }}
+.talks li {{ display: grid; grid-template-columns: .34in .38in 1.66in 1fr; gap: 4pt; align-items: baseline; padding: .7pt 0; border-bottom: .5pt solid #e6ebf1; }}
 .talks li:last-child {{ border-bottom: 0; }}
 .talks .t {{ font-weight: 600; color: {BLUE}; font-variant-numeric: tabular-nums; }}
 .tag {{ font-size: 6.4pt; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #8a4b12; }}
 .full .tag {{ color: {BLUE}; }}
 .full .who, .full .ttl {{ font-weight: 700; }}
-.who {{ overflow: hidden; text-overflow: ellipsis; }}
-.ttl {{ overflow: hidden; text-overflow: ellipsis; color: #33404f; }}
-footer {{ padding: 5pt .5in .26in; display: flex; justify-content: space-between; gap: 12pt; font-size: 7.6pt; color: #4a5868; border-top: 2pt solid {BLUE}; margin: 6pt .5in 0; padding-left: 0; padding-right: 0; }}
+.who {{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+.ttl {{ color: #33404f; font-size: 7pt; line-height: 1.12; }}
+footer {{ padding: 4pt .45in .14in; display: flex; justify-content: space-between; gap: 12pt; font-size: 7.6pt; color: #4a5868; border-top: 2pt solid {BLUE}; margin: 4pt .45in 0; padding-left: 0; padding-right: 0; }}
 footer b {{ color: {NAVY}; }}
 </style></head><body>
 <header>

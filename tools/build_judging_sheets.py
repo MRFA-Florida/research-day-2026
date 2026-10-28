@@ -144,16 +144,19 @@ def oral_html():
     return pages, "@page { size: Letter landscape; margin: .4in; }"
 
 
-def poster_html():
+def poster_html(per_page=16):
     pages = []
-    cols = '<col style="width:.42in"><col style="width:.3in"><col style="width:3.05in">' + '<col style="width:.42in">' * 4 + '<col style="width:.46in"><col style="width:.3in"><col>'
+    cols = '<col style="width:.42in"><col style="width:.34in"><col style="width:3.25in">' + '<col style="width:.42in">' * 4 + '<col style="width:.46in"><col style="width:.3in"><col>'
     for a in [x for x in ev["agenda"] if x.get("type") == "posters"]:
         n = 1 if a["start"] < "12:00" else 2
         ps = [p for p in ev["posters"] if p.get("posterSession", 1) == n]
-        rows = [dict(cls="", num=esc(p["code"]), sub="", av=avatar(p), name=esc(short(p["presenter"]) + (", " + p["degrees"] if p.get("degrees") else "")),
-                     tag=esc(p.get("category", "")), title=esc(p["title"])) for p in ps]
-        pages.append(sheet("Posters", f"Poster session {ROMAN[n]} · {fmt(a['start'])} – {fmt(a['end'])} · {len(ps)} posters", cols, rows, POSTER,
-                           ".212in", ".18in", "10.05in", f"<b>Return this sheet</b> to the registration desk by {fmt(a['end'])}. Score only the posters you visit.", ".17in"))
+        chunks = [ps[i:i + per_page] for i in range(0, len(ps), per_page)]
+        for k, chunk in enumerate(chunks, 1):
+            rows = [dict(cls="", num=esc(p["code"]), sub="", av=avatar(p), name=esc(short(p["presenter"]) + (", " + p["degrees"] if p.get("degrees") else "")),
+                         tag=esc(p.get("category", "")), title=esc(p["title"])) for p in chunk]
+            part = f" · page {k} of {len(chunks)}" if len(chunks) > 1 else ""
+            pages.append(sheet("Posters", f"Poster session {ROMAN[n]} · {fmt(a['start'])} – {fmt(a['end'])} · {chunk[0]['code']} to {chunk[-1]['code']}{part}", cols, rows, POSTER,
+                               ".44in", ".26in", "10.05in", f"<b>Return this sheet</b> to the registration desk by {fmt(a['end'])}. Score only the posters you visit.", ".26in"))
     return pages, "@page { size: Letter; margin: .4in; }"
 
 
@@ -161,7 +164,7 @@ def build(name, maker, poster=False):
     pages, page_css = maker()
     css = CSS + ("" if poster else ".ttl{line-height:1.13}.rubric{margin:7pt 0 5pt}header{padding:10pt 16pt}")
     if poster:
-        css += "footer span:last-child{display:none}footer{white-space:nowrap}.rubric{margin:6pt 0 5pt;gap:4pt}.rubric div{font-size:6.8pt;padding:2.5pt 5pt;line-height:1.15}.rubric b{font-size:7.8pt}.note{font-size:7pt;margin-bottom:3pt}th{font-size:6.8pt;padding:3pt 2pt}footer{padding-top:4pt}.ttl{-webkit-line-clamp:1;white-space:nowrap;text-overflow:ellipsis;display:block}.nm{font-size:7pt;line-height:1.1}.ttl{font-size:6.6pt;line-height:1.1}td.box{padding:2pt 3pt}td.num{font-size:7.8pt}td{padding:0 3pt}header{padding:9pt 14pt}header h1{font-size:14pt}.nm .tag{font-weight:600;text-transform:none;letter-spacing:0;color:#6b7785}"
+        css += "footer span:last-child{display:none}footer{white-space:nowrap}.rubric{margin:6pt 0 5pt;gap:4pt}.rubric div{font-size:6.8pt;padding:2.5pt 5pt;line-height:1.15}.rubric b{font-size:7.8pt}.note{font-size:7pt;margin-bottom:3pt}th{font-size:6.8pt;padding:3pt 2pt}footer{padding-top:4pt}.ttl{display:block;-webkit-line-clamp:unset;font-size:7pt;line-height:1.15}.nm{font-size:7.6pt;line-height:1.15}td.box{padding:2pt 3pt}td.num{font-size:7.8pt}td{padding:0 3pt}header{padding:9pt 14pt}header h1{font-size:14pt}.nm .tag{font-weight:600;text-transform:none;letter-spacing:0;color:#6b7785}"
     doc = f'<!doctype html><html><head><meta charset="utf-8"><style>{font_faces()}{page_css}{css}</style></head><body>{"".join(pages)}</body></html>'
     cands = glob.glob("/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell")
     with sync_playwright() as p:
