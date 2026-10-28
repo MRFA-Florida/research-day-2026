@@ -144,27 +144,56 @@ def oral_html():
     return pages, "@page { size: Letter landscape; margin: .4in; }"
 
 
-def poster_html(per_page=16):
-    pages = []
-    cols = '<col style="width:.42in"><col style="width:.34in"><col style="width:3.25in">' + '<col style="width:.42in">' * 4 + '<col style="width:.46in"><col style="width:.3in"><col>'
-    for a in [x for x in ev["agenda"] if x.get("type") == "posters"]:
-        n = 1 if a["start"] < "12:00" else 2
-        ps = [p for p in ev["posters"] if p.get("posterSession", 1) == n]
-        chunks = [ps[i:i + per_page] for i in range(0, len(ps), per_page)]
-        for k, chunk in enumerate(chunks, 1):
-            rows = [dict(cls="", num=esc(p["code"]), sub="", av=avatar(p), name=esc(short(p["presenter"]) + (", " + p["degrees"] if p.get("degrees") else "")),
-                         tag=esc(p.get("category", "")), title=esc(p["title"])) for p in chunk]
-            part = f" · page {k} of {len(chunks)}" if len(chunks) > 1 else ""
-            pages.append(sheet("Posters", f"Poster session {ROMAN[n]} · {fmt(a['start'])} – {fmt(a['end'])} · {chunk[0]['code']} to {chunk[-1]['code']}{part}", cols, rows, POSTER,
-                               ".44in", ".26in", "10.05in", f"<b>Return this sheet</b> to the registration desk by {fmt(a['end'])}. Score only the posters you visit.", ".26in"))
-    return pages, "@page { size: Letter; margin: .4in; }"
+def poster_sheet(a, ps):
+    n = 1 if a["start"] < "12:00" else 2
+    rub = "".join(f'<div><b><i>{i}</i>{esc(nm)}</b>{esc(d)}</div>' for i, (nm, d) in enumerate(POSTER, 1))
+    heads = "".join(f'<th>{i}<br><span style="font-weight:500">{esc(nm.split()[0])}</span></th>' for i, (nm, _) in enumerate(POSTER, 1))
+    trs = "".join(f'''<tr><td class="num">{esc(p["code"])}</td><td class="ph">{avatar(p)}</td>
+      <td class="pr"><div class="nm">{esc(short(p["presenter"]) + (", " + p["degrees"] if p.get("degrees") else ""))}</div></td>
+      <td class="pt">{esc(p["title"])}</td>{"".join('<td class="box"><div></div></td>' for _ in POSTER)}<td class="box tot"><div></div></td><td class="cm"></td></tr>''' for p in ps)
+    return f'''<section class="page">
+  <header><img src="{LOGO}" alt="">
+    <div><p class="k">Judge evaluation · Posters</p><h1>MRFA Research Day <span>Florida 2026</span></h1><p class="s">Poster session {ROMAN[n]} · {fmt(a['start'])} – {fmt(a['end'])} · {len(ps)} posters</p></div>
+    <div class="judge"><span>Judge</span><span class="ln"></span><span>Signature</span><span class="ln"></span></div></header>
+  <div class="rubric" style="grid-template-columns:repeat(4,1fr)">{rub}</div>
+  <p class="note"><span><b>Score each criterion from 1 to 10</b> (1–3 needs improvement · 4–6 good · 7–8 very good · 9–10 outstanding). Total out of 40. Score only the posters you visit; leave blank any poster you are an author, mentor or PI on.</span></p>
+  <table class="pt-table"><colgroup><col style="width:.4in"><col style="width:.24in"><col style="width:1.3in"><col><col style="width:.36in"><col style="width:.36in"><col style="width:.36in"><col style="width:.36in"><col style="width:.4in"><col style="width:.5in"></colgroup>
+    <thead><tr><th>#</th><th></th><th class="l">Presenter</th><th class="l">Title</th>{heads}<th>Total<br><span style="font-weight:500">/40</span></th><th class="l">Notes</th></tr></thead>
+    <tbody>{trs}</tbody></table>
+  <footer><span><b>Return this sheet</b> to the registration desk by {fmt(a['end'])}.</span><span>MRFA Research Day · Thursday, October 29, 2026</span></footer>
+</section>'''
+
+
+def poster_html():
+    pages = [poster_sheet(a, [p for p in ev["posters"] if p.get("posterSession", 1) == (1 if a["start"] < "12:00" else 2)])
+             for a in ev["agenda"] if a.get("type") == "posters"]
+    return pages, "@page { size: Letter; margin: .35in; }"
+
+
+POSTER_CSS = """
+.page { height: 10.25in; }
+header { padding: 8pt 13pt; } header img { width: 36pt; } header h1 { font-size: 13.5pt; } header .s { font-size: 8.4pt; } header .k { font-size: 7pt; }
+.judge { font-size: 8pt; grid-template-columns: auto 2in; }
+.rubric { margin: 5pt 0 4pt; gap: 4pt; } .rubric div { font-size: 6.6pt; padding: 2pt 5pt; line-height: 1.12; } .rubric b { font-size: 7.6pt; }
+.note { font-size: 6.8pt; margin: 0 0 3pt; }
+th { font-size: 6.6pt; padding: 2.5pt 2pt; }
+.pt-table td { padding: 1.6pt 3pt; vertical-align: middle; }
+.pt-table td.num { font-size: 7.4pt; }
+.pt-table td.ph { padding: 1pt; } .pt-table .av { width: .2in; height: .2in; font-size: 5.6pt; }
+.pt-table .nm { font-size: 7pt; line-height: 1.1; white-space: normal; }
+.pt-table .ar { font-size: 5.9pt; line-height: 1.1; color: #6b7785; }
+.pt-table td.pt { font-size: 6.6pt; line-height: 1.12; color: #33404f; }
+.pt-table td.box { padding: 1.5pt 2pt; } .pt-table td.box div { height: .19in; }
+.pt-table td.cm { border-left: .6pt dotted #9fb0c8; }
+footer { padding-top: 4pt; font-size: 6.8pt; }
+"""
 
 
 def build(name, maker, poster=False):
     pages, page_css = maker()
     css = CSS + ("" if poster else ".ttl{line-height:1.13}.rubric{margin:7pt 0 5pt}header{padding:10pt 16pt}")
     if poster:
-        css += "footer span:last-child{display:none}footer{white-space:nowrap}.rubric{margin:6pt 0 5pt;gap:4pt}.rubric div{font-size:6.8pt;padding:2.5pt 5pt;line-height:1.15}.rubric b{font-size:7.8pt}.note{font-size:7pt;margin-bottom:3pt}th{font-size:6.8pt;padding:3pt 2pt}footer{padding-top:4pt}.ttl{display:block;-webkit-line-clamp:unset;font-size:7pt;line-height:1.15}.nm{font-size:7.6pt;line-height:1.15}td.box{padding:2pt 3pt}td.num{font-size:7.8pt}td{padding:0 3pt}header{padding:9pt 14pt}header h1{font-size:14pt}.nm .tag{font-weight:600;text-transform:none;letter-spacing:0;color:#6b7785}"
+        css += POSTER_CSS
     doc = f'<!doctype html><html><head><meta charset="utf-8"><style>{font_faces()}{page_css}{css}</style></head><body>{"".join(pages)}</body></html>'
     cands = glob.glob("/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell")
     with sync_playwright() as p:
