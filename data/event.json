@@ -634,15 +634,15 @@
       "boardId": "MRFA01",
       "posterSession": 1,
       "category": "Cardiovascular, Transplant & Critical Care",
-      "presenter": "Andrea Muniz",
-      "degrees": "MD",
-      "role": "Visiting Research Fellow",
-      "department": "Cardiac Transplant",
+      "presenter": "Aarti Desai",
+      "degrees": "MBBS",
+      "role": "Research Fellow",
+      "department": "Division of Heart Failure and Transplantation",
       "title": "Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support",
       "pi": "Rohan Goswami",
       "abstract": true,
       "citation": "Desai A, Mautong H, Sharma S, Ruiz J, Leoni J, Goswami R. Health-Related Quality-of-Life Measures in Patients with Heart Failure Cardiogenic Shock Following Axillary Mechanical Circulatory Support. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-01.",
-      "photo": "assets/img/speakers/andrea-muniz.jpg"
+      "photo": "assets/img/speakers/aarti-desai.jpg"
     },
     {
       "id": "p02",
