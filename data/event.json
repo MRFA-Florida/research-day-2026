@@ -173,7 +173,7 @@
       "type": "posters",
       "title": "Poster session II",
       "link": "speakers.html#posters",
-      "who": "32 posters",
+      "who": "31 posters",
       "setup": "Set up 11:30 AM–12:00 PM · remove by 2:15 PM"
     },
     {
@@ -1465,21 +1465,6 @@
       "pi": "Akinduro Spine Oncology Laboratory / Dr. Oluwaseun O. Akinduro",
       "abstract": true,
       "citation": "Iyer HG, Vega-Medina PA, Ghaderi S, et al. Comparative Outcomes of Endonasal and Transoral Odontoidectomy: An Institutional Experience and Meta-Analysis. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-51."
-    },
-    {
-      "id": "p52",
-      "number": "P-52",
-      "code": "P-52",
-      "boardId": "MRFA52",
-      "posterSession": 2,
-      "category": "Neuroscience & Neurodegeneration (basic)",
-      "presenter": "Jackie Barua",
-      "degrees": "",
-      "role": "",
-      "department": "",
-      "title": "Investigating Lateral Hypothalamic α-Synuclein Pathology and REM Sleep Behavior Disorder Across the Lewy Body Disease Spectrum",
-      "pi": "",
-      "abstract": false
     },
     {
       "id": "p53",
