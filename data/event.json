@@ -1637,7 +1637,8 @@
       "title": "Distinct circadian rhythms in the glioblastoma margin and core regulate time-dependent temozolomide sensitivity",
       "pi": "Hugo Guerrero-Cazares",
       "abstract": true,
-      "citation": "Tapia-Dierking B, Rivera-Alsina A, Salazar Salazar JC, et al. Distinct circadian rhythms in the glioblastoma margin and core regulate time-dependent temozolomide sensitivity. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-62."
+      "citation": "Tapia-Dierking B, Rivera-Alsina A, Salazar Salazar JC, et al. Distinct circadian rhythms in the glioblastoma margin and core regulate time-dependent temozolomide sensitivity. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-62.",
+      "photo": "assets/img/speakers/brianna-tapia-dierking.jpg"
     },
     {
       "id": "p63",
@@ -1749,25 +1750,49 @@
     {
       "id": "best-oral",
       "title": "Best Full Oral Presentation",
-      "winner": null
+      "winners": [
+        {
+          "id": "s1-10"
+        }
+      ]
     },
     {
       "id": "best-rapid",
       "title": "Best Rapid-Fire Presentation",
-      "winner": null
+      "winners": [
+        {
+          "id": "s1-05"
+        }
+      ]
     },
     {
       "id": "best-poster",
       "title": "Best Poster Presentation",
-      "winner": null
+      "winners": [
+        {
+          "id": "p01"
+        },
+        {
+          "id": "p62"
+        }
+      ]
     },
     {
       "id": "audience",
       "title": "Audience Choice Award",
-      "winner": null
+      "winners": [
+        {
+          "id": "s2-04",
+          "note": "tie"
+        },
+        {
+          "id": "s2-07",
+          "note": "tie"
+        }
+      ]
     }
   ],
-  "awardsNote": "Recipients will be announced at the Awards Ceremony at 2:15 PM on October 29 and posted here.",
+  "awardsNote": "Congratulations to this year's award recipients, announced at the Awards Ceremony on October 29, 2026. Thank you to all presenters, judges and attendees.",
   "committee": [
     {
       "name": "Regina Castaneda",

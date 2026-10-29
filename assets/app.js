@@ -254,21 +254,25 @@
   function renderAwards() {
     $("awards-note").textContent = data.awardsNote || "";
     $("award-list").innerHTML = (data.awards || []).map((a) => {
-      const w = a.winner && itemById(a.winner.id);
-      if (!w) return `<li class="award pending"><h3>${esc(a.title)}</h3><p>To be announced at 2:15 PM</p></li>`;
-      const isPoster = !!postersById[w.id];
-      const link = isPoster ? (w.talk ? `abstract.html?talk=${esc(w.talk)}` : `abstract.html?poster=${esc(w.id)}`) : `abstract.html?talk=${esc(w.id)}`;
-      return `<li class="award won">
-        <h3><span aria-hidden="true">🏆</span> ${esc(a.title)}</h3>
-        <div class="award-win">
+      const ws = (a.winners || (a.winner ? [a.winner] : [])).map((x) => ({ x, w: itemById(x.id) })).filter((o) => o.w);
+      if (!ws.length) return `<li class="award pending"><h3>${esc(a.title)}</h3><p>To be announced at 2:15 PM</p></li>`;
+      const block = ({ x, w }) => {
+        const isPoster = !!postersById[w.id];
+        const link = isPoster ? (w.talk ? `abstract.html?talk=${esc(w.talk)}` : `abstract.html?poster=${esc(w.id)}`) : `abstract.html?talk=${esc(w.id)}`;
+        return `<div class="award-win">
           ${avatar({ presenter: w.presenter, photo: w.photo }, "lg")}
           <div>
             <p class="w-name">${esc(fullName(w))}</p>
             ${roleLine(w) ? `<p class="w-role">${esc(roleLine(w))}</p>` : ""}
             <p class="w-title"><a href="${link}">${esc(w.title)}</a></p>
-            <p class="w-code">${esc(w.code || "")}${a.winner.note ? `, ${esc(a.winner.note)}` : ""}</p>
+            <p class="w-code">${esc(w.code || "")}${x.note && x.note !== "tie" ? `, ${esc(x.note)}` : ""}</p>
           </div>
-        </div>
+        </div>`;
+      };
+      const tag = ws.length > 1 ? `<span class="w-tag">${ws.some((o) => o.x.note === "tie") ? "Tie" : ws.length + " recipients"}</span>` : "";
+      return `<li class="award won">
+        <h3><span aria-hidden="true">🏆</span> ${esc(a.title)} ${tag}</h3>
+        ${ws.map(block).join("")}
       </li>`;
     }).join("");
   }

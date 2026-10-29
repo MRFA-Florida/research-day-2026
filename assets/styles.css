@@ -295,6 +295,8 @@ dialog::backdrop { background: rgba(7,26,54,.65); }
 .w-role, .w-code { margin: .1rem 0 0; color: var(--muted); font-size: .88rem; }
 .w-title { margin: .4rem 0 0; line-height: 1.35; }
 .w-title a { color: var(--ink); }
+.w-tag { margin-left: .35rem; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: .15rem .5rem; border-radius: 999px; background: color-mix(in srgb, #e0a100 25%, var(--surface)); vertical-align: middle; }
+.award-win + .award-win { padding-top: .8rem; border-top: 1px solid color-mix(in srgb, #e0a100 30%, var(--line)); }
 
 /* My agenda */
 .mine { list-style: none; margin: 0 0 1rem; padding: 0; }
