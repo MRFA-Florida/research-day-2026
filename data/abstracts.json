@@ -1793,5 +1793,462 @@
         ]
       }
     ]
+  },
+  "p02": {
+    "affiliations": [
+      "Department of Neuroscience, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Hiroaki Sekiya",
+      "Nathalie Goetz",
+      "Noriko Akamine",
+      "Asa Nakahara",
+      "Pamela J. McLean",
+      "Akiyoshi Kakita",
+      "Dennis W. Dickson"
+    ],
+    "category": "Neuroscience & Neurodegeneration (basic)",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "PRKN mutations are the most common cause of autosomal recessive early-onset Parkinson's disease (PD). Lewy-related pathology (LRP) is observed in only approximately one-third of patients with PRKN-associated PD (PRKN-PD), with no consistent common pathological substrate identified. αSYN oligomers, early aggregation species formed prior to Lewy body formation, are considered more toxic than mature fibrillar aggregates. However, conventional methods have limited sensitivity for detecting these oligomers, and whether they contribute to PRKN-PD remains unclear. We investigated the distribution and severity of αSYN oligomers and their relationship with LRP in patients with PRKN-PD."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We included seven patients with biallelic PRKN mutations, comprising point mutations, exonic deletions, and duplications/triplications in various combinations (three homozygous and four compound heterozygous). Clinical information, including age at onset and death, and disease duration, was collected. LRP was assessed by conventional immunohistochemistry using a phosphorylated αSYN antibody, while αSYN oligomers were examined by αSYN proximity ligation assay staining. Both pathologies were evaluated in the brainstem, limbic, and neocortical regions. The severity of αSYN oligomers was semi-quantitatively assessed based on the neuropil and neuronal staining."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "LRP was absent in four patients; among the remaining three, LRP extended to limbic structures in one, was limited to the brainstem in one, and was restricted to the dorsal motor nucleus of the vagus and locus coeruleus in one. In six patients, αSYN oligomer burden was higher in limbic and neocortical regions than in the brainstem; one patient, who carried the only compound heterozygous mutation combining a point mutation and an exonic deletion, showed minimal oligomer burden throughout. αSYN oligomer burden was comparable between patients with and without LRP. Disease duration showed a tendency toward a negative correlation with overall αSYN oligomer burden (r=-0.71; P=0.07)."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "αSYN oligomers were widely distributed across brain regions in PRKN-PD patients, regardless of LRP status. Although mitophagy impairment is considered the primary pathogenic mechanism in PRKN-PD, these findings indicate that αSYN aggregation, in the form of oligomers, also occurs in this disease and may represent a potential therapeutic target."
+        ]
+      }
+    ]
+  },
+  "p08": {
+    "affiliations": [
+      "Department of Neuroscience, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Cice Chen",
+      "Abhijit Satpati",
+      "Felipe Pereira",
+      "Gowoon Son",
+      "Renata E. P. Leite",
+      "Claudia K. Suemoto",
+      "Vitor R. Paes",
+      "Lea T. Grinberg"
+    ],
+    "category": "Neuroscience & Neurodegeneration (basic)",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Sleep-wake disruption is an early feature of Alzheimer’s disease (AD). Lateral hypothalamic orexinergic neurons (OrxN), which stabilize arousal, degenerate early in AD, but the mechanisms of selective OrxN vulnerability or persistence remain unclear."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We will apply Visium HD FFPE spatial transcriptomics to postmortem human hypothalamus spanning Braak stages 0, I, VI, and atypical AD. Serial sections labeled for orexin-A and CP13 will identify OrxN-enriched lateral hypothalamic regions, estimate tau burden, and align imaging features with Visium coordinates. Spots will be classified as OrxN-enriched, adjacent, or poor, followed by clustering and differential expression analyses to define OrxN states and associations with disease stage and tau."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "We previously showed substantial OrxN loss by Braak stage I, with ~40% neuronal loss early in disease and 20% of OrxN persisting in late-stage AD. Preliminary analyses in control and AD hypothalamic tissue identified differentially expressed markers among OrxN subpopulations, supporting the feasibility of resolving transcriptionally distinct OrxN states in human postmortem tissue. We expect these states to differ across AD progression and to reveal molecular signatures linked to early vulnerability or late resilience, including stress-response, metabolic, proteostatic, and signaling pathways."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "This study will establish an initial spatial transcriptomic framework for understanding selective OrxN vulnerability in AD and will provide a foundation for future studies of how glial and metabolic environments contribute to OrxN degeneration or survival."
+        ]
+      }
+    ]
+  },
+  "p09": {
+    "affiliations": [
+      "Department of Quantitative Health Sciences, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Court L. Franco",
+      "A. Kissinger-Knox",
+      "T. Kauer",
+      "A. Maxim",
+      "F. Wang",
+      "A. Yedavalli",
+      "F. McDuffie",
+      "F. Moss",
+      "R. Venkatakrishnan",
+      "R. Canales",
+      "B. Lok",
+      "M. Phillips",
+      "J. Samadder",
+      "J. L. Krieger"
+    ],
+    "category": "Health Services, Digital Health & Community",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Early-onset colorectal cancer (EOCRC) is rising among adults under 45, yet most remain ineligible for routine screening, making techquitable symptom recognition and timely evaluation tools essential for early detection. This study examined young adults’ (YAs) perceptions of the usability and feasibility of a Smart Symptom Tracking (SST) Tool, an AI-powered, human-centered mHealth intervention designed to help YAs track gastrointestinal symptoms, access tailored education, and generate downloadable health reports for clinical visits."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "YAs participated in think-aloud semi-structured interviews while navigating the high-fidelity SST Tool prototype. Participants (N=24) ranged from 19–45 years old (M=28.21, SD=7.27). Guided by the Health Information Technology Usability Evaluation Model (Health-ITUEM), we analyzed the transcripts using an AI-assisted deductive qualitative approach. Researchers first coded 20% of transcripts and used these data to train MAXQDA AI Assist. The full dataset was coded across four Health-ITUEM constructs, perceived a) user control, b) usefulness, c) impact, and d) ease of use, with research-team review at each step."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Findings revealed strong alignment between participant perceptions and the four usability constructs. Participants described the tool as useful for guiding decision-making. Participants endorsed the SST Tool’s value for agency, empowerment, symptom tracking and monitoring, communication support, tailored education, personalization, and downloadable health reports. Areas for refinement included information overload, privacy, trust in AI-generated insights, customization, integration with healthcare platforms, and barriers to adoption."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Findings provide early evidence that the SST Tool is a feasible and usable AI-enabled mHealth system for supporting EOCRC symptom recognition, communication, and clinical advocacy among YAs outside routine screening pathways. The SST Tool offers a promising symptom-driven pathway for earlier detection. Future work should prioritize full-system development, stronger personalization features, transparent AI safeguards, and randomized controlled trial pilot testing against standard care."
+        ]
+      }
+    ]
+  },
+  "p16": {
+    "affiliations": [
+      "Department of Neuroscience, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Guo Luo",
+      "Pauline Dodet",
+      "Jing Zhang",
+      "Yann Le Guen",
+      "Michael Greicius",
+      "Ziv Gan-Or",
+      "Emmanuel Mignot",
+      "Sarosh Irani"
+    ],
+    "category": "Neuroscience & Neurodegeneration (basic)",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Neurofibrillary tangles (NFTs) are hallmarks of Alzheimer’s disease (AD) and formed by aggregation of the microtube-associated protein tau that undergoes many modifications, including acetylation on lysine (K) in tau. A piece of tau consisting of six amino acid residues, paired helical filament (PHF)6 (VQIVYK), plays a predominant role in tau aggregation. Merging evidence supports adaptive immune system plays an important role. However, the pieces of antigens, the types and functions of T cells, and HLA types associated with AD remain largely unknown."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We analyzed HLA associations in ~176,000 individuals with PD or AD versus controls across ancestry groups. We also compared postmortem brain density of NFTs and amyloid plaques in brain, tau and Aβ42 levels in cerebrospinal fluid (CSF) of ~8,000 individuals (controls and AD), and examined association of HLA in ~2,500 patient with pathologically demonstrated Lewy Body Dementia. This was followed by HLA binding, tetramer T cell studies and TCR activation by tau PHF6 in Jurkat cell."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "We found that HLA-DRB1*04:04 has protective effect in AD. We detected clonally expanded T cells recognizing tau, especially modified PHF6 with acetylation at lysine 311 (PHF6 aK311) when presented by DRB1*04:04, and the phenotypes of these T cells are distinct in AD patients versus cognitively healthy controls. Further, we identified different TCR clones from both AD patients and healthy controls only activated by tau PHF6 aK311 presented by DRB1*04:04."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "An HLA-DRB1*04-mediated adaptive immune response against tau PHF6 aK311 decreases AD risk, offering the possibility of new therapeutic avenues."
+        ]
+      }
+    ]
+  },
+  "p22": {
+    "affiliations": [
+      "Department of Critical Care Medicine, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Priyanka Poudel",
+      "Rijan Kafle",
+      "Katherine Quiza",
+      "Aashutosh Chaudhary",
+      "Suzit Bhusal",
+      "Ashlesha Chaudhary",
+      "Prasanth Balasubramanian",
+      "Remzi Bag",
+      "Pramod Guru",
+      "Sanjay Chaudhary"
+    ],
+    "category": "Cardiovascular, Transplant & Critical Care",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Anemia is a common finding among lung transplant candidates. However, whether chronic pre-transplant anemia independently predicts perioperative red blood cell (RBC) transfusion burden is unclear. This study aims to determine the impact of pre-transplant anemia severity and anemia-directed therapy on perioperative RBC transfusion burden in lung transplant recipients."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We conducted a retrospective cohort study of 404 adult lung transplant recipients. Anemia severity was defined by the lowest hemoglobin within 6 months before transplant and categorized as ≥12g/dl and 10-12 g/dL, 8–<10 g/dL, or <8 g/dL. Multivariable linear and logistic regression models adjusted for age, sex, body mass index, donor age, and pre-transplant creatinine."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "In our study, hemoglobin level was <10 g/dL in 58 patients (14.36%), including 14 (3.71%) with Hb <8 g/dL. Preoperative transfusions accounted for 30 cases (7.43%), intraoperative transfusions for 235 cases (58.17%), and postoperative transfusions for 267 cases (66.09%). Mean RBC transfusion was 0.04 ± 0.35 units preoperatively, 0.75 ± 1.81 units intraoperatively, and 2.22 ± 5.77 units postoperatively. Transfusion burden increased progressively with worsening anemia in unadjusted analyses. Iron therapy was used in 19 (4.70%) patients and erythropoiesis-stimulating agents in 5 (1.24%; 1 epoetin, 4 darbepoetin) with higher use among patients with severe anemia. Among patients with hemoglobin <10 g/dL and <8 g/dL, IV iron was associated with higher unadjusted transfusion, while ESA showed no association with PRBC use. In adjusted models, neither anemia severity nor anemia-directed therapy independently predicted transfusion burden. Pre-transplant creatinine was the only independent predictor (OR 2.00, 95% CI 1.27–3.07; p = 0.002)."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "In our cohort, RBC transfusion occurred mainly intraoperatively and postoperatively. Anemia-directed therapy was infrequently used and did not independently reduce transfusion, even in patients with hemoglobin <10 g/dL or <8 g/dL."
+        ]
+      }
+    ]
+  },
+  "p23": {
+    "affiliations": [
+      "Department of Cancer Biology, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Prita Pandya",
+      "Kayleah Meneses",
+      "Nayya Murray",
+      "Reagan Carris",
+      "Karen Ann Subin",
+      "Rucha Trivedi",
+      "Verline Justilien"
+    ],
+    "category": "Cancer & Translational Biology",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Cancer stem cells (CSCs) contribute to non-small cell lung cancer (NSCLC) tumor initiation, progression, metastasis, therapeutic resistance, and recurrence and are sustained by aberrant developmental signaling. Our prior studies identified RAB27B, a small GTPase involved in vesicle trafficking and extracellular vesicle secretion, as upregulated in NSCLC CSCs and required for stem-like phenotypes. However, its role in lung tumorigenesis and cell-autonomous CSC signaling remains unclear."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "RAB27B expression was evaluated in human lung adenocarcinoma and across lesion progression in the KrasG12D;Trp53fl/fl (KP) mouse model. Primary NSCLC datasets were analyzed to identify stem cell-associated pathways enriched in RAB27B-high tumors. RAB27B was knockdown in NSCLC CSCs to assess its role in CSC maintenance, transformed growth, invasion, and tumorigenicity. Rab27b was also deleted in alveolar type II (ATII) cells in a conditional KP mouse model to evaluate the requirement of Rab27b in lung tumorigenesis. Following identification of Wnt/β-catenin signaling as a RAB27B-associated pathway, β-catenin abundance and localization, TCF-dependent transcriptional activity, Wnt target gene expression, and WNT5A/FZD3 dependency were assessed upon RAB27B knockdown in NSCLC cells."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "RAB27B was elevated in human lung adenocarcinoma, associated with reduced patient survival, and increased during KP tumor progression. Pathway analysis of RAB27B-high NSCLC tumors identified enrichment of stem cell-associated pathways, including Wnt/β-catenin signaling. RAB27B depletion impaired CSC maintenance, clonal expansion, transformed growth, invasion, tumor growth, and metastatic activity. Rab27b deletion blocked KP-mediated transformation of ATII cells, reduced lung tumor burden, and improved survival. Mechanistically, RAB27B knockdown reduced β-catenin abundance and nuclear accumulation, TCF-dependent transcriptional activity, and MYC, CCND1, and LEF1 expression. Exogenous WNT3A restored β-catenin-dependent transcriptional activity in RAB27B-depleted cells. Knockdown of WNT5A or FZD3 reduced transformed growth, supporting a cell-autonomous role for Wnt signaling in CSCs."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "RAB27B is required for oncogenic transformation, lung tumor progression, and NSCLC CSC activity. Our study also identifies a novel cell-autonomous RAB27B/Wnt signaling axis which may serve as a potential therapeutic vulnerability in NSCLC."
+        ]
+      }
+    ]
+  },
+  "p24": {
+    "affiliations": [
+      "Department of Laboratory Medicine and Pathology, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Samprada Tripathee",
+      "Nilasma Shrestha",
+      "Claudia Muñoz-Herrera",
+      "Andrea Muniz",
+      "Laxmi Raj Bangari",
+      "Rohan Goswami",
+      "Mohamed Elrefaei"
+    ],
+    "category": "Cardiovascular, Transplant & Critical Care",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Development of HLA de novo Donor-Specific Antibodies (dnDSA) is associated with adverse allograft outcomes. The aim of our study was to assess the relationship between the development of HLA dnDSA and clinical outcomes in heart transplant recipients (HTR)."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "Retrospective analysis of 195 heart transplant recipients between 2020 and 2023 with 3-year follow-up period. HLA dnDSA were assessed using a single-antigen bead assay. The incidence of acute cellular rejection (ACR), antibody mediated rejection (AMR), and cardiac allograft vasculopathy (CAV) was evaluated during follow-up."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "HLA dnDSA were detected in 32/195 (16.4%) HTR during the first year post transplant. Detection of HLA dnDSA was associated with higher incidence of CAV (31.3% vs. 14.1%; OR, 2.77; 95% CI, 1.16–6.59; P = 0.03) and ACR (ACR 43.8% vs. 18.4%; OR, 3.45; 95% Cl, 1.54-7.70; P = 0.004). AMR occurred more frequently in dnDSA positive recipients (6.25% vs. 3.07%; OR, 2.11; 95% CI, 0.40–11.2), but this association was not statistically significant (P = 0.32)."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Development of HLA dnDSA was associated with significantly increased risk of CAV and ACR in HTR. Our results support routine HLA dnDSA monitoring as a tool to identify HTR at increased risk of immune-mediated allograft injury and heart allograft dysfunction."
+        ]
+      }
+    ]
+  },
+  "p37": {
+    "affiliations": [
+      "Department of Physical Medicine and Rehabilitation, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Robert Pagan Rosado",
+      "Andres Monge Ferrin",
+      "Larry Prokop"
+    ],
+    "category": "Pain, Rehabilitation & Musculoskeletal",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Lumbar spine conditions impose a meaningful burden in baseball players. Lumbar bone stress injuries are particularly relevant in pitchers because repetitive extension and rotation may contribute to their development. Evidence guiding management and return to play remains limited."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "This scoping review followed JBI guidance for conduct and PRISMA-ScR for reporting. An experienced medical librarian conducted a comprehensive literature search based on a prespecified protocol. Of 59 records identified, 18 full-text articles were assessed for eligibility, and seven met the inclusion criteria: original studies involving baseball players at any competitive level and primarily reporting lumbar bone stress injuries. Pitcher-specific findings and data on management, rehabilitation, and return to play were extracted when available. Data from the included studies were charted and descriptively synthesized."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Seven studies were included. Most examined adolescent baseball players, with fewer involving professional athletes; all were conducted in the United States or Japan. Study designs were predominantly retrospective or cross-sectional, and most samples combined playing positions, limiting pitcher-specific synthesis. Lumbar bone stress injury definitions included early-stage spondylolysis identified by pedicle hyperintensity on MRI, pars interarticularis stress reaction or fracture, spondylolysis, spondylolisthesis, and pedicle stress fracture. MRI was the most frequently reported imaging modality, and L5 was the most affected level. Management and return to play were sparsely reported; when described, treatment was predominantly nonoperative. One professional cohort found that nearly all athletes returned to play, but pitchers required a longer median time than position players (69 vs 34 days). One laterality study found lesions more frequently contralateral to the throwing side in pitchers (32 vs 16), and one case-control study found greater lumbar lordosis among athletes with spondylolysis."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Existing evidence characterizes lumbar bone stress injuries in baseball players, but pitcher-specific management and return-to-play data remain limited. Treatment and rehabilitation protocols were inconsistently reported and lacked standardization. Future studies should develop and evaluate pitcher-specific management and return-to-play criteria to guide clinicians and improve athlete outcomes."
+        ]
+      }
+    ]
+  },
+  "p41": {
+    "affiliations": [
+      "Department of Dermatology, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Breethiga Velusamy",
+      "Samantha Josephson",
+      "Muhamad Alhaj Moustafa",
+      "Olayemi Sokumbi"
+    ],
+    "category": "Cancer & Translational Biology",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Chimeric antigen receptor T-cell (CAR-T) therapy is one of the most innovative and rapidly emerging immunotherapies for the treatment of various types of blood cell malignancies. The cutaneous reactions and their concurrent histopathology associated with CAR-T therapy have not been extensively studied."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We conducted a retrospective chart review of all the patients who have received CAR-T therapy from June 12th, 2018, to May 18th, 2026, since the initiation of Mayo Clinic, Florida, CAR-T program database. We analyzed individual records for the presence of any cutaneous symptoms post infusion."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "Out of 303 patients who received CAR-T during this time, 9 were included in the final analysis based on follow-up documentation by the treating oncologist or dermatologist. Rash onset was classified as early (<30 days), intermediate (30-180 days), or late (>180 days). The median time to rash onset was 22 days. Among patients with early-onset eruptions, 2 patients (2/6, 33.33%) developed a blistering eruption, 2 patients (2/6, 33.33%) developed morbilliform eruption, one patient developed a morbilliform rash with one bullous lesion (1/6, 16.67%), and one patient developed abnormal ecchymosis (1/6, 16.67%). Only one of these patients’ blistering rashes was diagnosed as Toxic Epidermal Necrolysis (TEN). Among patients with intermediate-onset eruptions, the erythematous morbilliform rash was most common (2/3, 66.67%)."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Overall, this study suggests that skin findings secondary to CAR-T cell therapy are a potentially common but an under reported phenomenon, and referral to dermatology is crucial for getting accurate treatment and diagnoses for these reactions."
+        ]
+      }
+    ]
+  },
+  "p53": {
+    "affiliations": [
+      "Department of Nephrology, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Jiakun Yu",
+      "Max Plebani",
+      "Marino Bruce",
+      "Emily Najlis",
+      "Abd Moain Abu Dabrh"
+    ],
+    "category": "Health Services, Digital Health & Community",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Health and wellness coaching (HWC) is increasingly used to support behavior change, chronic disease self-management and prevention. As healthcare systems emphasize value-based care and sustainable approaches to improving population health, understanding the economic value of HWC is increasingly important. Although clinical and behavioral outcomes of HWC have been studied, evidence regarding its economic impact remains poorly characterized. This review addresses this gap by synthesizing published evidence on the economic outcomes of HWC interventions."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We conducted a systematic review following PRISMA guidance. PubMed, Embase, ERIC, Scopus, PsycINFO and Web of Science were searched for English-language studies published January 2000-May 2026. Eligible interventions met all four core constructs of the NBHWC standards. Studies with follow-up ≥12 weeks and primary cost data were included. Outcomes included delivery cost, cost offsets, cost-effectiveness, cost-utility, cost-benefit/ROI and indirect costs."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "848 records were identified and screened, 198 full texts assessed, 21 studies, representing 22 cohorts, met the inclusion criteria. Populations were heterogeneous, spanning COPD, HIV, obesity, smoking cessation, frailty and mobility limitation, serious mental illness, irritable bowel syndrome, post-arthroplasty rehabilitation and hospital-to-home transitions. Cost-related outcomes included intervention-delivery resources and costs, healthcare utilization, direct medical and social-care costs, health utilities and QALYs. Cost-effective analyses were conducted in 12 studies, 8 of which conducted cost-utility analysis using incremental cost-effectiveness ratios. Cost-effectiveness outcomes were expressed as incremental cost-effectiveness ratios, average cost-effectiveness ratios, cost per behavioral outcome, net monetary benefit, or probability of cost-effectiveness."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Among studies meeting standardized HWC criteria, economic outcomes varied substantially. The available evidence suggests that HWC may have potential to reduce healthcare costs and provide economic value in selected populations, but the heterogeneity of interventions, populations, economic outcomes, and reporting methods limits definitive conclusions regarding its overall cost-effectiveness or return on investment. Future research should prioritize standardized, high-quality economic evaluations to clarify the long-term value and scalability of HWC."
+        ]
+      }
+    ]
+  },
+  "p55": {
+    "affiliations": [
+      "Department of Critical Care Medicine, Mayo Clinic Florida, Jacksonville, Florida"
+    ],
+    "authors": [
+      "Natasha Panesar",
+      "Maria F. Solorzano",
+      "Maria L. Reyna-Cruz",
+      "Jennifer B. Cowart",
+      "Scott A. Helgeson",
+      "Anirban Bhattacharyya",
+      "Stephanie S. Anderson",
+      "Angela Muhanga",
+      "Terri Menser",
+      "Pablo Moreno Franco"
+    ],
+    "category": "Health Services, Digital Health & Community",
+    "sections": [
+      {
+        "h": "Introduction",
+        "p": [
+          "Inpatient falls remain a major patient safety challenge despite prevention strategies. Multifactorial, patient-centered interventions are more effective than many single-component approaches, yet translating risk assessment into timely, individualized prevention remains difficult. Ambient artificial intelligence (AI) enables continuous monitoring, behavioral interpretation, and automated intervention. Frameworks for precision AI deployment remain underdeveloped; this abstract examines how the UTS Understand phase can guide patient selection and implementation of ambient AI for inpatient fall prevention."
+        ]
+      },
+      {
+        "h": "Methods",
+        "p": [
+          "We conducted a case study of ambient computer-vision AI implementation for fall prevention at a tertiary academic medical center. Using the Understand phase of the UTS framework, we evaluated technology capabilities, clinical workflows, electronic health record (EHR)-based eligibility criteria, and data requirements before deployment. Retrospective analysis examined eligibility signals, including Hester Davis (HD) fall-risk scores and physician activity restriction orders, in identifying patients who experienced inpatient falls. Workflow mapping and technology assessment identified implementation challenges and opportunities for precision intervention design."
+        ]
+      },
+      {
+        "h": "Results",
+        "p": [
+          "The ambient AI platform provided continuous room monitoring, behavioral detection, automated verbal redirection, silent monitoring, and configurable suppression logic. Retrospective analyses showed that an HD score ≥15 identified 69.5% of patients who experienced falls, highlighting limitations of documentation-based eligibility models. Expanded eligibility strategies incorporating activity restriction orders or prolonged risk windows increased fall-event coverage but also increased intervention exposure. Workflow evaluation identified sources of precision loss, including documentation lag, score volatility, inter-rater variability, and monitoring gaps during suppression periods. These findings revealed a mismatch between evolving patient risk and episodic clinical documentation. Future implementation models included delirium-adaptive eligibility, medication-responsive monitoring, behavioral signal-driven activation, and trajectory-based risk prediction."
+        ]
+      },
+      {
+        "h": "Conclusion",
+        "p": [
+          "Future fall prevention strategies should incorporate dynamic behavioral, clinical, and contextual signals rather than static documentation thresholds."
+        ]
+      }
+    ]
   }
 }

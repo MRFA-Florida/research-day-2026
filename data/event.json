@@ -657,7 +657,8 @@
       "department": "",
       "title": "Alpha-synuclein oligomers in Parkinson’s disease with PRKN mutations, with and without Lewy-related pathology",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Sekiya H, Goetz N, Akamine N, et al. Alpha-synuclein oligomers in Parkinson’s disease with PRKN mutations, with and without Lewy-related pathology. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-02."
     },
     {
       "id": "p03",
@@ -753,7 +754,8 @@
       "department": "",
       "title": "Molecular and spatial dissection of orexinergic neuron subpopulation vulnerability in Alzheimer's disease",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Chen C, Satpati A, Pereira F, et al. Molecular and spatial dissection of orexinergic neuron subpopulation vulnerability in Alzheimer's disease. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-08."
     },
     {
       "id": "p09",
@@ -768,7 +770,8 @@
       "department": "",
       "title": "Supporting Symptom Recognition and Clinical Communication in Early-Onset Colorectal Cancer: Young Adults’ Perceived Usability and Feasibility of an AI-Enabled mHealth Tool",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Franco CL, Kissinger-Knox A, Kauer T, et al. Supporting Symptom Recognition and Clinical Communication in Early-Onset Colorectal Cancer: Young Adults’ Perceived Usability and Feasibility of an AI-Enabled mHealth Tool. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-09."
     },
     {
       "id": "p10",
@@ -883,7 +886,8 @@
       "department": "",
       "title": "Tau acetylated PHF6 reactive T cells presented by HLA-DRB1*04:04 in Alzheimer's Disease",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Luo G, Dodet P, Zhang J, et al. Tau acetylated PHF6 reactive T cells presented by HLA-DRB1*04:04 in Alzheimer's Disease. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-16."
     },
     {
       "id": "p17",
@@ -983,7 +987,8 @@
       "department": "",
       "title": "Interventions for Anemia Correction in Critically Ill Lung Transplant Candidates",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Poudel P, Kafle R, Quiza K, et al. Interventions for Anemia Correction in Critically Ill Lung Transplant Candidates. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-22."
     },
     {
       "id": "p23",
@@ -998,7 +1003,8 @@
       "department": "",
       "title": "The Small GTPase RAB27B Is Required for NSCLC Tumorigenesis and Promotes Cell-Autonomous Wnt Signaling in Cancer Stem Cells",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Pandya P, Meneses K, Murray N, et al. The Small GTPase RAB27B Is Required for NSCLC Tumorigenesis and Promotes Cell-Autonomous Wnt Signaling in Cancer Stem Cells. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-23."
     },
     {
       "id": "p24",
@@ -1013,7 +1019,8 @@
       "department": "",
       "title": "Development of HLA De Novo Donor-Specific Antibodies is Associated with Increased Risk of Rejection and Cardiac Allograft Vasculopathy Following Heart Transplantation",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Tripathee S, Shrestha N, Muñoz-Herrera C, et al. Development of HLA De Novo Donor-Specific Antibodies is Associated with Increased Risk of Rejection and Cardiac Allograft Vasculopathy Following Heart Transplantation. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-24."
     },
     {
       "id": "p25",
@@ -1232,7 +1239,8 @@
       "department": "",
       "title": "Lumbar Bone Stress Injuries in Pitchers: A Scoping Review",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Pagan Rosado R, Monge Ferrin A, Prokop L. Lumbar Bone Stress Injuries in Pitchers: A Scoping Review. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-37."
     },
     {
       "id": "p38",
@@ -1297,7 +1305,8 @@
       "department": "",
       "title": "Cutaneous Manifestations Secondary to CAR-T Cell Therapy: A Retrospective Cohort Study",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Velusamy B, Josephson S, Alhaj Moustafa M, et al. Cutaneous Manifestations Secondary to CAR-T Cell Therapy: A Retrospective Cohort Study. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-41."
     },
     {
       "id": "p42",
@@ -1479,7 +1488,8 @@
       "department": "",
       "title": "Economic Evaluation of Health and Wellness Coaching: A Systematic Review",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Yu J, Plebani M, Bruce M, et al. Economic Evaluation of Health and Wellness Coaching: A Systematic Review. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-53."
     },
     {
       "id": "p54",
@@ -1509,7 +1519,8 @@
       "department": "",
       "title": "Precision Medicine Through the Understand Phase: Leveraging the UTS Framework to Design Personalized AI Orchestration in Inpatient Fall Prevention",
       "pi": "",
-      "abstract": false
+      "abstract": true,
+      "citation": "Panesar N, Solorzano MF, Reyna-Cruz ML, et al. Precision Medicine Through the Understand Phase: Leveraging the UTS Framework to Design Personalized AI Orchestration in Inpatient Fall Prevention. Presented at: Mayo Clinic Research Fellows’ Association (MRFA) Research Day; October 29, 2026; Jacksonville, FL. Abstract P-55."
     },
     {
       "id": "p56",
